@@ -1,0 +1,858 @@
+File E:\work\CHStone\CHStone_v1.11_150204\aes\aes.c: 238 tokens, 129 lines
+File E:\work\CHStone\CHStone_v1.11_150204\aes\aes_dec.c: 280 tokens, 136 lines
+File E:\work\CHStone\CHStone_v1.11_150204\aes\aes_enc.c: 267 tokens, 130 lines
+File E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: 6186 tokens, 542 lines
+File E:\work\CHStone\CHStone_v1.11_150204\aes\aes_key.c: 521 tokens, 163 lines
+Total: 7492 tokens
+
+E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 128-246|E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 248-367[1741]
+0x55, 0x21, 0x0c, 0x7d}                |return Sbox[(in / 16)][(in % 16)];
+};                                     |}
+                                       |
+/* ********* ByteSub & ShiftRow ****** |/* ********* InversShiftRow & ByteSub 
+void                                   |void
+ByteSub_ShiftRow (int statemt[32], int |InversShiftRow_ByteSub (int statemt[32
+{                                      |{
+int temp;                              |int temp;
+                                       |
+switch (nb)                            |switch (nb)
+{                                      |{
+case 4:                                |case 4:
+temp = Sbox[statemt[1] >> 4][statemt[1 |temp = invSbox[statemt[13] >> 4][state
+statemt[1] = Sbox[statemt[5] >> 4][sta |statemt[13] = invSbox[statemt[9] >> 4]
+statemt[5] = Sbox[statemt[9] >> 4][sta |statemt[9] = invSbox[statemt[5] >> 4][
+statemt[9] = Sbox[statemt[13] >> 4][st |statemt[5] = invSbox[statemt[1] >> 4][
+statemt[13] = temp;                    |statemt[1] = temp;
+                                       |
+temp = Sbox[statemt[2] >> 4][statemt[2 |temp = invSbox[statemt[14] >> 4][state
+statemt[2] = Sbox[statemt[10] >> 4][st |statemt[14] = invSbox[statemt[6] >> 4]
+statemt[10] = temp;                    |statemt[6] = temp;
+temp = Sbox[statemt[6] >> 4][statemt[6 |temp = invSbox[statemt[2] >> 4][statem
+statemt[6] = Sbox[statemt[14] >> 4][st |statemt[2] = invSbox[statemt[10] >> 4]
+statemt[14] = temp;                    |statemt[10] = temp;
+                                       |
+temp = Sbox[statemt[3] >> 4][statemt[3 |temp = invSbox[statemt[15] >> 4][state
+statemt[3] = Sbox[statemt[15] >> 4][st |statemt[15] = invSbox[statemt[3] >> 4]
+statemt[15] = Sbox[statemt[11] >> 4][s |statemt[3] = invSbox[statemt[7] >> 4][
+statemt[11] = Sbox[statemt[7] >> 4][st |statemt[7] = invSbox[statemt[11] >> 4]
+statemt[7] = temp;                     |statemt[11] = temp;
+                                       |
+statemt[0] = Sbox[statemt[0] >> 4][sta |statemt[0] = invSbox[statemt[0] >> 4][
+statemt[4] = Sbox[statemt[4] >> 4][sta |statemt[4] = invSbox[statemt[4] >> 4][
+statemt[8] = Sbox[statemt[8] >> 4][sta |statemt[8] = invSbox[statemt[8] >> 4][
+statemt[12] = Sbox[statemt[12] >> 4][s |statemt[12] = invSbox[statemt[12] >> 4
+break;                                 |break;
+case 6:                                |case 6:
+temp = Sbox[statemt[1] >> 4][statemt[1 |temp = invSbox[statemt[21] >> 4][state
+statemt[1] = Sbox[statemt[5] >> 4][sta |statemt[21] = invSbox[statemt[17] >> 4
+statemt[5] = Sbox[statemt[9] >> 4][sta |statemt[17] = invSbox[statemt[13] >> 4
+statemt[9] = Sbox[statemt[13] >> 4][st |statemt[13] = invSbox[statemt[9] >> 4]
+statemt[13] = Sbox[statemt[17] >> 4][s |statemt[9] = invSbox[statemt[5] >> 4][
+statemt[17] = Sbox[statemt[21] >> 4][s |statemt[5] = invSbox[statemt[1] >> 4][
+statemt[21] = temp;                    |statemt[1] = temp;
+                                       |
+temp = Sbox[statemt[2] >> 4][statemt[2 |temp = invSbox[statemt[22] >> 4][state
+statemt[2] = Sbox[statemt[10] >> 4][st |statemt[22] = invSbox[statemt[14] >> 4
+statemt[10] = Sbox[statemt[18] >> 4][s |statemt[14] = invSbox[statemt[6] >> 4]
+statemt[18] = temp;                    |statemt[6] = temp;
+temp = Sbox[statemt[6] >> 4][statemt[6 |temp = invSbox[statemt[18] >> 4][state
+statemt[6] = Sbox[statemt[14] >> 4][st |statemt[18] = invSbox[statemt[10] >> 4
+statemt[14] = Sbox[statemt[22] >> 4][s |statemt[10] = invSbox[statemt[2] >> 4]
+statemt[22] = temp;                    |statemt[2] = temp;
+                                       |
+temp = Sbox[statemt[3] >> 4][statemt[3 |temp = invSbox[statemt[15] >> 4][state
+statemt[3] = Sbox[statemt[15] >> 4][st |statemt[15] = invSbox[statemt[3] >> 4]
+statemt[15] = temp;                    |statemt[3] = temp;
+temp = Sbox[statemt[7] >> 4][statemt[7 |temp = invSbox[statemt[19] >> 4][state
+statemt[7] = Sbox[statemt[19] >> 4][st |statemt[19] = invSbox[statemt[7] >> 4]
+statemt[19] = temp;                    |statemt[7] = temp;
+temp = Sbox[statemt[11] >> 4][statemt[ |temp = invSbox[statemt[23] >> 4][state
+statemt[11] = Sbox[statemt[23] >> 4][s |statemt[23] = invSbox[statemt[11] >> 4
+statemt[23] = temp;                    |statemt[11] = temp;
+                                       |
+statemt[0] = Sbox[statemt[0] >> 4][sta |statemt[0] = invSbox[statemt[0] >> 4][
+statemt[4] = Sbox[statemt[4] >> 4][sta |statemt[4] = invSbox[statemt[4] >> 4][
+statemt[8] = Sbox[statemt[8] >> 4][sta |statemt[8] = invSbox[statemt[8] >> 4][
+statemt[12] = Sbox[statemt[12] >> 4][s |statemt[12] = invSbox[statemt[12] >> 4
+statemt[16] = Sbox[statemt[16] >> 4][s |statemt[16] = invSbox[statemt[16] >> 4
+statemt[20] = Sbox[statemt[20] >> 4][s |statemt[20] = invSbox[statemt[20] >> 4
+break;                                 |break;
+case 8:                                |case 8:
+temp = Sbox[statemt[1] >> 4][statemt[1 |temp = invSbox[statemt[29] >> 4][state
+statemt[1] = Sbox[statemt[5] >> 4][sta |statemt[29] = invSbox[statemt[25] >> 4
+statemt[5] = Sbox[statemt[9] >> 4][sta |statemt[25] = invSbox[statemt[21] >> 4
+statemt[9] = Sbox[statemt[13] >> 4][st |statemt[21] = invSbox[statemt[17] >> 4
+statemt[13] = Sbox[statemt[17] >> 4][s |statemt[17] = invSbox[statemt[13] >> 4
+statemt[17] = Sbox[statemt[21] >> 4][s |statemt[13] = invSbox[statemt[9] >> 4]
+statemt[21] = Sbox[statemt[25] >> 4][s |statemt[9] = invSbox[statemt[5] >> 4][
+statemt[25] = Sbox[statemt[29] >> 4][s |statemt[5] = invSbox[statemt[1] >> 4][
+statemt[29] = temp;                    |statemt[1] = temp;
+                                       |
+temp = Sbox[statemt[2] >> 4][statemt[2 |temp = invSbox[statemt[30] >> 4][state
+statemt[2] = Sbox[statemt[14] >> 4][st |statemt[30] = invSbox[statemt[18] >> 4
+statemt[14] = Sbox[statemt[26] >> 4][s |statemt[18] = invSbox[statemt[6] >> 4]
+statemt[26] = Sbox[statemt[6] >> 4][st |statemt[6] = invSbox[statemt[26] >> 4]
+statemt[6] = Sbox[statemt[18] >> 4][st |statemt[26] = invSbox[statemt[14] >> 4
+statemt[18] = Sbox[statemt[30] >> 4][s |statemt[14] = invSbox[statemt[2] >> 4]
+statemt[30] = Sbox[statemt[10] >> 4][s |statemt[2] = invSbox[statemt[22] >> 4]
+statemt[10] = Sbox[statemt[22] >> 4][s |statemt[22] = invSbox[statemt[10] >> 4
+statemt[22] = temp;                    |statemt[10] = temp;
+                                       |
+temp = Sbox[statemt[3] >> 4][statemt[3 |temp = invSbox[statemt[31] >> 4][state
+statemt[3] = Sbox[statemt[19] >> 4][st |statemt[31] = invSbox[statemt[15] >> 4
+statemt[19] = temp;                    |statemt[15] = temp;
+temp = Sbox[statemt[7] >> 4][statemt[7 |temp = invSbox[statemt[27] >> 4][state
+statemt[7] = Sbox[statemt[23] >> 4][st |statemt[27] = invSbox[statemt[11] >> 4
+statemt[23] = temp;                    |statemt[11] = temp;
+temp = Sbox[statemt[11] >> 4][statemt[ |temp = invSbox[statemt[23] >> 4][state
+statemt[11] = Sbox[statemt[27] >> 4][s |statemt[23] = invSbox[statemt[7] >> 4]
+statemt[27] = temp;                    |statemt[7] = temp;
+temp = Sbox[statemt[15] >> 4][statemt[ |temp = invSbox[statemt[19] >> 4][state
+statemt[15] = Sbox[statemt[31] >> 4][s |statemt[19] = invSbox[statemt[3] >> 4]
+statemt[31] = temp;                    |statemt[3] = temp;
+                                       |
+statemt[0] = Sbox[statemt[0] >> 4][sta |statemt[0] = invSbox[statemt[0] >> 4][
+statemt[4] = Sbox[statemt[4] >> 4][sta |statemt[4] = invSbox[statemt[4] >> 4][
+statemt[8] = Sbox[statemt[8] >> 4][sta |statemt[8] = invSbox[statemt[8] >> 4][
+statemt[12] = Sbox[statemt[12] >> 4][s |statemt[12] = invSbox[statemt[12] >> 4
+statemt[16] = Sbox[statemt[16] >> 4][s |statemt[16] = invSbox[statemt[16] >> 4
+statemt[20] = Sbox[statemt[20] >> 4][s |statemt[20] = invSbox[statemt[20] >> 4
+statemt[24] = Sbox[statemt[24] >> 4][s |statemt[24] = invSbox[statemt[24] >> 4
+statemt[28] = Sbox[statemt[28] >> 4][s |statemt[28] = invSbox[statemt[28] >> 4
+break;                                 |break;
+}                                      |}
+}                                      |}
+                                       |
+int                                    |/* ******** MixColumn ********** */
+SubByte (int in)                       |int
+                                       |MixColumn_AddRoundKey (int statemt[32]
+
+E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 1-94|E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 95-128[555]
+/*                                     |};
++------------------------------------- |const int invSbox[16][16] = {
+| CHStone : a suite of benchmark progr |{0x52, 0x09, 0x6a, 0xd5, 0x30, 0x36, 0
+| ==================================== |0x81, 0xf3, 0xd7, 0xfb},
+|                                      |{0x7c, 0xe3, 0x39, 0x82, 0x9b, 0x2f, 0
+| * Collected and Modified : Y. Hara,  |0xc4, 0xde, 0xe9, 0xcb},
+|                            H. Takada |{0x54, 0x7b, 0x94, 0x32, 0xa6, 0xc2, 0
+|                            Nagoya Un |0x42, 0xfa, 0xc3, 0x4e},
+|                                      |{0x08, 0x2e, 0xa1, 0x66, 0x28, 0xd9, 0
+| * Remark :                           |0x6d, 0x8b, 0xd1, 0x25},
+|    1. This source code is modified t |{0x72, 0xf8, 0xf6, 0x64, 0x86, 0x68, 0
+|       programs in CHStone.           |0x5d, 0x65, 0xb6, 0x92},
+|    2. Test vectors are added for CHS |{0x6c, 0x70, 0x48, 0x50, 0xfd, 0xed, 0
+|    3. If "main_result" is 0 at the e |0xa7, 0x8d, 0x9d, 0x84},
+|       correctly executed.            |{0x90, 0xd8, 0xab, 0x00, 0x8c, 0xbc, 0
+|    4. Please follow the copyright of |0xb8, 0xb3, 0x45, 0x06},
++------------------------------------- |{0xd0, 0x2c, 0x1e, 0x8f, 0xca, 0x3f, 0
+*/                                     |0x01, 0x13, 0x8a, 0x6b},
+/* aes_function.c */                   |{0x3a, 0x91, 0x11, 0x41, 0x4f, 0x67, 0
+/*                                     |0xf0, 0xb4, 0xe6, 0x73},
+* Copyright (C) 2005                   |{0x96, 0xac, 0x74, 0x22, 0xe7, 0xad, 0
+* Akira Iwata & Masayuki Sato          |0x1c, 0x75, 0xdf, 0x6e},
+* Akira Iwata Laboratory,              |{0x47, 0xf1, 0x1a, 0x71, 0x1d, 0x29, 0
+* Nagoya Institute of Technology in Ja |0xaa, 0x18, 0xbe, 0x1b},
+*                                      |{0xfc, 0x56, 0x3e, 0x4b, 0xc6, 0xd2, 0
+* All rights reserved.                 |0x78, 0xcd, 0x5a, 0xf4},
+*                                      |{0x1f, 0xdd, 0xa8, 0x33, 0x88, 0x07, 0
+* This software is written by Masayuki |0x27, 0x80, 0xec, 0x5f},
+* And if you want to contact us, send  |{0x60, 0x51, 0x7f, 0xa9, 0x19, 0xb5, 0
+* (wakayama@elcom.nitech.ac.jp)        |0x93, 0xc9, 0x9c, 0xef},
+*                                      |{0xa0, 0xe0, 0x3b, 0x4d, 0xae, 0x2a, 0
+* Redistribution and use in source and |0x83, 0x53, 0x99, 0x61},
+* are permitted provided that the foll |{0x17, 0x2b, 0x04, 0x7e, 0xba, 0x77, 0
+*                                      |0x55, 0x21, 0x0c, 0x7d}
+* 1. Redistributions of source code mu |
+*    this list of conditions and the f |
+*                                      |
+* 2. Redistributions in binary form mu |
+*    this list of conditions and the f |
+*    and/or other materials provided w |
+*                                      |
+* 3. All advertising materials mention |
+*    display the following acknowledgm |
+*    "This product includes software d |
+*    Nagoya Institute of Technology in |
+*                                      |
+* 4. Redistributions of any form whats |
+*    acknowledgment:                   |
+*    "This product includes software d |
+*     Nagoya Institute of Technology i |
+*                                      |
+*   THIS SOFTWARE IS PROVIDED "AS IS"  |
+*   AKIRA IWATA LABORATORY DISCLAIMS A |
+*   SOFTWARE, INCLUDING ALL IMPLIED WA |
+*   IN NO EVENT SHALL AKIRA IWATA LABO |
+*   INDIRECT OR CONSEQUENTIAL DAMAGES  |
+*   FROM LOSS OF USE, DATA OR PROFITS, |
+*   NEGLIGENCE OR OTHER TORTUOUS ACTIO |
+*   WITH THE USE OR PERFORMANCE OF THI |
+*                                      |
+*/                                     |
+const int Sbox[16][16] = {             |
+{0x63, 0x7c, 0x77, 0x7b, 0xf2, 0x6b, 0 |
+0xfe, 0xd7, 0xab, 0x76},               |
+{0xca, 0x82, 0xc9, 0x7d, 0xfa, 0x59, 0 |
+0x9c, 0xa4, 0x72, 0xc0},               |
+{0xb7, 0xfd, 0x93, 0x26, 0x36, 0x3f, 0 |
+0x71, 0xd8, 0x31, 0x15},               |
+{0x04, 0xc7, 0x23, 0xc3, 0x18, 0x96, 0 |
+0xeb, 0x27, 0xb2, 0x75},               |
+{0x09, 0x83, 0x2c, 0x1a, 0x1b, 0x6e, 0 |
+0x29, 0xe3, 0x2f, 0x84},               |
+{0x53, 0xd1, 0x00, 0xed, 0x20, 0xfc, 0 |
+0x4a, 0x4c, 0x58, 0xcf},               |
+{0xd0, 0xef, 0xaa, 0xfb, 0x43, 0x4d, 0 |
+0x50, 0x3c, 0x9f, 0xa8},               |
+{0x51, 0xa3, 0x40, 0x8f, 0x92, 0x9d, 0 |
+0x10, 0xff, 0xf3, 0xd2},               |
+{0xcd, 0x0c, 0x13, 0xec, 0x5f, 0x97, 0 |
+0x64, 0x5d, 0x19, 0x73},               |
+{0x60, 0x81, 0x4f, 0xdc, 0x22, 0x2a, 0 |
+0xde, 0x5e, 0x0b, 0xdb},               |
+{0xe0, 0x32, 0x3a, 0x0a, 0x49, 0x06, 0 |
+0x91, 0x95, 0xe4, 0x79},               |
+{0xe7, 0xc8, 0x37, 0x6d, 0x8d, 0xd5, 0 |
+0x65, 0x7a, 0xae, 0x08},               |
+{0xba, 0x78, 0x25, 0x2e, 0x1c, 0xa6, 0 |
+0x4b, 0xbd, 0x8b, 0x8a},               |
+{0x70, 0x3e, 0xb5, 0x66, 0x48, 0x03, 0 |
+0x86, 0xc1, 0x1d, 0x9e},               |
+{0xe1, 0xf8, 0x98, 0x11, 0x69, 0xd9, 0 |
+0xce, 0x55, 0x28, 0xdf},               |
+{0x8c, 0xa1, 0x89, 0x0d, 0xbf, 0xe6, 0 |
+0xb0, 0x54, 0xbb, 0x16}                |
+
+E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 300-317|E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 342-358[286]
+statemt[2] = temp;                     |statemt[15] = temp;
+                                       |temp = invSbox[statemt[27] >> 4][state
+temp = invSbox[statemt[15] >> 4][state |statemt[27] = invSbox[statemt[11] >> 4
+statemt[15] = invSbox[statemt[3] >> 4] |statemt[11] = temp;
+statemt[3] = temp;                     |temp = invSbox[statemt[23] >> 4][state
+temp = invSbox[statemt[19] >> 4][state |statemt[23] = invSbox[statemt[7] >> 4]
+statemt[19] = invSbox[statemt[7] >> 4] |statemt[7] = temp;
+statemt[7] = temp;                     |temp = invSbox[statemt[19] >> 4][state
+temp = invSbox[statemt[23] >> 4][state |statemt[19] = invSbox[statemt[3] >> 4]
+statemt[23] = invSbox[statemt[11] >> 4 |statemt[3] = temp;
+statemt[11] = temp;                    |
+                                       |statemt[0] = invSbox[statemt[0] >> 4][
+statemt[0] = invSbox[statemt[0] >> 4][ |statemt[4] = invSbox[statemt[4] >> 4][
+statemt[4] = invSbox[statemt[4] >> 4][ |statemt[8] = invSbox[statemt[8] >> 4][
+statemt[8] = invSbox[statemt[8] >> 4][ |statemt[12] = invSbox[statemt[12] >> 4
+statemt[12] = invSbox[statemt[12] >> 4 |statemt[16] = invSbox[statemt[16] >> 4
+statemt[16] = invSbox[statemt[16] >> 4 |statemt[20] = invSbox[statemt[20] >> 4
+statemt[20] = invSbox[statemt[20] >> 4 |
+
+E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 96-112|E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 112-128[271]
+const int invSbox[16][16] = {          |0x01, 0x13, 0x8a, 0x6b},
+{0x52, 0x09, 0x6a, 0xd5, 0x30, 0x36, 0 |{0x3a, 0x91, 0x11, 0x41, 0x4f, 0x67, 0
+0x81, 0xf3, 0xd7, 0xfb},               |0xf0, 0xb4, 0xe6, 0x73},
+{0x7c, 0xe3, 0x39, 0x82, 0x9b, 0x2f, 0 |{0x96, 0xac, 0x74, 0x22, 0xe7, 0xad, 0
+0xc4, 0xde, 0xe9, 0xcb},               |0x1c, 0x75, 0xdf, 0x6e},
+{0x54, 0x7b, 0x94, 0x32, 0xa6, 0xc2, 0 |{0x47, 0xf1, 0x1a, 0x71, 0x1d, 0x29, 0
+0x42, 0xfa, 0xc3, 0x4e},               |0xaa, 0x18, 0xbe, 0x1b},
+{0x08, 0x2e, 0xa1, 0x66, 0x28, 0xd9, 0 |{0xfc, 0x56, 0x3e, 0x4b, 0xc6, 0xd2, 0
+0x6d, 0x8b, 0xd1, 0x25},               |0x78, 0xcd, 0x5a, 0xf4},
+{0x72, 0xf8, 0xf6, 0x64, 0x86, 0x68, 0 |{0x1f, 0xdd, 0xa8, 0x33, 0x88, 0x07, 0
+0x5d, 0x65, 0xb6, 0x92},               |0x27, 0x80, 0xec, 0x5f},
+{0x6c, 0x70, 0x48, 0x50, 0xfd, 0xed, 0 |{0x60, 0x51, 0x7f, 0xa9, 0x19, 0xb5, 0
+0xa7, 0x8d, 0x9d, 0x84},               |0x93, 0xc9, 0x9c, 0xef},
+{0x90, 0xd8, 0xab, 0x00, 0x8c, 0xbc, 0 |{0xa0, 0xe0, 0x3b, 0x4d, 0xae, 0x2a, 0
+0xb8, 0xb3, 0x45, 0x06},               |0x83, 0x53, 0x99, 0x61},
+{0xd0, 0x2c, 0x1e, 0x8f, 0xca, 0x3f, 0 |{0x17, 0x2b, 0x04, 0x7e, 0xba, 0x77, 0
+0x01, 0x13, 0x8a, 0x6b},               |0x55, 0x21, 0x0c, 0x7d}
+
+E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 319-328|E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 328-338[186]
+case 8:                                |statemt[1] = temp;
+temp = invSbox[statemt[29] >> 4][state |
+statemt[29] = invSbox[statemt[25] >> 4 |temp = invSbox[statemt[30] >> 4][state
+statemt[25] = invSbox[statemt[21] >> 4 |statemt[30] = invSbox[statemt[18] >> 4
+statemt[21] = invSbox[statemt[17] >> 4 |statemt[18] = invSbox[statemt[6] >> 4]
+statemt[17] = invSbox[statemt[13] >> 4 |statemt[6] = invSbox[statemt[26] >> 4]
+statemt[13] = invSbox[statemt[9] >> 4] |statemt[26] = invSbox[statemt[14] >> 4
+statemt[9] = invSbox[statemt[5] >> 4][ |statemt[14] = invSbox[statemt[2] >> 4]
+statemt[5] = invSbox[statemt[1] >> 4][ |statemt[2] = invSbox[statemt[22] >> 4]
+statemt[1] = temp;                     |statemt[22] = invSbox[statemt[10] >> 4
+                                       |statemt[10] = temp;
+
+E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 264-275|E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 300-310[147]
+statemt[1] = temp;                     |statemt[2] = temp;
+                                       |
+temp = invSbox[statemt[14] >> 4][state |temp = invSbox[statemt[15] >> 4][state
+statemt[14] = invSbox[statemt[6] >> 4] |statemt[15] = invSbox[statemt[3] >> 4]
+statemt[6] = temp;                     |statemt[3] = temp;
+temp = invSbox[statemt[2] >> 4][statem |temp = invSbox[statemt[19] >> 4][state
+statemt[2] = invSbox[statemt[10] >> 4] |statemt[19] = invSbox[statemt[7] >> 4]
+statemt[10] = temp;                    |statemt[7] = temp;
+                                       |temp = invSbox[statemt[23] >> 4][state
+temp = invSbox[statemt[15] >> 4][state |statemt[23] = invSbox[statemt[11] >> 4
+statemt[15] = invSbox[statemt[3] >> 4] |statemt[11] = temp;
+statemt[3] = invSbox[statemt[7] >> 4][ |
+
+E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 282-291|E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 317-326[144]
+statemt[12] = invSbox[statemt[12] >> 4 |statemt[20] = invSbox[statemt[20] >> 4
+break;                                 |break;
+case 6:                                |case 8:
+temp = invSbox[statemt[21] >> 4][state |temp = invSbox[statemt[29] >> 4][state
+statemt[21] = invSbox[statemt[17] >> 4 |statemt[29] = invSbox[statemt[25] >> 4
+statemt[17] = invSbox[statemt[13] >> 4 |statemt[25] = invSbox[statemt[21] >> 4
+statemt[13] = invSbox[statemt[9] >> 4] |statemt[21] = invSbox[statemt[17] >> 4
+statemt[9] = invSbox[statemt[5] >> 4][ |statemt[17] = invSbox[statemt[13] >> 4
+statemt[5] = invSbox[statemt[1] >> 4][ |statemt[13] = invSbox[statemt[9] >> 4]
+statemt[1] = temp;                     |statemt[9] = invSbox[statemt[5] >> 4][
+
+E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 275-282|E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 308-315[139]
+statemt[3] = invSbox[statemt[7] >> 4][ |temp = invSbox[statemt[23] >> 4][state
+statemt[7] = invSbox[statemt[11] >> 4] |statemt[23] = invSbox[statemt[11] >> 4
+statemt[11] = temp;                    |statemt[11] = temp;
+                                       |
+statemt[0] = invSbox[statemt[0] >> 4][ |statemt[0] = invSbox[statemt[0] >> 4][
+statemt[4] = invSbox[statemt[4] >> 4][ |statemt[4] = invSbox[statemt[4] >> 4][
+statemt[8] = invSbox[statemt[8] >> 4][ |statemt[8] = invSbox[statemt[8] >> 4][
+statemt[12] = invSbox[statemt[12] >> 4 |statemt[12] = invSbox[statemt[12] >> 4
+
+E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 332-338|E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 353-359[138]
+statemt[18] = invSbox[statemt[6] >> 4] |statemt[0] = invSbox[statemt[0] >> 4][
+statemt[6] = invSbox[statemt[26] >> 4] |statemt[4] = invSbox[statemt[4] >> 4][
+statemt[26] = invSbox[statemt[14] >> 4 |statemt[8] = invSbox[statemt[8] >> 4][
+statemt[14] = invSbox[statemt[2] >> 4] |statemt[12] = invSbox[statemt[12] >> 4
+statemt[2] = invSbox[statemt[22] >> 4] |statemt[16] = invSbox[statemt[16] >> 4
+statemt[22] = invSbox[statemt[10] >> 4 |statemt[20] = invSbox[statemt[20] >> 4
+statemt[10] = temp;                    |statemt[24] = invSbox[statemt[24] >> 4
+
+E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 112-120|E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 120-128[136]
+0x01, 0x13, 0x8a, 0x6b},               |0x78, 0xcd, 0x5a, 0xf4},
+{0x3a, 0x91, 0x11, 0x41, 0x4f, 0x67, 0 |{0x1f, 0xdd, 0xa8, 0x33, 0x88, 0x07, 0
+0xf0, 0xb4, 0xe6, 0x73},               |0x27, 0x80, 0xec, 0x5f},
+{0x96, 0xac, 0x74, 0x22, 0xe7, 0xad, 0 |{0x60, 0x51, 0x7f, 0xa9, 0x19, 0xb5, 0
+0x1c, 0x75, 0xdf, 0x6e},               |0x93, 0xc9, 0x9c, 0xef},
+{0x47, 0xf1, 0x1a, 0x71, 0x1d, 0x29, 0 |{0xa0, 0xe0, 0x3b, 0x4d, 0xae, 0x2a, 0
+0xaa, 0x18, 0xbe, 0x1b},               |0x83, 0x53, 0x99, 0x61},
+{0xfc, 0x56, 0x3e, 0x4b, 0xc6, 0xd2, 0 |{0x17, 0x2b, 0x04, 0x7e, 0xba, 0x77, 0
+0x78, 0xcd, 0x5a, 0xf4},               |0x55, 0x21, 0x0c, 0x7d}
+
+E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 384-396|E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 396-408[122]
+ statemt[2 + j * 4] ^ statemt[3 + j *  | statemt[3 + j * 4] ^ statemt[j * 4] ^
+                                       |
+ret[1 + j * 4] = (statemt[1 + j * 4] < |ret[2 + j * 4] = (statemt[2 + j * 4] <
+if ((ret[1 + j * 4] >> 8) == 1)        |if ((ret[2 + j * 4] >> 8) == 1)
+ ret[1 + j * 4] ^= 283;                | ret[2 + j * 4] ^= 283;
+x = statemt[2 + j * 4];                |x = statemt[3 + j * 4];
+x ^= (x << 1);                         |x ^= (x << 1);
+if ((x >> 8) == 1)                     |if ((x >> 8) == 1)
+ ret[1 + j * 4] ^= (x ^ 283);          | ret[2 + j * 4] ^= (x ^ 283);
+else                                   |else
+ ret[1 + j * 4] ^= x;                  | ret[2 + j * 4] ^= x;
+ret[1 + j * 4] ^=                      |ret[2 + j * 4] ^=
+ statemt[3 + j * 4] ^ statemt[j * 4] ^ | statemt[j * 4] ^ statemt[1 + j * 4] ^
+
+E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 338-345|E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 345-351[98]
+statemt[10] = temp;                    |statemt[11] = temp;
+                                       |temp = invSbox[statemt[23] >> 4][state
+temp = invSbox[statemt[31] >> 4][state |statemt[23] = invSbox[statemt[7] >> 4]
+statemt[31] = invSbox[statemt[15] >> 4 |statemt[7] = temp;
+statemt[15] = temp;                    |temp = invSbox[statemt[19] >> 4][state
+temp = invSbox[statemt[27] >> 4][state |statemt[19] = invSbox[statemt[3] >> 4]
+statemt[27] = invSbox[statemt[11] >> 4 |statemt[3] = temp;
+statemt[11] = temp;                    |
+
+E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 258-264|E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 283-289[97]
+{                                      |break;
+case 4:                                |case 6:
+temp = invSbox[statemt[13] >> 4][state |temp = invSbox[statemt[21] >> 4][state
+statemt[13] = invSbox[statemt[9] >> 4] |statemt[21] = invSbox[statemt[17] >> 4
+statemt[9] = invSbox[statemt[5] >> 4][ |statemt[17] = invSbox[statemt[13] >> 4
+statemt[5] = invSbox[statemt[1] >> 4][ |statemt[13] = invSbox[statemt[9] >> 4]
+statemt[1] = temp;                     |statemt[9] = invSbox[statemt[5] >> 4][
+
+E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 437-444|E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 533-539[96]
+register int x;                        |}
+                                       |for (j = 0; j < nb; ++j)
+for (j = 0; j < nb; ++j)               |{
+{                                      |statemt[j * 4] ^= word[0][j + nb * n];
+statemt[j * 4] ^= word[0][j + nb * n]; |statemt[1 + j * 4] ^= word[1][j + nb *
+statemt[1 + j * 4] ^= word[1][j + nb * |statemt[2 + j * 4] ^= word[2][j + nb *
+statemt[2 + j * 4] ^= word[2][j + nb * |statemt[3 + j * 4] ^= word[3][j + nb *
+statemt[3 + j * 4] ^= word[3][j + nb * |
+
+E:\work\CHStone\CHStone_v1.11_150204\aes\aes.c: line 76-98|E:\work\CHStone\CHStone_v1.11_150204\aes\aes.c: line 98-115[95]
+{                                      |statemt[15] = 52;
+/*                                     |
++------------------------------------- |key[0] = 43;
+| * Test Vectors (added for CHStone)   |key[1] = 126;
+|     statemt, key : input data        |key[2] = 21;
++------------------------------------- |key[3] = 22;
+*/                                     |key[4] = 40;
+statemt[0] = 50;                       |key[5] = 174;
+statemt[1] = 67;                       |key[6] = 210;
+statemt[2] = 246;                      |key[7] = 166;
+statemt[3] = 168;                      |key[8] = 171;
+statemt[4] = 136;                      |key[9] = 247;
+statemt[5] = 90;                       |key[10] = 21;
+statemt[6] = 48;                       |key[11] = 136;
+statemt[7] = 141;                      |key[12] = 9;
+statemt[8] = 49;                       |key[13] = 207;
+statemt[9] = 49;                       |key[14] = 79;
+statemt[10] = 152;                     |key[15] = 60;
+statemt[11] = 162;                     |
+statemt[12] = 224;                     |
+statemt[13] = 55;                      |
+statemt[14] = 7;                       |
+statemt[15] = 52;                      |
+
+E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 351-356|E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 356-360[92]
+statemt[3] = temp;                     |statemt[12] = invSbox[statemt[12] >> 4
+                                       |statemt[16] = invSbox[statemt[16] >> 4
+statemt[0] = invSbox[statemt[0] >> 4][ |statemt[20] = invSbox[statemt[20] >> 4
+statemt[4] = invSbox[statemt[4] >> 4][ |statemt[24] = invSbox[statemt[24] >> 4
+statemt[8] = invSbox[statemt[8] >> 4][ |statemt[28] = invSbox[statemt[28] >> 4
+statemt[12] = invSbox[statemt[12] >> 4 |
+
+E:\work\CHStone\CHStone_v1.11_150204\aes\aes_dec.c: line 1-84|E:\work\CHStone\CHStone_v1.11_150204\aes\aes_enc.c: line 1-85[85]
+/*                                     |/*
++------------------------------------- |+-------------------------------------
+| CHStone : a suite of benchmark progr || CHStone : a suite of benchmark progr
+| ==================================== || ====================================
+|                                      ||                                     
+| * Collected and Modified : Y. Hara,  || * Collected and Modified : Y. Hara, 
+|                            H. Takada ||                            H. Takada
+|                            Nagoya Un ||                            Nagoya Un
+|                                      ||                                     
+| * Remark :                           || * Remark :                          
+|    1. This source code is modified t ||    1. This source code is modified t
+|       programs in CHStone.           ||       programs in CHStone.          
+|    2. Test vectors are added for CHS ||    2. Test vectors are added for CHS
+|    3. If "main_result" is 0 at the e ||    3. If "main_result" is 0 at the e
+|       correctly executed.            ||       correctly executed.           
+|    4. Please follow the copyright of ||    4. Please follow the copyright of
++------------------------------------- |+-------------------------------------
+*/                                     |*/
+/* aes_dec.c */                        |/* aes_enc.c */
+/*                                     |/*
+* Copyright (C) 2005                   |* Copyright (C) 2005
+* Akira Iwata & Masayuki Sato          |* Akira Iwata & Masayuki Sato
+* Akira Iwata Laboratory,              |* Akira Iwata Laboratory,
+* Nagoya Institute of Technology in Ja |* Nagoya Institute of Technology in Ja
+*                                      |*
+* All rights reserved.                 |* All rights reserved.
+*                                      |*
+* This software is written by Masayuki |* This software is written by Masayuki
+* And if you want to contact us, send  |* And if you want to contact us, send 
+* (wakayama@elcom.nitech.ac.jp)        |* (wakayama@elcom.nitech.ac.jp)
+*                                      |*
+* Redistribution and use in source and |* Redistribution and use in source and
+* are permitted provided that the foll |* are permitted provided that the foll
+*                                      |* 
+* 1. Redistributions of source code mu |* 1. Redistributions of source code mu
+*    this list of conditions and the f |*    this list of conditions and the f
+*                                      |*
+* 2. Redistributions in binary form mu |* 2. Redistributions in binary form mu
+*    this list of conditions and the f |*    this list of conditions and the f
+*    and/or other materials provided w |*    and/or other materials provided w
+*                                      |*
+* 3. All advertising materials mention |* 3. All advertising materials mention
+*    display the following acknowledgm |*    display the following acknowledgm
+*    "This product includes software d |*    "This product includes software d
+*    Nagoya Institute of Technology in |*    Nagoya Institute of Technology in
+*                                      |*
+* 4. Redistributions of any form whats |* 4. Redistributions of any form whats
+*    acknowledgment:                   |*    acknowledgment:
+*    "This product includes software d |*    "This product includes software d
+*     Nagoya Institute of Technology i |*     Nagoya Institute of Technology i
+*                                      |*
+*   THIS SOFTWARE IS PROVIDED "AS IS"  |*   THIS SOFTWARE IS PROVIDED "AS IS" 
+*   AKIRA IWATA LABORATORY DISCLAIMS A |*   AKIRA IWATA LABORATORY DISCLAIMS A
+*   SOFTWARE, INCLUDING ALL IMPLIED WA |*   SOFTWARE, INCLUDING ALL IMPLIED WA
+*   IN NO EVENT SHALL AKIRA IWATA LABO |*   IN NO EVENT SHALL AKIRA IWATA LABO
+*   INDIRECT OR CONSEQUENTIAL DAMAGES  |*   INDIRECT OR CONSEQUENTIAL DAMAGES 
+*   FROM LOSS OF USE, DATA OR PROFITS, |*   FROM LOSS OF USE, DATA OR PROFITS,
+*   NEGLIGENCE OR OTHER TORTUOUS ACTIO |*   NEGLIGENCE OR OTHER TORTUOUS ACTIO
+*   WITH THE USE OR PERFORMANCE OF THI |*   WITH THE USE OR PERFORMANCE OF THI
+*                                      |*
+*/                                     |*/
+int                                    |/*  ******* encrypto ************ */
+decrypt (int statemt[32], int key[32], |int
+{                                      |encrypt (int statemt[32], int key[32],
+int i;                                 |{
+/*                                     |int i;
++------------------------------------- |/*
+| * Test Vector (added for CHStone)    |+-------------------------------------
+|     out_enc_statemt : expected outpu || * Test Vector (added for CHStone)   
++------------------------------------- ||     out_enc_statemt : expected outpu
+*/                                     |+-------------------------------------
+const int out_dec_statemt[16] =        |*/
+{ 0x32, 0x43, 0xf6, 0xa8, 0x88, 0x5a,  |const int out_enc_statemt[16] =
+0xe0, 0x37, 0x7, 0x34                  |{ 0x39, 0x25, 0x84, 0x1d, 0x2, 0xdc, 0
+};                                     |0x19, 0x6a, 0xb, 0x32
+KeySchedule (type, key);               |};
+                                       |
+switch (type)                          |KeySchedule (type, key);
+{                                      |switch (type)
+case 128128:                           |{
+round_val = 10;                        |case 128128:
+nb = 4;                                |round_val = 0;
+break;                                 |nb = 4;
+case 128192:                           |break;
+                                       |case 192128:
+
+E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 422-434|E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 500-512[85]
+for (j = 0; j < nb; ++j)               |for (i = 0; i < nb; ++i)
+{                                      |{
+statemt[j * 4] = ret[j * 4];           |statemt[i * 4] = ret[i * 4];
+statemt[1 + j * 4] = ret[1 + j * 4];   |statemt[1 + i * 4] = ret[1 + i * 4];
+statemt[2 + j * 4] = ret[2 + j * 4];   |statemt[2 + i * 4] = ret[2 + i * 4];
+statemt[3 + j * 4] = ret[3 + j * 4];   |statemt[3 + i * 4] = ret[3 + i * 4];
+}                                      |}
+return 0;                              |return 0;
+}                                      |}
+                                       |
+/* ******** InversMixColumn ********** |/* ******** AddRoundKey ********** */
+int                                    |int
+AddRoundKey_InversMixColumn (int state |AddRoundKey (int statemt[32], int type
+
+E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 478-486|E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 490-498[75]
+ x ^= statemt[(i + 2) % 4 + j * 4];    | x ^= 283;
+ x = (x << 1);                         | x = (x << 1);
+ if ((x >> 8) == 1)                    | if ((x >> 8) == 1)
+ x ^= 283;                             | x ^= 283;
+ x = (x << 1);                         | x = (x << 1);
+ if ((x >> 8) == 1)                    | if ((x >> 8) == 1)
+ x ^= 283;                             | x ^= 283;
+ x ^= statemt[(i + 2) % 4 + j * 4];    | x ^= statemt[(i + 3) % 4 + j * 4];
+ ret[i + j * 4] ^= x;                  | ret[i + j * 4] ^= x;
+
+E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 291-296|E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 296-300[72]
+statemt[1] = temp;                     |statemt[6] = temp;
+                                       |temp = invSbox[statemt[18] >> 4][state
+temp = invSbox[statemt[22] >> 4][state |statemt[18] = invSbox[statemt[10] >> 4
+statemt[22] = invSbox[statemt[14] >> 4 |statemt[10] = invSbox[statemt[2] >> 4]
+statemt[14] = invSbox[statemt[6] >> 4] |statemt[2] = temp;
+statemt[6] = temp;                     |
+
+E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 296-300|E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 328-333[72]
+statemt[6] = temp;                     |statemt[1] = temp;
+temp = invSbox[statemt[18] >> 4][state |
+statemt[18] = invSbox[statemt[10] >> 4 |temp = invSbox[statemt[30] >> 4][state
+statemt[10] = invSbox[statemt[2] >> 4] |statemt[30] = invSbox[statemt[18] >> 4
+statemt[2] = temp;                     |statemt[18] = invSbox[statemt[6] >> 4]
+                                       |statemt[6] = invSbox[statemt[26] >> 4]
+
+E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 396-401|E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 408-413[72]
+ statemt[3 + j * 4] ^ statemt[j * 4] ^ | statemt[j * 4] ^ statemt[1 + j * 4] ^
+                                       |
+ret[2 + j * 4] = (statemt[2 + j * 4] < |ret[3 + j * 4] = (statemt[3 + j * 4] <
+if ((ret[2 + j * 4] >> 8) == 1)        |if ((ret[3 + j * 4] >> 8) == 1)
+ ret[2 + j * 4] ^= 283;                | ret[3 + j * 4] ^= 283;
+x = statemt[3 + j * 4];                |x = statemt[j * 4];
+
+E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 120-124|E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 124-128[68]
+0x78, 0xcd, 0x5a, 0xf4},               |0x93, 0xc9, 0x9c, 0xef},
+{0x1f, 0xdd, 0xa8, 0x33, 0x88, 0x07, 0 |{0xa0, 0xe0, 0x3b, 0x4d, 0xae, 0x2a, 0
+0x27, 0x80, 0xec, 0x5f},               |0x83, 0x53, 0x99, 0x61},
+{0x60, 0x51, 0x7f, 0xa9, 0x19, 0xb5, 0 |{0x17, 0x2b, 0x04, 0x7e, 0xba, 0x77, 0
+0x93, 0xc9, 0x9c, 0xef},               |0x55, 0x21, 0x0c, 0x7d}
+
+E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 471-477|E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 484-490[65]
+ x ^= 283;                             | x ^= 283;
+ x ^= statemt[(i + 1) % 4 + j * 4];    | x ^= statemt[(i + 2) % 4 + j * 4];
+ ret[i + j * 4] ^= x;                  | ret[i + j * 4] ^= x;
+                                       |
+ x = (statemt[(i + 2) % 4 + j * 4] <<  | x = (statemt[(i + 3) % 4 + j * 4] << 
+ if ((x >> 8) == 1)                    | if ((x >> 8) == 1)
+ x ^= 283;                             | x ^= 283;
+
+E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 401-408|E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 413-420[64]
+x = statemt[3 + j * 4];                |x = statemt[j * 4];
+x ^= (x << 1);                         |x ^= (x << 1);
+if ((x >> 8) == 1)                     |if ((x >> 8) == 1)
+ ret[2 + j * 4] ^= (x ^ 283);          | ret[3 + j * 4] ^= (x ^ 283);
+else                                   |else
+ ret[2 + j * 4] ^= x;                  | ret[3 + j * 4] ^= x;
+ret[2 + j * 4] ^=                      |ret[3 + j * 4] ^=
+ statemt[j * 4] ^ statemt[1 + j * 4] ^ | statemt[1 + j * 4] ^ statemt[2 + j * 
+
+E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 460-467|E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 486-493[62]
+ ret[i + j * 4] = x;                   | ret[i + j * 4] ^= x;
+                                       |
+ x = (statemt[(i + 1) % 4 + j * 4] <<  | x = (statemt[(i + 3) % 4 + j * 4] << 
+ if ((x >> 8) == 1)                    | if ((x >> 8) == 1)
+ x ^= 283;                             | x ^= 283;
+ x = (x << 1);                         | x = (x << 1);
+ if ((x >> 8) == 1)                    | if ((x >> 8) == 1)
+ x ^= 283;                             | x ^= 283;
+
+E:\work\CHStone\CHStone_v1.11_150204\aes\aes_dec.c: line 125-135|E:\work\CHStone\CHStone_v1.11_150204\aes\aes_enc.c: line 119-129[58]
+for (i = 0; i < ((type % 1000) / 8); + |for (i = 0; i < nb * 4; ++i)
+{                                      |{
+if (statemt[i] < 16)                   |if (statemt[i] < 16)
+ printf ("0");                         | printf ("0");
+printf ("%x", statemt[i]);             |printf ("%x", statemt[i]);
+}                                      |}
+                                       |
+for (i = 0; i < 16; i++)               |for (i = 0; i < 16; i++)
+main_result += (statemt[i] != out_dec_ |main_result += (statemt[i] != out_enc_
+                                       |
+return 0;                              |return 0;
+
+E:\work\CHStone\CHStone_v1.11_150204\aes\aes_key.c: line 83-102|E:\work\CHStone\CHStone_v1.11_150204\aes\aes_key.c: line 103-122[50]
+{                                      |break;
+case 128128:                           |case 192192:
+nk = 4;                                |nk = 6;
+nb = 4;                                |nb = 6;
+round_val = 10;                        |round_val = 12;
+break;                                 |break;
+case 128192:                           |case 192256:
+nk = 4;                                |nk = 6;
+nb = 6;                                |nb = 8;
+round_val = 12;                        |round_val = 14;
+break;                                 |break;
+case 128256:                           |case 256128:
+nk = 4;                                |nk = 8;
+nb = 8;                                |nb = 4;
+round_val = 14;                        |round_val = 14;
+break;                                 |break;
+case 192128:                           |case 256192:
+nk = 6;                                |nk = 8;
+nb = 4;                                |nb = 6;
+round_val = 12;                        |round_val = 14;
+
+E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 328-332|E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 338-342[49]
+statemt[1] = temp;                     |statemt[10] = temp;
+                                       |
+temp = invSbox[statemt[30] >> 4][state |temp = invSbox[statemt[31] >> 4][state
+statemt[30] = invSbox[statemt[18] >> 4 |statemt[31] = invSbox[statemt[15] >> 4
+statemt[18] = invSbox[statemt[6] >> 4] |statemt[15] = temp;
+
+E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 345-348|E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 348-351[49]
+statemt[11] = temp;                    |statemt[7] = temp;
+temp = invSbox[statemt[23] >> 4][state |temp = invSbox[statemt[19] >> 4][state
+statemt[23] = invSbox[statemt[7] >> 4] |statemt[19] = invSbox[statemt[3] >> 4]
+statemt[7] = temp;                     |statemt[3] = temp;
+
+E:\work\CHStone\CHStone_v1.11_150204\aes\aes.c: line 98-107|E:\work\CHStone\CHStone_v1.11_150204\aes\aes.c: line 107-115[48]
+statemt[15] = 52;                      |key[7] = 166;
+                                       |key[8] = 171;
+key[0] = 43;                           |key[9] = 247;
+key[1] = 126;                          |key[10] = 21;
+key[2] = 21;                           |key[11] = 136;
+key[3] = 22;                           |key[12] = 9;
+key[4] = 40;                           |key[13] = 207;
+key[5] = 174;                          |key[14] = 79;
+key[6] = 210;                          |key[15] = 60;
+key[7] = 166;                          |
+
+E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 349-351|E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 353-355[47]
+temp = invSbox[statemt[19] >> 4][state |statemt[0] = invSbox[statemt[0] >> 4][
+statemt[19] = invSbox[statemt[3] >> 4] |statemt[4] = invSbox[statemt[4] >> 4][
+statemt[3] = temp;                     |statemt[8] = invSbox[statemt[8] >> 4][
+
+E:\work\CHStone\CHStone_v1.11_150204\aes\aes_dec.c: line 84-102|E:\work\CHStone\CHStone_v1.11_150204\aes\aes_enc.c: line 84-102[46]
+case 128192:                           |break;
+case 192192:                           |case 192128:
+round_val = 12;                        |round_val = 2;
+nb = 6;                                |nb = 4;
+break;                                 |break;
+case 192128:                           |case 256128:
+round_val = 12;                        |round_val = 4;
+nb = 4;                                |nb = 4;
+break;                                 |break;
+case 128256:                           |case 128192:
+case 192256:                           |case 192192:
+round_val = 14;                        |round_val = 2;
+nb = 8;                                |nb = 6;
+break;                                 |break;
+case 256128:                           |case 256192:
+round_val = 14;                        |round_val = 4;
+nb = 4;                                |nb = 6;
+break;                                 |break;
+case 256192:                           |case 128256:
+
+E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 356-358|E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 358-360[46]
+statemt[12] = invSbox[statemt[12] >> 4 |statemt[20] = invSbox[statemt[20] >> 4
+statemt[16] = invSbox[statemt[16] >> 4 |statemt[24] = invSbox[statemt[24] >> 4
+statemt[20] = invSbox[statemt[20] >> 4 |statemt[28] = invSbox[statemt[28] >> 4
+
+E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 467-471|E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 477-481[41]
+ x ^= 283;                             | x ^= 283;
+ x ^= statemt[(i + 1) % 4 + j * 4];    | x ^= statemt[(i + 2) % 4 + j * 4];
+ x = (x << 1);                         | x = (x << 1);
+ if ((x >> 8) == 1)                    | if ((x >> 8) == 1)
+ x ^= 283;                             | x ^= 283;
+
+E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 376-380|E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 388-392[40]
+ ret[j * 4] ^= 283;                    | ret[1 + j * 4] ^= 283;
+x = statemt[1 + j * 4];                |x = statemt[2 + j * 4];
+x ^= (x << 1);                         |x ^= (x << 1);
+if ((x >> 8) == 1)                     |if ((x >> 8) == 1)
+ ret[j * 4] ^= (x ^ 283);              | ret[1 + j * 4] ^= (x ^ 283);
+
+E:\work\CHStone\CHStone_v1.11_150204\aes\aes_enc.c: line 66-75|E:\work\CHStone\CHStone_v1.11_150204\aes\aes_key.c: line 1-68[38]
+int i;                                 |/*
+/*                                     |+-------------------------------------
++------------------------------------- || CHStone : a suite of benchmark progr
+| * Test Vector (added for CHStone)    || ====================================
+|     out_enc_statemt : expected outpu ||                                     
++------------------------------------- || * Collected and Modified : Y. Hara, 
+*/                                     ||                            H. Takada
+const int out_enc_statemt[16] =        ||                            Nagoya Un
+{ 0x39, 0x25, 0x84, 0x1d, 0x2, 0xdc, 0 ||                                     
+0x19, 0x6a, 0xb, 0x32                  || * Remark :                          
+                                       ||    1. This source code is modified t
+                                       ||       programs in CHStone.          
+                                       ||    2. Test vectors are added for CHS
+                                       ||    3. If "main_result" is 0 at the e
+                                       ||       correctly executed.           
+                                       ||    4. Please follow the copyright of
+                                       |+-------------------------------------
+                                       |*/
+                                       |/* aes_key.c */
+                                       |/*
+                                       |* Copyright (C) 2005
+                                       |* Akira Iwata & Masayuki Sato
+                                       |* Akira Iwata Laboratory,
+                                       |* Nagoya Institute of Technology in Ja
+                                       |*
+                                       |* All rights reserved.
+                                       |*
+                                       |* This software is written by Masayuki
+                                       |* And if you want to contact us, send 
+                                       |* (wakayama@elcom.nitech.ac.jp)
+                                       |*
+                                       |* Redistribution and use in source and
+                                       |* are permitted provided that the foll
+                                       |* 
+                                       |* 1. Redistributions of source code mu
+                                       |*    this list of conditions and the f
+                                       |*
+                                       |* 2. Redistributions in binary form mu
+                                       |*    this list of conditions and the f
+                                       |*    and/or other materials provided w
+                                       |*
+                                       |* 3. All advertising materials mention
+                                       |*    display the following acknowledgm
+                                       |*    "This product includes software d
+                                       |*    Nagoya Institute of Technology in
+                                       |*
+                                       |* 4. Redistributions of any form whats
+                                       |*    acknowledgment:
+                                       |*    "This product includes software d
+                                       |*     Nagoya Institute of Technology i
+                                       |*
+                                       |*   THIS SOFTWARE IS PROVIDED "AS IS" 
+                                       |*   AKIRA IWATA LABORATORY DISCLAIMS A
+                                       |*   SOFTWARE, INCLUDING ALL IMPLIED WA
+                                       |*   IN NO EVENT SHALL AKIRA IWATA LABO
+                                       |*   INDIRECT OR CONSEQUENTIAL DAMAGES 
+                                       |*   FROM LOSS OF USE, DATA OR PROFITS,
+                                       |*   NEGLIGENCE OR OTHER TORTUOUS ACTIO
+                                       |*   WITH THE USE OR PERFORMANCE OF THI
+                                       |*
+                                       |*/
+                                       |
+                                       |/* **************key generate & key di
+                                       |const int Rcon0[30] = {
+                                       |0x01, 0x02, 0x04, 0x08,
+                                       |0x10, 0x20, 0x40, 0x80,
+                                       |0x1b, 0x36, 0x6c, 0xd8,
+                                       |0xab, 0x4d, 0x9a, 0x2f,
+
+E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 536-537|E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 538-539[38]
+statemt[j * 4] ^= word[0][j + nb * n]; |statemt[2 + j * 4] ^= word[2][j + nb *
+statemt[1 + j * 4] ^= word[1][j + nb * |statemt[3 + j * 4] ^= word[3][j + nb *
+
+E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 383-384|E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 419-420[35]
+ret[j * 4] ^=                          |ret[3 + j * 4] ^=
+ statemt[2 + j * 4] ^ statemt[3 + j *  | statemt[1 + j * 4] ^ statemt[2 + j * 
+
+E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 452-456|E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 468-472[35]
+ x ^= statemt[i + j * 4];              | x ^= statemt[(i + 1) % 4 + j * 4];
+ x = (x << 1);                         | x = (x << 1);
+ if ((x >> 8) == 1)                    | if ((x >> 8) == 1)
+ x ^= 283;                             | x ^= 283;
+ x ^= statemt[i + j * 4];              | x ^= statemt[(i + 1) % 4 + j * 4];
+
+E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 124-126|E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 126-128[34]
+0x93, 0xc9, 0x9c, 0xef},               |0x83, 0x53, 0x99, 0x61},
+{0xa0, 0xe0, 0x3b, 0x4d, 0xae, 0x2a, 0 |{0x17, 0x2b, 0x04, 0x7e, 0xba, 0x77, 0
+0x83, 0x53, 0x99, 0x61},               |0x55, 0x21, 0x0c, 0x7d}
+
+E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 126-128|E:\work\CHStone\CHStone_v1.11_150204\aes\aes_key.c: line 64-68[31]
+0x83, 0x53, 0x99, 0x61},               |const int Rcon0[30] = {
+{0x17, 0x2b, 0x04, 0x7e, 0xba, 0x77, 0 |0x01, 0x02, 0x04, 0x08,
+0x55, 0x21, 0x0c, 0x7d}                |0x10, 0x20, 0x40, 0x80,
+                                       |0x1b, 0x36, 0x6c, 0xd8,
+                                       |0xab, 0x4d, 0x9a, 0x2f,
+
+E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 449-452|E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 475-478[31]
+ x = (statemt[i + j * 4] << 1);        | x = (statemt[(i + 2) % 4 + j * 4] << 
+ if ((x >> 8) == 1)                    | if ((x >> 8) == 1)
+ x ^= 283;                             | x ^= 283;
+ x ^= statemt[i + j * 4];              | x ^= statemt[(i + 2) % 4 + j * 4];
+
+E:\work\CHStone\CHStone_v1.11_150204\aes\aes_key.c: line 64-68|E:\work\CHStone\CHStone_v1.11_150204\aes\aes_key.c: line 68-72[30]
+const int Rcon0[30] = {                |0xab, 0x4d, 0x9a, 0x2f,
+0x01, 0x02, 0x04, 0x08,                |0x5e, 0xbc, 0x63, 0xc6,
+0x10, 0x20, 0x40, 0x80,                |0x97, 0x35, 0x6a, 0xd4,
+0x1b, 0x36, 0x6c, 0xd8,                |0xb3, 0x7d, 0xfa, 0xef,
+0xab, 0x4d, 0x9a, 0x2f,                |0xc5, 0x91,
+
+E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 456-459|E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 468-471[29]
+ x ^= statemt[i + j * 4];              | x ^= statemt[(i + 1) % 4 + j * 4];
+ x = (x << 1);                         | x = (x << 1);
+ if ((x >> 8) == 1)                    | if ((x >> 8) == 1)
+ x ^= 283;                             | x ^= 283;
+
+E:\work\CHStone\CHStone_v1.11_150204\aes\aes_key.c: line 150-152|E:\work\CHStone\CHStone_v1.11_150204\aes\aes_key.c: line 152-154[28]
+ {                                     | temp[1] = word[1][j - 1];
+ temp[0] = word[0][j - 1];             | temp[2] = word[2][j - 1];
+ temp[1] = word[1][j - 1];             | temp[3] = word[3][j - 1];
+
+E:\work\CHStone\CHStone_v1.11_150204\aes\aes_key.c: line 102-112|E:\work\CHStone\CHStone_v1.11_150204\aes\aes_key.c: line 112-122[26]
+round_val = 12;                        |round_val = 14;
+break;                                 |break;
+case 192192:                           |case 256128:
+nk = 6;                                |nk = 8;
+nb = 6;                                |nb = 4;
+round_val = 12;                        |round_val = 14;
+break;                                 |break;
+case 192256:                           |case 256192:
+nk = 6;                                |nk = 8;
+nb = 8;                                |nb = 6;
+round_val = 14;                        |round_val = 14;
+
+E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 362-369|E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 429-436[25]
+}                                      |return 0;
+}                                      |}
+                                       |
+/* ******** MixColumn ********** */    |/* ******** InversMixColumn **********
+int                                    |int
+MixColumn_AddRoundKey (int statemt[32] |AddRoundKey_InversMixColumn (int state
+{                                      |{
+int ret[8 * 4], j;                     |int ret[8 * 4], i, j;
+
+E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 408-408|E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 420-420[25]
+ statemt[j * 4] ^ statemt[1 + j * 4] ^ | statemt[1 + j * 4] ^ statemt[2 + j * 
+
+E:\work\CHStone\CHStone_v1.11_150204\aes\aes.c: line 107-111|E:\work\CHStone\CHStone_v1.11_150204\aes\aes.c: line 111-115[24]
+key[7] = 166;                          |key[11] = 136;
+key[8] = 171;                          |key[12] = 9;
+key[9] = 247;                          |key[13] = 207;
+key[10] = 21;                          |key[14] = 79;
+key[11] = 136;                         |key[15] = 60;
+
+E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 420-422|E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 444-446[24]
+ statemt[1 + j * 4] ^ statemt[2 + j *  |statemt[3 + j * 4] ^= word[3][j + nb *
+}                                      |}
+for (j = 0; j < nb; ++j)               |for (j = 0; j < nb; ++j)
+
+E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 445-447|E:\work\CHStone\CHStone_v1.11_150204\aes\aes_key.c: line 131-133[24]
+}                                      |}
+for (j = 0; j < nb; ++j)               |for (j = 0; j < nk; ++j)
+for (i = 0; i < 4; ++i)                |for (i = 0; i < 4; ++i)
+
+E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 488-491|E:\work\CHStone\CHStone_v1.11_150204\aes\aes_func.c: line 491-494[24]
+ x = (statemt[(i + 3) % 4 + j * 4] <<  | x = (x << 1);
+ if ((x >> 8) == 1)                    | if ((x >> 8) == 1)
+ x ^= 283;                             | x ^= 283;
+ x = (x << 1);                         | x = (x << 1);
+
