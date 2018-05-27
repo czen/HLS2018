@@ -1,0 +1,254 @@
+File E:\work\CHStone\CHStone_v1.11_150204\dfsin\dfsin.c: 450 tokens, 185 lines
+File E:\work\CHStone\CHStone_v1.11_150204\dfsin\softfloat.c: 2129 tokens, 650 lines
+Total: 2579 tokens
+
+E:\work\CHStone\CHStone_v1.11_150204\dfsin\dfsin.c: line 88-125|E:\work\CHStone\CHStone_v1.11_150204\dfsin\dfsin.c: line 126-164[116]
+#define N 36                           |};    /* 35PI/18 */
+const float64 test_in[N] = {           |
+0x0000000000000000ULL, /*      0  */   |const float64 test_out[N] = {
+0x3fc65717fced55c1ULL, /*   PI/18 */   |0x0000000000000000ULL, /*  0.000000 */
+0x3fd65717fced55c1ULL, /*   PI/9  */   |0x3fc63a1a335aadcdULL, /*  0.173648 */
+0x3fe0c151fdb20051ULL, /*   PI/6  */   |0x3fd5e3a82b09bf3eULL, /*  0.342020 */
+0x3fe65717fced55c1ULL, /*  2PI/9  */   |0x3fdfffff91f9aa91ULL, /*  0.500000 */
+0x3febecddfc28ab31ULL, /*  5PI/18 */   |0x3fe491b716c242e3ULL, /*  0.642787 */
+0x3ff0c151fdb20051ULL, /*   PI/3  */   |0x3fe8836f672614a6ULL, /*  0.766044 */
+0x3ff38c34fd4fab09ULL, /*  7PI/18 */   |0x3febb67ac40b2bedULL, /*  0.866025 */
+0x3ff65717fced55c1ULL, /*  4PI/9  */   |0x3fee11f6127e28adULL, /*  0.939693 */
+0x3ff921fafc8b0079ULL, /*   PI/2  */   |0x3fef838b6adffac0ULL, /*  0.984808 */
+0x3ffbecddfc28ab31ULL, /*  5PI/9  */   |0x3fefffffe1cbd7aaULL, /*  1.000000 */
+0x3ffeb7c0fbc655e9ULL, /* 11PI/18 */   |0x3fef838bb0147989ULL, /*  0.984808 */
+0x4000c151fdb20051ULL, /*  2PI/3  */   |0x3fee11f692d962b4ULL, /*  0.939693 */
+0x400226c37d80d5adULL, /* 13PI/18 */   |0x3febb67b77c0142dULL, /*  0.866026 */
+0x40038c34fd4fab09ULL, /*  7PI/9  */   |0x3fe883709d4ea869ULL, /*  0.766045 */
+0x4004f1a67d1e8065ULL, /*  5PI/6  */   |0x3fe491b81d72d8e8ULL, /*  0.642788 */
+0x40065717fced55c1ULL, /*  8PI/9  */   |0x3fe00000ea5f43c8ULL, /*  0.500000 */
+0x4007bc897cbc2b1dULL, /* 17PI/18 */   |0x3fd5e3aa4e0590c5ULL, /*  0.342021 */
+0x400921fafc8b0079ULL, /*   PI    */   |0x3fc63a1d2189552cULL, /*  0.173648 */
+0x400a876c7c59d5d5ULL, /* 19PI/18 */   |0x3ea6aedffc454b91ULL, /*  0.000001 */
+0x400becddfc28ab31ULL, /* 10PI/9  */   |0xbfc63a1444ddb37cULL, /* -0.173647 */
+0x400d524f7bf7808dULL, /*  7PI/6  */   |0xbfd5e3a4e68f8f3eULL, /* -0.342019 */
+0x400eb7c0fbc655e9ULL, /* 11PI/9  */   |0xbfdffffd494cf96bULL, /* -0.499999 */
+0x40100e993dca95a3ULL, /* 23PI/18 */   |0xbfe491b61cb9a3d3ULL, /* -0.642787 */
+0x4010c151fdb20051ULL, /*  8PI/6  */   |0xbfe8836eb2dcf815ULL, /* -0.766044 */
+0x4011740abd996affULL, /* 25PI/18 */   |0xbfebb67a740aae32ULL, /* -0.866025 */
+0x401226c37d80d5adULL, /* 13PI/9  */   |0xbfee11f5912d2157ULL, /* -0.939692 */
+0x4012d97c3d68405bULL, /*  3PI/2  */   |0xbfef838b1ac64afcULL, /* -0.984808 */
+0x40138c34fd4fab09ULL, /* 14PI/9  */   |0xbfefffffc2e5dc8fULL, /* -1.000000 */
+0x40143eedbd3715b7ULL, /* 29PI/18 */   |0xbfef838b5ea2e7eaULL, /* -0.984808 */
+0x4014f1a67d1e8065ULL, /* 15PI/9  */   |0xbfee11f7112dae27ULL, /* -0.939693 */
+0x4015a45f3d05eb13ULL, /* 31PI/18 */   |0xbfebb67c2c31cb4aULL, /* -0.866026 */
+0x40165717fced55c1ULL, /* 16PI/9  */   |0xbfe883716e6fd781ULL, /* -0.766045 */
+0x401709d0bcd4c06fULL, /* 33PI/18 */   |0xbfe491b9cd1b5d56ULL, /* -0.642789 */
+0x4017bc897cbc2b1dULL, /* 17PI/9  */   |0xbfe000021d0ca30dULL, /* -0.500001 */
+0x40186f423ca395cbULL                  |0xbfd5e3ad0a69caf7ULL, /* -0.342021 */
+                                       |0xbfc63a23c48863ddULL
+
+E:\work\CHStone\CHStone_v1.11_150204\dfsin\softfloat.c: line 273-299|E:\work\CHStone\CHStone_v1.11_150204\dfsin\softfloat.c: line 354-380[76]
+return packFloat64 (zSign, 0x432 - shi |return roundAndPackFloat64 (zSign, zEx
+                                       |
+}                                      |}
+                                       |
+/*------------------------------------ |/*------------------------------------
+| Returns the result of adding the abs || Returns the result of subtracting th
+| floating-point values `a' and `b'.   || precision floating-point values `a' 
+| before being returned.  `zSign' is i || difference is negated before being r
+| The addition is performed according  || result is a NaN.  The subtraction is
+| Floating-Point Arithmetic.           || Standard for Binary Floating-Point A
+*------------------------------------- |*-------------------------------------
+                                       |
+static float64                         |static float64
+addFloat64Sigs (float64 a, float64 b,  |subFloat64Sigs (float64 a, float64 b, 
+{                                      |{
+int16 aExp, bExp, zExp;                |int16 aExp, bExp, zExp;
+bits64 aSig, bSig, zSig;               |bits64 aSig, bSig, zSig;
+int16 expDiff;                         |int16 expDiff;
+                                       |
+aSig = extractFloat64Frac (a);         |aSig = extractFloat64Frac (a);
+aExp = extractFloat64Exp (a);          |aExp = extractFloat64Exp (a);
+bSig = extractFloat64Frac (b);         |bSig = extractFloat64Frac (b);
+bExp = extractFloat64Exp (b);          |bExp = extractFloat64Exp (b);
+expDiff = aExp - bExp;                 |expDiff = aExp - bExp;
+aSig <<= 9;                            |aSig <<= 10;
+bSig <<= 9;                            |bSig <<= 10;
+if (0 < expDiff)                       |if (0 < expDiff)
+
+E:\work\CHStone\CHStone_v1.11_150204\dfsin\softfloat.c: line 472-483|E:\work\CHStone\CHStone_v1.11_150204\dfsin\softfloat.c: line 541-552[54]
+bits64 aSig, bSig, zSig0, zSig1;       |bits64 rem0, rem1, term0, term1;
+                                       |
+aSig = extractFloat64Frac (a);         |aSig = extractFloat64Frac (a);
+aExp = extractFloat64Exp (a);          |aExp = extractFloat64Exp (a);
+aSign = extractFloat64Sign (a);        |aSign = extractFloat64Sign (a);
+bSig = extractFloat64Frac (b);         |bSig = extractFloat64Frac (b);
+bExp = extractFloat64Exp (b);          |bExp = extractFloat64Exp (b);
+bSign = extractFloat64Sign (b);        |bSign = extractFloat64Sign (b);
+zSign = aSign ^ bSign;                 |zSign = aSign ^ bSign;
+if (aExp == 0x7FF)                     |if (aExp == 0x7FF)
+{                                      |{
+if (aSig || ((bExp == 0x7FF) && bSig)) |if (aSig)
+
+E:\work\CHStone\CHStone_v1.11_150204\dfsin\dfsin.c: line 128-145|E:\work\CHStone\CHStone_v1.11_150204\dfsin\dfsin.c: line 145-162[51]
+const float64 test_out[N] = {          |0x3fd5e3aa4e0590c5ULL, /*  0.342021 */
+0x0000000000000000ULL, /*  0.000000 */ |0x3fc63a1d2189552cULL, /*  0.173648 */
+0x3fc63a1a335aadcdULL, /*  0.173648 */ |0x3ea6aedffc454b91ULL, /*  0.000001 */
+0x3fd5e3a82b09bf3eULL, /*  0.342020 */ |0xbfc63a1444ddb37cULL, /* -0.173647 */
+0x3fdfffff91f9aa91ULL, /*  0.500000 */ |0xbfd5e3a4e68f8f3eULL, /* -0.342019 */
+0x3fe491b716c242e3ULL, /*  0.642787 */ |0xbfdffffd494cf96bULL, /* -0.499999 */
+0x3fe8836f672614a6ULL, /*  0.766044 */ |0xbfe491b61cb9a3d3ULL, /* -0.642787 */
+0x3febb67ac40b2bedULL, /*  0.866025 */ |0xbfe8836eb2dcf815ULL, /* -0.766044 */
+0x3fee11f6127e28adULL, /*  0.939693 */ |0xbfebb67a740aae32ULL, /* -0.866025 */
+0x3fef838b6adffac0ULL, /*  0.984808 */ |0xbfee11f5912d2157ULL, /* -0.939692 */
+0x3fefffffe1cbd7aaULL, /*  1.000000 */ |0xbfef838b1ac64afcULL, /* -0.984808 */
+0x3fef838bb0147989ULL, /*  0.984808 */ |0xbfefffffc2e5dc8fULL, /* -1.000000 */
+0x3fee11f692d962b4ULL, /*  0.939693 */ |0xbfef838b5ea2e7eaULL, /* -0.984808 */
+0x3febb67b77c0142dULL, /*  0.866026 */ |0xbfee11f7112dae27ULL, /* -0.939693 */
+0x3fe883709d4ea869ULL, /*  0.766045 */ |0xbfebb67c2c31cb4aULL, /* -0.866026 */
+0x3fe491b81d72d8e8ULL, /*  0.642788 */ |0xbfe883716e6fd781ULL, /* -0.766045 */
+0x3fe00000ea5f43c8ULL, /*  0.500000 */ |0xbfe491b9cd1b5d56ULL, /* -0.642789 */
+0x3fd5e3aa4e0590c5ULL, /*  0.342021 */ |0xbfe000021d0ca30dULL, /* -0.500001 */
+
+E:\work\CHStone\CHStone_v1.11_150204\dfsin\softfloat.c: line 300-311|E:\work\CHStone\CHStone_v1.11_150204\dfsin\softfloat.c: line 419-430[49]
+{                                      |aExpBigger:
+if (aExp == 0x7FF)                     |if (aExp == 0x7FF)
+ {                                     |{
+ if (aSig)                             |if (aSig)
+ return propagateFloat64NaN (a, b);    | return propagateFloat64NaN (a, b);
+ return a;                             |return a;
+ }                                     |}
+if (bExp == 0)                         |if (bExp == 0)
+ --expDiff;                            |--expDiff;
+else                                   |else
+ bSig |= LIT64 (0x2000000000000000);   |bSig |= LIT64 (0x4000000000000000);
+shift64RightJamming (bSig, expDiff, &b |shift64RightJamming (bSig, expDiff, &b
+
+E:\work\CHStone\CHStone_v1.11_150204\dfsin\softfloat.c: line 483-494|E:\work\CHStone\CHStone_v1.11_150204\dfsin\softfloat.c: line 494-505[47]
+if (aSig || ((bExp == 0x7FF) && bSig)) |if (bSig)
+ return propagateFloat64NaN (a, b);    | return propagateFloat64NaN (a, b);
+if ((bExp | bSig) == 0)                |if ((aExp | aSig) == 0)
+ {                                     | {
+ float_raise (float_flag_invalid);     | float_raise (float_flag_invalid);
+ return float64_default_nan;           | return float64_default_nan;
+ }                                     | }
+return packFloat64 (zSign, 0x7FF, 0);  |return packFloat64 (zSign, 0x7FF, 0);
+}                                      |}
+if (bExp == 0x7FF)                     |if (aExp == 0)
+{                                      |{
+if (bSig)                              |if (aSig == 0)
+
+E:\work\CHStone\CHStone_v1.11_150204\dfsin\softfloat.c: line 456-472|E:\work\CHStone\CHStone_v1.11_150204\dfsin\softfloat.c: line 524-540[37]
+else                                   |}
+return subFloat64Sigs (a, b, aSign);   |return roundAndPackFloat64 (zSign, zEx
+                                       |
+}                                      |}
+                                       |
+/*------------------------------------ |/*------------------------------------
+| Returns the result of multiplying th || Returns the result of dividing the d
+| `a' and `b'.  The operation is perfo || by the corresponding value `b'.  The
+| for Binary Floating-Point Arithmetic || the IEC/IEEE Standard for Binary Flo
+*------------------------------------- |*-------------------------------------
+                                       |
+float64                                |float64
+float64_mul (float64 a, float64 b)     |float64_div (float64 a, float64 b)
+{                                      |{
+flag aSign, bSign, zSign;              |flag aSign, bSign, zSign;
+int16 aExp, bExp, zExp;                |int16 aExp, bExp, zExp;
+bits64 aSig, bSig, zSig0, zSig1;       |bits64 aSig, bSig, zSig;
+
+E:\work\CHStone\CHStone_v1.11_150204\dfsin\softfloat.c: line 508-515|E:\work\CHStone\CHStone_v1.11_150204\dfsin\softfloat.c: line 582-589[37]
+}                                      |}
+if (bExp == 0)                         |if (aExp == 0)
+{                                      |{
+if (bSig == 0)                         |if (aSig == 0)
+ return packFloat64 (zSign, 0, 0);     | return packFloat64 (zSign, 0, 0);
+normalizeFloat64Subnormal (bSig, &bExp |normalizeFloat64Subnormal (aSig, &aExp
+}                                      |}
+zExp = aExp + bExp - 0x3FF;            |zExp = aExp - bExp + 0x3FD;
+
+E:\work\CHStone\CHStone_v1.11_150204\dfsin\softfloat.c: line 315-322|E:\work\CHStone\CHStone_v1.11_150204\dfsin\softfloat.c: line 562-569[36]
+{                                      |}
+if (bExp == 0x7FF)                     |if (bExp == 0x7FF)
+ {                                     |{
+ if (bSig)                             |if (bSig)
+ return propagateFloat64NaN (a, b);    | return propagateFloat64NaN (a, b);
+ return packFloat64 (zSign, 0x7FF, 0); |return packFloat64 (zSign, 0, 0);
+ }                                     |}
+if (aExp == 0)                         |if (bExp == 0)
+
+E:\work\CHStone\CHStone_v1.11_150204\dfsin\dfsin.c: line 145-154|E:\work\CHStone\CHStone_v1.11_150204\dfsin\dfsin.c: line 154-163[27]
+0x3fd5e3aa4e0590c5ULL, /*  0.342021 */ |0xbfee11f5912d2157ULL, /* -0.939692 */
+0x3fc63a1d2189552cULL, /*  0.173648 */ |0xbfef838b1ac64afcULL, /* -0.984808 */
+0x3ea6aedffc454b91ULL, /*  0.000001 */ |0xbfefffffc2e5dc8fULL, /* -1.000000 */
+0xbfc63a1444ddb37cULL, /* -0.173647 */ |0xbfef838b5ea2e7eaULL, /* -0.984808 */
+0xbfd5e3a4e68f8f3eULL, /* -0.342019 */ |0xbfee11f7112dae27ULL, /* -0.939693 */
+0xbfdffffd494cf96bULL, /* -0.499999 */ |0xbfebb67c2c31cb4aULL, /* -0.866026 */
+0xbfe491b61cb9a3d3ULL, /* -0.642787 */ |0xbfe883716e6fd781ULL, /* -0.766045 */
+0xbfe8836eb2dcf815ULL, /* -0.766044 */ |0xbfe491b9cd1b5d56ULL, /* -0.642789 */
+0xbfebb67a740aae32ULL, /* -0.866025 */ |0xbfe000021d0ca30dULL, /* -0.500001 */
+0xbfee11f5912d2157ULL, /* -0.939692 */ |0xbfd5e3ad0a69caf7ULL, /* -0.342021 */
+
+E:\work\CHStone\CHStone_v1.11_150204\dfsin\softfloat.c: line 371-377|E:\work\CHStone\CHStone_v1.11_150204\dfsin\softfloat.c: line 472-478[27]
+int16 expDiff;                         |bits64 aSig, bSig, zSig0, zSig1;
+                                       |
+aSig = extractFloat64Frac (a);         |aSig = extractFloat64Frac (a);
+aExp = extractFloat64Exp (a);          |aExp = extractFloat64Exp (a);
+bSig = extractFloat64Frac (b);         |aSign = extractFloat64Sign (a);
+bExp = extractFloat64Exp (b);          |bSig = extractFloat64Frac (b);
+expDiff = aExp - bExp;                 |bExp = extractFloat64Exp (b);
+
+E:\work\CHStone\CHStone_v1.11_150204\dfsin\softfloat.c: line 497-505|E:\work\CHStone\CHStone_v1.11_150204\dfsin\softfloat.c: line 557-565[27]
+ {                                     | return propagateFloat64NaN (a, b);
+ float_raise (float_flag_invalid);     | float_raise (float_flag_invalid);
+ return float64_default_nan;           | return float64_default_nan;
+ }                                     | }
+return packFloat64 (zSign, 0x7FF, 0);  |return packFloat64 (zSign, 0x7FF, 0);
+}                                      |}
+if (aExp == 0)                         |if (bExp == 0x7FF)
+{                                      |{
+if (aSig == 0)                         |if (bSig)
+
+E:\work\CHStone\CHStone_v1.11_150204\dfsin\softfloat.c: line 515-517|E:\work\CHStone\CHStone_v1.11_150204\dfsin\softfloat.c: line 589-591[26]
+zExp = aExp + bExp - 0x3FF;            |zExp = aExp - bExp + 0x3FD;
+aSig = (aSig | LIT64 (0x00100000000000 |aSig = (aSig | LIT64 (0x00100000000000
+bSig = (bSig | LIT64 (0x00100000000000 |bSig = (bSig | LIT64 (0x00100000000000
+
+E:\work\CHStone\CHStone_v1.11_150204\dfsin\softfloat.c: line 505-507|E:\work\CHStone\CHStone_v1.11_150204\dfsin\softfloat.c: line 511-513[25]
+if (aSig == 0)                         |if (bSig == 0)
+ return packFloat64 (zSign, 0, 0);     | return packFloat64 (zSign, 0, 0);
+normalizeFloat64Subnormal (aSig, &aExp |normalizeFloat64Subnormal (bSig, &bExp
+
+E:\work\CHStone\CHStone_v1.11_150204\dfsin\softfloat.c: line 229-244|E:\work\CHStone\CHStone_v1.11_150204\dfsin\softfloat.c: line 353-367[24]
+zExp = 0;                              |roundAndPack:
+return packFloat64 (zSign, zExp, zSig) |return roundAndPackFloat64 (zSign, zEx
+                                       |
+}                                      |}
+                                       |
+/*------------------------------------ |/*------------------------------------
+| Takes an abstract floating-point val || Returns the result of subtracting th
+| and significand `zSig', and returns  || precision floating-point values `a' 
+| point value corresponding to the abs || difference is negated before being r
+| `roundAndPackFloat64' except that `z || result is a NaN.  The subtraction is
+| Bit 63 of `zSig' must be zero, and ` || Standard for Binary Floating-Point A
+| floating-point exponent.             |*-------------------------------------
+*------------------------------------- |
+                                       |static float64
+static float64                         |subFloat64Sigs (float64 a, float64 b, 
+normalizeRoundAndPackFloat64 (flag zSi |
+
+E:\work\CHStone\CHStone_v1.11_150204\dfsin\softfloat.c: line 523-538|E:\work\CHStone\CHStone_v1.11_150204\dfsin\softfloat.c: line 607-623[24]
+--zExp;                                |zSig |= (rem1 != 0);
+}                                      |}
+return roundAndPackFloat64 (zSign, zEx |return roundAndPackFloat64 (zSign, zEx
+                                       |
+}                                      |}
+                                       |
+/*------------------------------------ |/*------------------------------------
+| Returns the result of dividing the d || Returns 1 if the double-precision fl
+| by the corresponding value `b'.  The || equal to the corresponding value `b'
+| the IEC/IEEE Standard for Binary Flo || performed according to the IEC/IEEE 
+*------------------------------------- || Arithmetic.
+                                       |*-------------------------------------
+float64                                |
+float64_div (float64 a, float64 b)     |flag
+{                                      |float64_le (float64 a, float64 b)
+flag aSign, bSign, zSign;              |{
+                                       |flag aSign, bSign;
+

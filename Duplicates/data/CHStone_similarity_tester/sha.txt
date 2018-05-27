@@ -1,8 +1,8 @@
-File E:\work\CHStone\CHStone_v1.11_150204\sha\sha.c: 895 tokens, 217 lines
-File E:\work\CHStone\CHStone_v1.11_150204\sha\sha_driver.c: 76 tokens, 56 lines
-Total: 971 tokens
+File E:\work\HLS2018\CHStone\CHStoneProcessed\sha\sha.c: 898 tokens, 189 lines
+File E:\work\HLS2018\CHStone\CHStoneProcessed\sha\sha_driver.c: 79 tokens, 31 lines
+Total: 977 tokens
 
-E:\work\CHStone\CHStone_v1.11_150204\sha\sha.c: line 113-121|E:\work\CHStone\CHStone_v1.11_150204\sha\sha.c: line 122-129[40]
+E:\work\HLS2018\CHStone\CHStoneProcessed\sha\sha.c: line 85-93|E:\work\HLS2018\CHStone\CHStoneProcessed\sha\sha.c: line 94-101[40]
 E = sha_info_digest[4];                |}
                                        |for (i = 40; i < 60; ++i)
 for (i = 0; i < 20; ++i)               |{

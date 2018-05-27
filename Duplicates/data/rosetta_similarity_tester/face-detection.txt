@@ -1,0 +1,1348 @@
+File E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\check_result.cpp: 215 tokens, 43 lines
+File E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\check_result.h: 49 tokens, 8 lines
+File E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\face_detect_host.cpp: 628 tokens, 159 lines
+File E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\face_detect_sw.cpp: 2155 tokens, 457 lines
+File E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\face_detect_sw.h: 56 tokens, 14 lines
+File E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: 42299 tokens, 19 lines
+File E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataRcc_with_partitioning.h: 70152 tokens, 43 lines
+File E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\image.cpp: 486 tokens, 89 lines
+File E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\image.h: 59 tokens, 23 lines
+File E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\image0_320_240.h: 154094 tokens, 483 lines
+File E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\typedefs.h: 215 tokens, 73 lines
+File E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\utils.cpp: 185 tokens, 66 lines
+File E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\utils.h: 50 tokens, 13 lines
+Total: 270643 tokens
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\image0_320_240.h: line 2-241|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\image0_320_240.h: line 241-481[77039]
+unsigned char Data[240][320]={         |{0xc1,0xbf,0xbf,0xbf,0xc3,0xc3,0xc1,0x
+{0xd4,0xd4,0xd4,0xd2,0xd4,0xd6,0xd4,0x |
+                                       |{0xc3,0xc3,0xc3,0xc1,0xc1,0xc3,0xc3,0x
+{0xd2,0xd2,0xd2,0xd0,0xd2,0xd4,0xd2,0x |
+                                       |{0xc1,0xc1,0xc1,0xbf,0xbf,0xc1,0xbf,0x
+{0xd2,0xd2,0xd2,0xd0,0xd2,0xd4,0xd2,0x |
+                                       |{0xc0,0xc2,0xc0,0xc0,0xc0,0xc0,0xbe,0x
+{0xd4,0xd4,0xd2,0xd2,0xd2,0xd6,0xd4,0x |
+                                       |{0xc0,0xc2,0xc0,0xc0,0xc0,0xc2,0xc0,0x
+{0xd0,0xd2,0xd0,0xd0,0xd2,0xd4,0xd2,0x |
+                                       |{0xbe,0xbe,0xbe,0xbe,0xc0,0xc0,0xbe,0x
+{0xd2,0xd2,0xd2,0xd2,0xd2,0xd4,0xd2,0x |
+                                       |{0xbe,0xbe,0xc0,0xbe,0xc0,0xc0,0xbe,0x
+{0xd4,0xd4,0xd4,0xd2,0xd2,0xd2,0xce,0x |
+                                       |{0xbe,0xc0,0xc0,0xbe,0xbe,0xbe,0xbc,0x
+{0xd2,0xd2,0xd2,0xd0,0xd0,0xce,0xca,0x |
+                                       |{0xbc,0xbe,0xbe,0xbc,0xbc,0xba,0xb8,0x
+{0xd6,0xcc,0xd4,0xd4,0xd2,0xce,0xc4,0x |
+                                       |{0xc4,0xba,0xbe,0xbe,0xbe,0xbc,0xb1,0x
+{0xd2,0xd0,0xd6,0xce,0xce,0xd4,0xce,0x |
+                                       |{0xc4,0xbc,0xc2,0xbc,0xbc,0xbe,0xb8,0x
+{0xd0,0xd6,0xdb,0xce,0xcc,0xd4,0xd0,0x |
+                                       |{0xbe,0xbe,0xc2,0xbc,0xba,0xbe,0xba,0x
+{0xd0,0xd6,0xd9,0xd0,0xd0,0xd6,0xd0,0x |
+                                       |{0xba,0xbe,0xc2,0xbe,0xbc,0xbe,0xba,0x
+{0xd0,0xd0,0xce,0xd2,0xd6,0xd6,0xd2,0x |
+                                       |{0xba,0xc0,0xbe,0xbe,0xbe,0xc0,0xbc,0x
+{0xd4,0xce,0xc6,0xce,0xd2,0xcc,0xce,0x |
+                                       |{0xbc,0xbc,0xb7,0xb8,0xba,0xbc,0xbe,0x
+{0xd4,0xd2,0xc8,0xd0,0xce,0xc4,0xcc,0x |
+                                       |{0xbc,0xbc,0xb3,0xb8,0xba,0xb7,0xbc,0x
+{0xd0,0xd4,0xd0,0xd6,0xd4,0xca,0xd2,0x |
+                                       |{0xbc,0xbe,0xb8,0xc0,0xbe,0xb5,0xba,0x
+{0xd6,0xd0,0xd4,0xce,0xc8,0xce,0xd0,0x |
+                                       |{0xbf,0xbf,0xbf,0xbb,0xb9,0xbb,0xbd,0x
+{0xcc,0xc8,0xd2,0xd0,0xce,0xd2,0xce,0x |
+                                       |{0xbd,0xbd,0xbb,0xbb,0xb9,0xb9,0xb9,0x
+{0xd0,0xc8,0xd0,0xce,0xcc,0xd0,0xce,0x |
+                                       |{0xb9,0xb9,0xb9,0xbb,0xbb,0xbb,0xb9,0x
+{0xd2,0xca,0xd0,0xce,0xcc,0xd2,0xd0,0x |
+                                       |{0xb9,0xb7,0xb9,0xbb,0xbd,0xbf,0xbd,0x
+{0xce,0xc8,0xd0,0xd2,0xd0,0xd6,0xd0,0x |
+                                       |{0xbb,0xb9,0xb9,0xb9,0xbd,0xbd,0xbd,0x
+{0xd6,0xcc,0xce,0xca,0xc6,0xce,0xce,0x |
+                                       |{0xbd,0xbb,0xb9,0xb7,0xb9,0xb9,0xbb,0x
+{0xd6,0xcc,0xce,0xc8,0xc2,0xca,0xcc,0x |
+                                       |{0xb9,0xb9,0xb9,0xb7,0xb7,0xb7,0xb9,0x
+{0xc2,0xc1,0xd0,0xd2,0xd0,0xd2,0xce,0x |
+                                       |{0xb5,0xb7,0xb9,0xb9,0xb9,0xb9,0xbb,0x
+{0xcb,0xcd,0xd1,0xd1,0xd1,0xcd,0xcb,0x |
+                                       |{0xb6,0xb6,0xb9,0xbf,0xbf,0xb9,0xb7,0x
+{0xcf,0xcd,0xcd,0xcb,0xcb,0xcd,0xcd,0x |
+                                       |{0xbb,0xb7,0xb7,0xb9,0xb9,0xb7,0xb9,0x
+{0xd1,0xcd,0xc9,0xc9,0xc9,0xcd,0xcf,0x |
+                                       |{0xbf,0xb9,0xb6,0xb8,0xb9,0xb8,0xb9,0x
+{0xcf,0xcd,0xcd,0xcd,0xcf,0xcf,0xcd,0x |
+                                       |{0xbf,0xbb,0xb9,0xbb,0xbd,0xbb,0xb8,0x
+{0xd1,0xcf,0xcf,0xd1,0xd3,0xd1,0xcf,0x |
+                                       |{0xbd,0xbb,0xbb,0xbd,0xbf,0xbd,0xb9,0x
+{0xd1,0xd1,0xcf,0xcf,0xd1,0xd1,0xcf,0x |
+                                       |{0xbd,0xbb,0xbb,0xbb,0xbb,0xbd,0xbb,0x
+{0xcd,0xcd,0xcd,0xcf,0xcf,0xcf,0xcf,0x |
+                                       |{0xbb,0xbb,0xbb,0xb9,0xb9,0xbb,0xbb,0x
+{0xc7,0xc9,0xcd,0xcf,0xcf,0xcf,0xcd,0x |
+                                       |{0xb6,0xb8,0xbb,0xbb,0xbb,0xbb,0xbb,0x
+{0xcd,0xcb,0xc9,0xc9,0xcb,0xcd,0xcf,0x |
+                                       |{0xbb,0xb8,0xb6,0xb6,0xb8,0xbb,0xbb,0x
+{0xcf,0xcd,0xcd,0xcd,0xcd,0xcd,0xcd,0x |
+                                       |{0xbb,0xb9,0xb8,0xb9,0xb9,0xb9,0xb9,0x
+{0xcb,0xcb,0xcb,0xcd,0xcd,0xcd,0xcb,0x |
+                                       |{0xb8,0xb9,0xb9,0xbb,0xbb,0xb9,0xb8,0x
+{0xc9,0xc9,0xc9,0xcb,0xcb,0xcb,0xcb,0x |
+                                       |{0xb6,0xb8,0xb9,0xb9,0xb9,0xb9,0xb9,0x
+{0xcb,0xcb,0xcb,0xcb,0xcb,0xcd,0xcd,0x |
+                                       |{0xb6,0xb8,0xb8,0xb8,0xb8,0xb8,0xb8,0x
+{0xcf,0xcd,0xcb,0xc9,0xc9,0xcb,0xcb,0x |
+                                       |{0xb9,0xb8,0xb8,0xb6,0xb6,0xb6,0xb6,0x
+{0xcd,0xcd,0xc9,0xc9,0xc9,0xc9,0xc9,0x |
+                                       |{0xb9,0xb7,0xb5,0xb5,0xb5,0xb7,0xb5,0x
+{0xcd,0xcb,0xcb,0xcb,0xcd,0xcd,0xcd,0x |
+                                       |{0xb9,0xb7,0xb5,0xb5,0xb9,0xb9,0xb7,0x
+{0xce,0xce,0xcc,0xce,0xce,0xce,0xcc,0x |
+                                       |{0xbb,0xb9,0xb7,0xb7,0xb7,0xb7,0xb5,0x
+{0xca,0xcc,0xce,0xce,0xce,0xcc,0xcc,0x |
+                                       |{0xb5,0xb7,0xb7,0xb9,0xb7,0xb7,0xb7,0x
+{0xcc,0xce,0xd0,0xd0,0xce,0xcc,0xcc,0x |
+                                       |{0xb3,0xb7,0xb9,0xbb,0xb9,0xb9,0xb7,0x
+{0xce,0xce,0xce,0xce,0xce,0xcc,0xca,0x |
+                                       |{0xb5,0xb7,0xb9,0xb9,0xb9,0xb7,0xb5,0x
+{0xcc,0xca,0xca,0xcc,0xcc,0xcc,0xca,0x |
+                                       |{0xb7,0xb5,0xb5,0xb5,0xb5,0xb7,0xb5,0x
+{0xca,0xca,0xca,0xca,0xcc,0xce,0xcc,0x |
+                                       |{0xb7,0xb5,0xb3,0xb3,0xb5,0xb7,0xb7,0x
+{0xc8,0xca,0xcc,0xca,0xc8,0xc8,0xca,0x |
+                                       |{0xb3,0xb5,0xb7,0xb5,0xb3,0xb1,0xb5,0x
+{0xc4,0xc8,0xcc,0xc8,0xc0,0xbe,0xc2,0x |
+                                       |{0xb0,0xb3,0xb5,0xb3,0xac,0xaa,0xae,0x
+{0xca,0xca,0xcc,0xce,0xce,0xcc,0xca,0x |
+                                       |{0xb2,0xb5,0xb7,0xb7,0xb7,0xb9,0xb7,0x
+{0xca,0xca,0xcc,0xca,0xc8,0xc4,0xc6,0x |
+                                       |{0xb2,0xb3,0xb5,0xb3,0xb2,0xb2,0xb2,0x
+{0xca,0xca,0xcc,0xca,0xc4,0xc0,0xc4,0x |
+                                       |{0xb3,0xb3,0xb5,0xb3,0xb0,0xaa,0xae,0x
+{0xce,0xcc,0xcc,0xcc,0xc8,0xc6,0xc8,0x |
+                                       |{0xb7,0xb5,0xb5,0xb7,0xb3,0xac,0xb0,0x
+{0xce,0xcc,0xcc,0xce,0xce,0xce,0xce,0x |
+                                       |{0xb9,0xb3,0xb5,0xb9,0xb9,0xb3,0xb3,0x
+{0xcc,0xca,0xca,0xcc,0xd0,0xd0,0xce,0x |
+                                       |{0xb7,0xb3,0xb3,0xb7,0xb9,0xb7,0xb5,0x
+{0xca,0xc8,0xc8,0xcc,0xcc,0xcc,0xca,0x |
+                                       |{0xb5,0xb3,0xb3,0xb5,0xb5,0xb7,0xb5,0x
+{0xcc,0xca,0xca,0xca,0xca,0xc6,0xc8,0x |
+                                       |{0xb5,0xb5,0xb5,0xb3,0xb3,0xb5,0xb3,0x
+{0xc8,0xc8,0xca,0xcc,0xca,0xc8,0xc8,0x |
+                                       |{0xb2,0xb7,0xb9,0xb7,0xb3,0xb3,0xb3,0x
+{0xc8,0xc6,0xc6,0xca,0xca,0xc8,0xc8,0x |
+                                       |{0xb0,0xb2,0xb3,0xb3,0xb3,0xb5,0xb5,0x
+{0xca,0xc8,0xc6,0xca,0xcc,0xcc,0xca,0x |
+                                       |{0xb3,0xb2,0xb2,0xb3,0xb7,0xb7,0xb5,0x
+{0xca,0xc8,0xc8,0xcc,0xce,0xcc,0xca,0x |
+                                       |{0xb7,0xb3,0xb3,0xb5,0xb7,0xb7,0xb3,0x
+{0xc8,0xc8,0xca,0xcc,0xca,0xc8,0xc8,0x |
+                                       |{0xb5,0xb3,0xb3,0xb5,0xb5,0xb2,0xb2,0x
+{0xc8,0xca,0xcc,0xcc,0xca,0xc6,0xc6,0x |
+                                       |{0xb3,0xb2,0xb3,0xb7,0xb5,0xb2,0xb2,0x
+{0xca,0xca,0xca,0xca,0xc8,0xc6,0xc4,0x |
+                                       |{0xb6,0xb2,0xb4,0xb8,0xb6,0xb0,0xb0,0x
+{0xca,0xc6,0xc4,0xc6,0xc6,0xc4,0xc0,0x |
+                                       |{0xb6,0xb2,0xb2,0xb4,0xb4,0xad,0xab,0x
+{0xc6,0xc8,0xca,0xc6,0xc6,0xc8,0xcc,0x |
+                                       |{0xb2,0xb4,0xb4,0xb2,0xb0,0xb2,0xb4,0x
+{0xc2,0xc6,0xca,0xca,0xc8,0xc6,0xc4,0x |
+                                       |{0xaf,0xb2,0xb4,0xb4,0xb4,0xb4,0xb2,0x
+{0xc4,0xc6,0xc8,0xca,0xc8,0xc8,0xc4,0x |
+                                       |{0xaf,0xb2,0xb4,0xb4,0xb4,0xb4,0xb0,0x
+{0xca,0xc8,0xc8,0xc6,0xc8,0xcc,0xca,0x |
+                                       |{0xb6,0xb4,0xb2,0xb0,0xb2,0xb4,0xb2,0x
+{0xcc,0xca,0xc8,0xc6,0xca,0xce,0xcc,0x |
+                                       |{0xba,0xb8,0xb4,0xb0,0xb2,0xb4,0xb6,0x
+{0xca,0xca,0xca,0xc8,0xca,0xcc,0xc8,0x |
+                                       |{0xb6,0xb6,0xb6,0xb4,0xb4,0xb6,0xb4,0x
+{0xc8,0xca,0xca,0xca,0xca,0xca,0xc6,0x |
+                                       |{0xb2,0xb4,0xb6,0xb6,0xb4,0xb4,0xb2,0x
+{0xc8,0xca,0xc8,0xc8,0xc8,0xc8,0xc8,0x |
+                                       |{0xb0,0xb4,0xb4,0xb4,0xb2,0xb2,0xb2,0x
+{0xca,0xca,0xc8,0xc8,0xc6,0xc6,0xc6,0x |
+                                       |{0xb3,0xb3,0xb2,0xb2,0xb3,0xb3,0xb2,0x
+{0xca,0xc8,0xc8,0xc8,0xc8,0xc8,0xc8,0x |
+                                       |{0xb3,0xb2,0xb2,0xb3,0xb3,0xb3,0xb3,0x
+{0xc8,0xc8,0xc8,0xc8,0xc8,0xc8,0xca,0x |
+                                       |{0xb3,0xb2,0xb2,0xb3,0xb3,0xb5,0xb3,0x
+{0xca,0xca,0xca,0xca,0xca,0xca,0xc8,0x |
+                                       |{0xb3,0xb3,0xb3,0xb3,0xb3,0xb5,0xb3,0x
+{0xca,0xca,0xca,0xca,0xca,0xc8,0xc8,0x |
+                                       |{0xb5,0xb5,0xb3,0xb3,0xb3,0xb3,0xb2,0x
+{0xca,0xca,0xca,0xca,0xca,0xc8,0xc8,0x |
+                                       |{0xb5,0xb5,0xb3,0xb3,0xb3,0xb3,0xb2,0x
+{0xc8,0xc8,0xca,0xca,0xca,0xc8,0xc8,0x |
+                                       |{0xb6,0xb4,0xb4,0xb4,0xb4,0xb4,0xb2,0x
+{0xc6,0xc8,0xc8,0xca,0xca,0xc8,0xc8,0x |
+                                       |{0xb4,0xb4,0xb2,0xb2,0xb4,0xb4,0xb2,0x
+{0xc6,0xc8,0xc8,0xc6,0xc8,0xca,0xc8,0x |
+                                       |{0xb0,0xb2,0xb2,0xb4,0xb4,0xb6,0xb4,0x
+{0xc6,0xc8,0xca,0xc8,0xc8,0xc8,0xc6,0x |
+                                       |{0xb0,0xb2,0xb2,0xb4,0xb4,0xb6,0xb4,0x
+{0xc6,0xc8,0xc8,0xc8,0xc6,0xc6,0xc1,0x |
+                                       |{0xb2,0xb4,0xb4,0xb2,0xb0,0xb0,0xad,0x
+{0xc6,0xc6,0xc6,0xc6,0xc4,0xc4,0xc1,0x |
+                                       |{0xb4,0xb4,0xb4,0xb0,0xaf,0xad,0xab,0x
+{0xc8,0xca,0xc8,0xc6,0xc6,0xc6,0xc4,0x |
+                                       |{0xb2,0xb4,0xb4,0xb2,0xb2,0xb2,0xb0,0x
+{0xc8,0xc8,0xc8,0xc6,0xc6,0xc6,0xc6,0x |
+                                       |{0xb2,0xb4,0xb4,0xb2,0xb2,0xb2,0xb0,0x
+{0xc6,0xc6,0xc6,0xc6,0xc6,0xc8,0xc4,0x |
+                                       |{0xb4,0xb4,0xb4,0xb2,0xb2,0xb2,0xaf,0x
+{0xc6,0xc8,0xca,0xca,0xca,0xca,0xc6,0x |
+                                       |{0xb0,0xb2,0xb4,0xb4,0xb4,0xb6,0xb4,0x
+{0xc8,0xbf,0xbd,0xc4,0xc8,0xc2,0xc2,0x |
+                                       |{0xb2,0xb2,0xb0,0xaf,0xb0,0xb4,0xb2,0x
+{0xc8,0xc1,0xbf,0xc2,0xc4,0xc1,0xbf,0x |
+                                       |{0xb2,0xaf,0xab,0xad,0xaf,0xad,0xad,0x
+{0xc8,0xc6,0xc4,0xc4,0xc4,0xc3,0xc3,0x |
+                                       |{0xb6,0xaf,0xad,0xb0,0xb0,0xab,0xab,0x
+{0xc6,0xc8,0xc8,0xc6,0xc4,0xc6,0xc6,0x |
+                                       |{0xb8,0xb2,0xb2,0xb4,0xb0,0xad,0xad,0x
+{0xc3,0xc4,0xc4,0xc4,0xc3,0xc4,0xc4,0x |
+                                       |{0xaf,0xb2,0xb2,0xb0,0xaf,0xaf,0xaf,0x
+{0xc3,0xc3,0xc3,0xc3,0xc4,0xc3,0xc3,0x |
+                                       |{0xa9,0xaf,0xb0,0xaf,0xaf,0xb2,0xb2,0x
+{0xc6,0xc1,0xc1,0xc6,0xc6,0xc3,0xc3,0x |
+                                       |{0xaf,0xaf,0xaf,0xb1,0xb2,0xb2,0xb2,0x
+{0xc6,0xbf,0xbf,0xc6,0xca,0xc4,0xc3,0x |
+                                       |{0xb6,0xaf,0xad,0xb2,0xb2,0xaf,0xad,0x
+{0xc3,0xc8,0xc6,0xbf,0xbd,0xc4,0xc6,0x |
+                                       |{0xaf,0xad,0xaf,0xaf,0xaf,0xaf,0xb1,0x
+{0xbf,0xc3,0xc3,0xbd,0xbf,0xc3,0xc6,0x |
+                                       |{0xb1,0xad,0xad,0xab,0xab,0xa9,0xab,0x
+{0xbb,0xbd,0xbf,0xc1,0xc3,0xc3,0xc3,0x |
+                                       |{0xad,0xab,0xab,0xad,0xaf,0xad,0xaf,0x
+{0xbf,0xbd,0xc1,0xc6,0xc8,0xc3,0xbf,0x |
+                                       |{0xa9,0xab,0xad,0xb2,0xb4,0xb2,0xb1,0x
+{0xc4,0xbf,0xbf,0xc4,0xc4,0xc1,0xbf,0x |
+                                       |{0xaf,0xad,0xad,0xaf,0xb1,0xaf,0xad,0x
+{0xc6,0xc1,0xbb,0xbd,0xbf,0xbf,0xc1,0x |
+                                       |{0xb2,0xad,0xab,0xab,0xad,0xad,0xaf,0x
+{0xc4,0xc0,0xbc,0xbe,0xc0,0xc2,0xc2,0x |
+                                       |{0xb2,0xad,0xab,0xad,0xaf,0xb1,0xb1,0x
+{0xc2,0xc2,0xc2,0xc4,0xc6,0xc6,0xc0,0x |
+                                       |{0xb2,0xb1,0xaf,0xb1,0xb2,0xb1,0xad,0x
+{0xc4,0xc6,0xc6,0xc4,0xc4,0xc6,0xc4,0x |
+                                       |{0xb2,0xb2,0xb1,0xb1,0xb1,0xb1,0xaf,0x
+{0xc2,0xc4,0xc4,0xc2,0xc4,0xc4,0xc4,0x |
+                                       |{0xb1,0xb1,0xb1,0xb2,0xb2,0xb1,0xb1,0x
+{0xc0,0xc2,0xc2,0xc0,0xc2,0xc4,0xc2,0x |
+                                       |{0xaf,0xaf,0xaf,0xb1,0xb1,0xb1,0xb1,0x
+{0xbf,0xc0,0xc0,0xc0,0xc0,0xc2,0xc2,0x |
+                                       |{0xad,0xad,0xad,0xaf,0xb1,0xb1,0xaf,0x
+{0xbf,0xc0,0xc0,0xc0,0xc0,0xc2,0xc2,0x |
+                                       |{0xad,0xad,0xaf,0xaf,0xb1,0xb1,0xaf,0x
+{0xc0,0xc0,0xc0,0xc0,0xc0,0xc2,0xc2,0x |
+                                       |{0xaf,0xaf,0xaf,0xb1,0xb1,0xb1,0xaf,0x
+{0xc0,0xc0,0xc0,0xc0,0xc0,0xc2,0xc0,0x |
+                                       |{0xaf,0xaf,0xaf,0xaf,0xb1,0xb1,0xaf,0x
+{0xc0,0xc0,0xc0,0xbf,0xc0,0xc0,0xbf,0x |
+                                       |{0xab,0xab,0xab,0xad,0xaf,0xaf,0xad,0x
+{0xc1,0xc1,0xc1,0xbf,0xbd,0xbd,0xbd,0x |
+                                       |{0xaf,0xaf,0xad,0xad,0xad,0xaf,0xaf,0x
+{0xc1,0xc1,0xbf,0xbf,0xbf,0xc1,0xbf,0x |
+                                       |{0xaf,0xaf,0xad,0xad,0xad,0xaf,0xaf,0x
+{0xc3,0xbf,0xbd,0xbf,0xc1,0xc3,0xc1,0x |
+                                       |{0xaf,0xaf,0xad,0xad,0xaf,0xaf,0xaf,0x
+{0xc1,0xbf,0xbf,0xbf,0xc1,0xc1,0xc1,0x |
+                                       |{0xb1,0xaf,0xaf,0xaf,0xaf,0xaf,0xaf,0x
+{0xbf,0xc1,0xc1,0xc1,0xbf,0xbf,0xbd,0x |
+                                       |{0xb1,0xb1,0xb1,0xb1,0xb1,0xb1,0xaf,0x
+{0xbf,0xc1,0xc1,0xc1,0xbf,0xbd,0xbd,0x |
+                                       |{0xb1,0xb1,0xb1,0xb1,0xb1,0xb1,0xaf,0x
+{0xbf,0xbf,0xc1,0xc1,0xc1,0xbf,0xbf,0x |
+                                       |{0xb1,0xb1,0xaf,0xb1,0xb1,0xaf,0xad,0x
+{0xc1,0xbf,0xbf,0xbf,0xc3,0xc3,0xc1,0x |
+                                       |{0xaf,0xaf,0xaf,0xaf,0xaf,0xaf,0xad,0x
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\image0_320_240.h: line 241-361|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\image0_320_240.h: line 361-481[38520]
+{0xc1,0xbf,0xbf,0xbf,0xc3,0xc3,0xc1,0x |{0xb7,0xb3,0xb3,0xb5,0xb7,0xb7,0xb3,0x
+                                       |
+{0xc3,0xc3,0xc3,0xc1,0xc1,0xc3,0xc3,0x |{0xb5,0xb3,0xb3,0xb5,0xb5,0xb2,0xb2,0x
+                                       |
+{0xc1,0xc1,0xc1,0xbf,0xbf,0xc1,0xbf,0x |{0xb3,0xb2,0xb3,0xb7,0xb5,0xb2,0xb2,0x
+                                       |
+{0xc0,0xc2,0xc0,0xc0,0xc0,0xc0,0xbe,0x |{0xb6,0xb2,0xb4,0xb8,0xb6,0xb0,0xb0,0x
+                                       |
+{0xc0,0xc2,0xc0,0xc0,0xc0,0xc2,0xc0,0x |{0xb6,0xb2,0xb2,0xb4,0xb4,0xad,0xab,0x
+                                       |
+{0xbe,0xbe,0xbe,0xbe,0xc0,0xc0,0xbe,0x |{0xb2,0xb4,0xb4,0xb2,0xb0,0xb2,0xb4,0x
+                                       |
+{0xbe,0xbe,0xc0,0xbe,0xc0,0xc0,0xbe,0x |{0xaf,0xb2,0xb4,0xb4,0xb4,0xb4,0xb2,0x
+                                       |
+{0xbe,0xc0,0xc0,0xbe,0xbe,0xbe,0xbc,0x |{0xaf,0xb2,0xb4,0xb4,0xb4,0xb4,0xb0,0x
+                                       |
+{0xbc,0xbe,0xbe,0xbc,0xbc,0xba,0xb8,0x |{0xb6,0xb4,0xb2,0xb0,0xb2,0xb4,0xb2,0x
+                                       |
+{0xc4,0xba,0xbe,0xbe,0xbe,0xbc,0xb1,0x |{0xba,0xb8,0xb4,0xb0,0xb2,0xb4,0xb6,0x
+                                       |
+{0xc4,0xbc,0xc2,0xbc,0xbc,0xbe,0xb8,0x |{0xb6,0xb6,0xb6,0xb4,0xb4,0xb6,0xb4,0x
+                                       |
+{0xbe,0xbe,0xc2,0xbc,0xba,0xbe,0xba,0x |{0xb2,0xb4,0xb6,0xb6,0xb4,0xb4,0xb2,0x
+                                       |
+{0xba,0xbe,0xc2,0xbe,0xbc,0xbe,0xba,0x |{0xb0,0xb4,0xb4,0xb4,0xb2,0xb2,0xb2,0x
+                                       |
+{0xba,0xc0,0xbe,0xbe,0xbe,0xc0,0xbc,0x |{0xb3,0xb3,0xb2,0xb2,0xb3,0xb3,0xb2,0x
+                                       |
+{0xbc,0xbc,0xb7,0xb8,0xba,0xbc,0xbe,0x |{0xb3,0xb2,0xb2,0xb3,0xb3,0xb3,0xb3,0x
+                                       |
+{0xbc,0xbc,0xb3,0xb8,0xba,0xb7,0xbc,0x |{0xb3,0xb2,0xb2,0xb3,0xb3,0xb5,0xb3,0x
+                                       |
+{0xbc,0xbe,0xb8,0xc0,0xbe,0xb5,0xba,0x |{0xb3,0xb3,0xb3,0xb3,0xb3,0xb5,0xb3,0x
+                                       |
+{0xbf,0xbf,0xbf,0xbb,0xb9,0xbb,0xbd,0x |{0xb5,0xb5,0xb3,0xb3,0xb3,0xb3,0xb2,0x
+                                       |
+{0xbd,0xbd,0xbb,0xbb,0xb9,0xb9,0xb9,0x |{0xb5,0xb5,0xb3,0xb3,0xb3,0xb3,0xb2,0x
+                                       |
+{0xb9,0xb9,0xb9,0xbb,0xbb,0xbb,0xb9,0x |{0xb6,0xb4,0xb4,0xb4,0xb4,0xb4,0xb2,0x
+                                       |
+{0xb9,0xb7,0xb9,0xbb,0xbd,0xbf,0xbd,0x |{0xb4,0xb4,0xb2,0xb2,0xb4,0xb4,0xb2,0x
+                                       |
+{0xbb,0xb9,0xb9,0xb9,0xbd,0xbd,0xbd,0x |{0xb0,0xb2,0xb2,0xb4,0xb4,0xb6,0xb4,0x
+                                       |
+{0xbd,0xbb,0xb9,0xb7,0xb9,0xb9,0xbb,0x |{0xb0,0xb2,0xb2,0xb4,0xb4,0xb6,0xb4,0x
+                                       |
+{0xb9,0xb9,0xb9,0xb7,0xb7,0xb7,0xb9,0x |{0xb2,0xb4,0xb4,0xb2,0xb0,0xb0,0xad,0x
+                                       |
+{0xb5,0xb7,0xb9,0xb9,0xb9,0xb9,0xbb,0x |{0xb4,0xb4,0xb4,0xb0,0xaf,0xad,0xab,0x
+                                       |
+{0xb6,0xb6,0xb9,0xbf,0xbf,0xb9,0xb7,0x |{0xb2,0xb4,0xb4,0xb2,0xb2,0xb2,0xb0,0x
+                                       |
+{0xbb,0xb7,0xb7,0xb9,0xb9,0xb7,0xb9,0x |{0xb2,0xb4,0xb4,0xb2,0xb2,0xb2,0xb0,0x
+                                       |
+{0xbf,0xb9,0xb6,0xb8,0xb9,0xb8,0xb9,0x |{0xb4,0xb4,0xb4,0xb2,0xb2,0xb2,0xaf,0x
+                                       |
+{0xbf,0xbb,0xb9,0xbb,0xbd,0xbb,0xb8,0x |{0xb0,0xb2,0xb4,0xb4,0xb4,0xb6,0xb4,0x
+                                       |
+{0xbd,0xbb,0xbb,0xbd,0xbf,0xbd,0xb9,0x |{0xb2,0xb2,0xb0,0xaf,0xb0,0xb4,0xb2,0x
+                                       |
+{0xbd,0xbb,0xbb,0xbb,0xbb,0xbd,0xbb,0x |{0xb2,0xaf,0xab,0xad,0xaf,0xad,0xad,0x
+                                       |
+{0xbb,0xbb,0xbb,0xb9,0xb9,0xbb,0xbb,0x |{0xb6,0xaf,0xad,0xb0,0xb0,0xab,0xab,0x
+                                       |
+{0xb6,0xb8,0xbb,0xbb,0xbb,0xbb,0xbb,0x |{0xb8,0xb2,0xb2,0xb4,0xb0,0xad,0xad,0x
+                                       |
+{0xbb,0xb8,0xb6,0xb6,0xb8,0xbb,0xbb,0x |{0xaf,0xb2,0xb2,0xb0,0xaf,0xaf,0xaf,0x
+                                       |
+{0xbb,0xb9,0xb8,0xb9,0xb9,0xb9,0xb9,0x |{0xa9,0xaf,0xb0,0xaf,0xaf,0xb2,0xb2,0x
+                                       |
+{0xb8,0xb9,0xb9,0xbb,0xbb,0xb9,0xb8,0x |{0xaf,0xaf,0xaf,0xb1,0xb2,0xb2,0xb2,0x
+                                       |
+{0xb6,0xb8,0xb9,0xb9,0xb9,0xb9,0xb9,0x |{0xb6,0xaf,0xad,0xb2,0xb2,0xaf,0xad,0x
+                                       |
+{0xb6,0xb8,0xb8,0xb8,0xb8,0xb8,0xb8,0x |{0xaf,0xad,0xaf,0xaf,0xaf,0xaf,0xb1,0x
+                                       |
+{0xb9,0xb8,0xb8,0xb6,0xb6,0xb6,0xb6,0x |{0xb1,0xad,0xad,0xab,0xab,0xa9,0xab,0x
+                                       |
+{0xb9,0xb7,0xb5,0xb5,0xb5,0xb7,0xb5,0x |{0xad,0xab,0xab,0xad,0xaf,0xad,0xaf,0x
+                                       |
+{0xb9,0xb7,0xb5,0xb5,0xb9,0xb9,0xb7,0x |{0xa9,0xab,0xad,0xb2,0xb4,0xb2,0xb1,0x
+                                       |
+{0xbb,0xb9,0xb7,0xb7,0xb7,0xb7,0xb5,0x |{0xaf,0xad,0xad,0xaf,0xb1,0xaf,0xad,0x
+                                       |
+{0xb5,0xb7,0xb7,0xb9,0xb7,0xb7,0xb7,0x |{0xb2,0xad,0xab,0xab,0xad,0xad,0xaf,0x
+                                       |
+{0xb3,0xb7,0xb9,0xbb,0xb9,0xb9,0xb7,0x |{0xb2,0xad,0xab,0xad,0xaf,0xb1,0xb1,0x
+                                       |
+{0xb5,0xb7,0xb9,0xb9,0xb9,0xb7,0xb5,0x |{0xb2,0xb1,0xaf,0xb1,0xb2,0xb1,0xad,0x
+                                       |
+{0xb7,0xb5,0xb5,0xb5,0xb5,0xb7,0xb5,0x |{0xb2,0xb2,0xb1,0xb1,0xb1,0xb1,0xaf,0x
+                                       |
+{0xb7,0xb5,0xb3,0xb3,0xb5,0xb7,0xb7,0x |{0xb1,0xb1,0xb1,0xb2,0xb2,0xb1,0xb1,0x
+                                       |
+{0xb3,0xb5,0xb7,0xb5,0xb3,0xb1,0xb5,0x |{0xaf,0xaf,0xaf,0xb1,0xb1,0xb1,0xb1,0x
+                                       |
+{0xb0,0xb3,0xb5,0xb3,0xac,0xaa,0xae,0x |{0xad,0xad,0xad,0xaf,0xb1,0xb1,0xaf,0x
+                                       |
+{0xb2,0xb5,0xb7,0xb7,0xb7,0xb9,0xb7,0x |{0xad,0xad,0xaf,0xaf,0xb1,0xb1,0xaf,0x
+                                       |
+{0xb2,0xb3,0xb5,0xb3,0xb2,0xb2,0xb2,0x |{0xaf,0xaf,0xaf,0xb1,0xb1,0xb1,0xaf,0x
+                                       |
+{0xb3,0xb3,0xb5,0xb3,0xb0,0xaa,0xae,0x |{0xaf,0xaf,0xaf,0xaf,0xb1,0xb1,0xaf,0x
+                                       |
+{0xb7,0xb5,0xb5,0xb7,0xb3,0xac,0xb0,0x |{0xab,0xab,0xab,0xad,0xaf,0xaf,0xad,0x
+                                       |
+{0xb9,0xb3,0xb5,0xb9,0xb9,0xb3,0xb3,0x |{0xaf,0xaf,0xad,0xad,0xad,0xaf,0xaf,0x
+                                       |
+{0xb7,0xb3,0xb3,0xb7,0xb9,0xb7,0xb5,0x |{0xaf,0xaf,0xad,0xad,0xad,0xaf,0xaf,0x
+                                       |
+{0xb5,0xb3,0xb3,0xb5,0xb5,0xb7,0xb5,0x |{0xaf,0xaf,0xad,0xad,0xaf,0xaf,0xaf,0x
+                                       |
+{0xb5,0xb5,0xb5,0xb3,0xb3,0xb5,0xb3,0x |{0xb1,0xaf,0xaf,0xaf,0xaf,0xaf,0xaf,0x
+                                       |
+{0xb2,0xb7,0xb9,0xb7,0xb3,0xb3,0xb3,0x |{0xb1,0xb1,0xb1,0xb1,0xb1,0xb1,0xaf,0x
+                                       |
+{0xb0,0xb2,0xb3,0xb3,0xb3,0xb5,0xb5,0x |{0xb1,0xb1,0xb1,0xb1,0xb1,0xb1,0xaf,0x
+                                       |
+{0xb3,0xb2,0xb2,0xb3,0xb7,0xb7,0xb5,0x |{0xb1,0xb1,0xaf,0xb1,0xb1,0xaf,0xad,0x
+                                       |
+{0xb7,0xb3,0xb3,0xb5,0xb7,0xb7,0xb3,0x |{0xaf,0xaf,0xaf,0xaf,0xaf,0xaf,0xad,0x
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataRcc_with_partitioning.h: line 3-21|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataRcc_with_partitioning.h: line 21-39[35004]
+9,16,27,32,52,53,62,72,83,91,99,115,12 |7,4,12,20,5,13,11,19,3,8,4,12,2,14,11,
+};                                     |
+static int rectangles_array0[2913] = { |static int rectangles_array6[2913] = {
+6,6,3,8,3,6,5,11,4,6,6,1,0,9,5,5,13,7, |12,4,18,9,2,12,12,4,7,12,4,19,8,6,14,1
+                                       |
+static int rectangles_array1[2913] = { |static int rectangles_array7[2913] = {
+4,4,9,18,5,5,8,14,0,6,4,8,2,9,6,0,11,5 |3,7,3,2,19,8,3,5,3,2,7,4,3,5,5,3,6,10,
+                                       |
+static int rectangles_array2[2913] = { |static int rectangles_array8[2913] = {
+12,12,18,9,4,12,12,4,7,12,12,19,24,6,1 |0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+                                       |
+static int rectangles_array3[2913] = { |static int rectangles_array9[2913] = {
+9,7,9,6,19,16,6,10,6,6,7,12,3,15,10,9, |0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+                                       |
+static int rectangles_array4[2913] = { |static int rectangles_array10[2913] = 
+6,10,3,8,5,6,5,11,4,6,10,1,8,9,5,5,16, |0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+                                       |
+static int rectangles_array5[2913] = { |static int rectangles_array11[2913] = 
+7,4,12,20,5,13,11,19,3,8,4,12,2,14,11, |0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\image0_320_240.h: line 361-421|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\image0_320_240.h: line 421-481[19260]
+{0xb7,0xb3,0xb3,0xb5,0xb7,0xb7,0xb3,0x |{0xb2,0xaf,0xab,0xad,0xaf,0xad,0xad,0x
+                                       |
+{0xb5,0xb3,0xb3,0xb5,0xb5,0xb2,0xb2,0x |{0xb6,0xaf,0xad,0xb0,0xb0,0xab,0xab,0x
+                                       |
+{0xb3,0xb2,0xb3,0xb7,0xb5,0xb2,0xb2,0x |{0xb8,0xb2,0xb2,0xb4,0xb0,0xad,0xad,0x
+                                       |
+{0xb6,0xb2,0xb4,0xb8,0xb6,0xb0,0xb0,0x |{0xaf,0xb2,0xb2,0xb0,0xaf,0xaf,0xaf,0x
+                                       |
+{0xb6,0xb2,0xb2,0xb4,0xb4,0xad,0xab,0x |{0xa9,0xaf,0xb0,0xaf,0xaf,0xb2,0xb2,0x
+                                       |
+{0xb2,0xb4,0xb4,0xb2,0xb0,0xb2,0xb4,0x |{0xaf,0xaf,0xaf,0xb1,0xb2,0xb2,0xb2,0x
+                                       |
+{0xaf,0xb2,0xb4,0xb4,0xb4,0xb4,0xb2,0x |{0xb6,0xaf,0xad,0xb2,0xb2,0xaf,0xad,0x
+                                       |
+{0xaf,0xb2,0xb4,0xb4,0xb4,0xb4,0xb0,0x |{0xaf,0xad,0xaf,0xaf,0xaf,0xaf,0xb1,0x
+                                       |
+{0xb6,0xb4,0xb2,0xb0,0xb2,0xb4,0xb2,0x |{0xb1,0xad,0xad,0xab,0xab,0xa9,0xab,0x
+                                       |
+{0xba,0xb8,0xb4,0xb0,0xb2,0xb4,0xb6,0x |{0xad,0xab,0xab,0xad,0xaf,0xad,0xaf,0x
+                                       |
+{0xb6,0xb6,0xb6,0xb4,0xb4,0xb6,0xb4,0x |{0xa9,0xab,0xad,0xb2,0xb4,0xb2,0xb1,0x
+                                       |
+{0xb2,0xb4,0xb6,0xb6,0xb4,0xb4,0xb2,0x |{0xaf,0xad,0xad,0xaf,0xb1,0xaf,0xad,0x
+                                       |
+{0xb0,0xb4,0xb4,0xb4,0xb2,0xb2,0xb2,0x |{0xb2,0xad,0xab,0xab,0xad,0xad,0xaf,0x
+                                       |
+{0xb3,0xb3,0xb2,0xb2,0xb3,0xb3,0xb2,0x |{0xb2,0xad,0xab,0xad,0xaf,0xb1,0xb1,0x
+                                       |
+{0xb3,0xb2,0xb2,0xb3,0xb3,0xb3,0xb3,0x |{0xb2,0xb1,0xaf,0xb1,0xb2,0xb1,0xad,0x
+                                       |
+{0xb3,0xb2,0xb2,0xb3,0xb3,0xb5,0xb3,0x |{0xb2,0xb2,0xb1,0xb1,0xb1,0xb1,0xaf,0x
+                                       |
+{0xb3,0xb3,0xb3,0xb3,0xb3,0xb5,0xb3,0x |{0xb1,0xb1,0xb1,0xb2,0xb2,0xb1,0xb1,0x
+                                       |
+{0xb5,0xb5,0xb3,0xb3,0xb3,0xb3,0xb2,0x |{0xaf,0xaf,0xaf,0xb1,0xb1,0xb1,0xb1,0x
+                                       |
+{0xb5,0xb5,0xb3,0xb3,0xb3,0xb3,0xb2,0x |{0xad,0xad,0xad,0xaf,0xb1,0xb1,0xaf,0x
+                                       |
+{0xb6,0xb4,0xb4,0xb4,0xb4,0xb4,0xb2,0x |{0xad,0xad,0xaf,0xaf,0xb1,0xb1,0xaf,0x
+                                       |
+{0xb4,0xb4,0xb2,0xb2,0xb4,0xb4,0xb2,0x |{0xaf,0xaf,0xaf,0xb1,0xb1,0xb1,0xaf,0x
+                                       |
+{0xb0,0xb2,0xb2,0xb4,0xb4,0xb6,0xb4,0x |{0xaf,0xaf,0xaf,0xaf,0xb1,0xb1,0xaf,0x
+                                       |
+{0xb0,0xb2,0xb2,0xb4,0xb4,0xb6,0xb4,0x |{0xab,0xab,0xab,0xad,0xaf,0xaf,0xad,0x
+                                       |
+{0xb2,0xb4,0xb4,0xb2,0xb0,0xb0,0xad,0x |{0xaf,0xaf,0xad,0xad,0xad,0xaf,0xaf,0x
+                                       |
+{0xb4,0xb4,0xb4,0xb0,0xaf,0xad,0xab,0x |{0xaf,0xaf,0xad,0xad,0xad,0xaf,0xaf,0x
+                                       |
+{0xb2,0xb4,0xb4,0xb2,0xb2,0xb2,0xb0,0x |{0xaf,0xaf,0xad,0xad,0xaf,0xaf,0xaf,0x
+                                       |
+{0xb2,0xb4,0xb4,0xb2,0xb2,0xb2,0xb0,0x |{0xb1,0xaf,0xaf,0xaf,0xaf,0xaf,0xaf,0x
+                                       |
+{0xb4,0xb4,0xb4,0xb2,0xb2,0xb2,0xaf,0x |{0xb1,0xb1,0xb1,0xb1,0xb1,0xb1,0xaf,0x
+                                       |
+{0xb0,0xb2,0xb4,0xb4,0xb4,0xb6,0xb4,0x |{0xb1,0xb1,0xb1,0xb1,0xb1,0xb1,0xaf,0x
+                                       |
+{0xb2,0xb2,0xb0,0xaf,0xb0,0xb4,0xb2,0x |{0xb1,0xb1,0xaf,0xb1,0xb1,0xaf,0xad,0x
+                                       |
+{0xb2,0xaf,0xab,0xad,0xaf,0xad,0xad,0x |{0xaf,0xaf,0xaf,0xaf,0xaf,0xaf,0xad,0x
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataRcc_with_partitioning.h: line 21-30|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataRcc_with_partitioning.h: line 30-39[17502]
+7,4,12,20,5,13,11,19,3,8,4,12,2,14,11, |0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+                                       |
+static int rectangles_array6[2913] = { |static int rectangles_array9[2913] = {
+12,4,18,9,2,12,12,4,7,12,4,19,8,6,14,1 |0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+                                       |
+static int rectangles_array7[2913] = { |static int rectangles_array10[2913] = 
+3,7,3,2,19,8,3,5,3,2,7,4,3,5,5,3,6,10, |0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+                                       |
+static int rectangles_array8[2913] = { |static int rectangles_array11[2913] = 
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, |0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 3-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataRcc_with_partitioning.h: line 4-12[11678]
+-4096,-4096,-4096,-4096,-4096,-4096,-4 |};
+                                       |static int rectangles_array0[2913] = {
+static int weights_array1[2913] = {    |6,6,3,8,3,6,5,11,4,6,6,1,0,9,5,5,13,7,
+12288,12288,12288,12288,8192,8192,8192 |
+                                       |static int rectangles_array1[2913] = {
+static int weights_array2[2913] = {    |4,4,9,18,5,5,8,14,0,6,4,8,2,9,6,0,11,5
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, |
+                                       |static int rectangles_array2[2913] = {
+static int alpha1_array[2913] = {      |12,12,18,9,4,12,12,4,7,12,12,19,24,6,1
+534,-477,-386,-223,-199,142,-432,-378, |
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\image0_320_240.h: line 421-451|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\image0_320_240.h: line 451-481[9630]
+{0xb2,0xaf,0xab,0xad,0xaf,0xad,0xad,0x |{0xb2,0xb2,0xb1,0xb1,0xb1,0xb1,0xaf,0x
+                                       |
+{0xb6,0xaf,0xad,0xb0,0xb0,0xab,0xab,0x |{0xb1,0xb1,0xb1,0xb2,0xb2,0xb1,0xb1,0x
+                                       |
+{0xb8,0xb2,0xb2,0xb4,0xb0,0xad,0xad,0x |{0xaf,0xaf,0xaf,0xb1,0xb1,0xb1,0xb1,0x
+                                       |
+{0xaf,0xb2,0xb2,0xb0,0xaf,0xaf,0xaf,0x |{0xad,0xad,0xad,0xaf,0xb1,0xb1,0xaf,0x
+                                       |
+{0xa9,0xaf,0xb0,0xaf,0xaf,0xb2,0xb2,0x |{0xad,0xad,0xaf,0xaf,0xb1,0xb1,0xaf,0x
+                                       |
+{0xaf,0xaf,0xaf,0xb1,0xb2,0xb2,0xb2,0x |{0xaf,0xaf,0xaf,0xb1,0xb1,0xb1,0xaf,0x
+                                       |
+{0xb6,0xaf,0xad,0xb2,0xb2,0xaf,0xad,0x |{0xaf,0xaf,0xaf,0xaf,0xb1,0xb1,0xaf,0x
+                                       |
+{0xaf,0xad,0xaf,0xaf,0xaf,0xaf,0xb1,0x |{0xab,0xab,0xab,0xad,0xaf,0xaf,0xad,0x
+                                       |
+{0xb1,0xad,0xad,0xab,0xab,0xa9,0xab,0x |{0xaf,0xaf,0xad,0xad,0xad,0xaf,0xaf,0x
+                                       |
+{0xad,0xab,0xab,0xad,0xaf,0xad,0xaf,0x |{0xaf,0xaf,0xad,0xad,0xad,0xaf,0xaf,0x
+                                       |
+{0xa9,0xab,0xad,0xb2,0xb4,0xb2,0xb1,0x |{0xaf,0xaf,0xad,0xad,0xaf,0xaf,0xaf,0x
+                                       |
+{0xaf,0xad,0xad,0xaf,0xb1,0xaf,0xad,0x |{0xb1,0xaf,0xaf,0xaf,0xaf,0xaf,0xaf,0x
+                                       |
+{0xb2,0xad,0xab,0xab,0xad,0xad,0xaf,0x |{0xb1,0xb1,0xb1,0xb1,0xb1,0xb1,0xaf,0x
+                                       |
+{0xb2,0xad,0xab,0xad,0xaf,0xb1,0xb1,0x |{0xb1,0xb1,0xb1,0xb1,0xb1,0xb1,0xaf,0x
+                                       |
+{0xb2,0xb1,0xaf,0xb1,0xb2,0xb1,0xad,0x |{0xb1,0xb1,0xaf,0xb1,0xb1,0xaf,0xad,0x
+                                       |
+{0xb2,0xb2,0xb1,0xb1,0xb1,0xb1,0xaf,0x |{0xaf,0xaf,0xaf,0xaf,0xaf,0xaf,0xad,0x
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataRcc_with_partitioning.h: line 30-35|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataRcc_with_partitioning.h: line 36-41[5844]
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, |0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+                                       |
+static int rectangles_array9[2913] = { |static int rectangles_array11[2913] = 
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, |0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+                                       |
+static int rectangles_array10[2913] =  |static int stages_thresh_array[25] = {
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataRcc_with_partitioning.h: line 35-38|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataRcc_with_partitioning.h: line 38-41[5834]
+static int rectangles_array10[2913] =  |static int rectangles_array11[2913] = 
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, |0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+                                       |
+static int rectangles_array11[2913] =  |static int stages_thresh_array[25] = {
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\image0_320_240.h: line 451-465|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\image0_320_240.h: line 465-479[4494]
+{0xb2,0xb2,0xb1,0xb1,0xb1,0xb1,0xaf,0x |{0xab,0xab,0xab,0xad,0xaf,0xaf,0xad,0x
+                                       |
+{0xb1,0xb1,0xb1,0xb2,0xb2,0xb1,0xb1,0x |{0xaf,0xaf,0xad,0xad,0xad,0xaf,0xaf,0x
+                                       |
+{0xaf,0xaf,0xaf,0xb1,0xb1,0xb1,0xb1,0x |{0xaf,0xaf,0xad,0xad,0xad,0xaf,0xaf,0x
+                                       |
+{0xad,0xad,0xad,0xaf,0xb1,0xb1,0xaf,0x |{0xaf,0xaf,0xad,0xad,0xaf,0xaf,0xaf,0x
+                                       |
+{0xad,0xad,0xaf,0xaf,0xb1,0xb1,0xaf,0x |{0xb1,0xaf,0xaf,0xaf,0xaf,0xaf,0xaf,0x
+                                       |
+{0xaf,0xaf,0xaf,0xb1,0xb1,0xb1,0xaf,0x |{0xb1,0xb1,0xb1,0xb1,0xb1,0xb1,0xaf,0x
+                                       |
+{0xaf,0xaf,0xaf,0xaf,0xb1,0xb1,0xaf,0x |{0xb1,0xb1,0xb1,0xb1,0xb1,0xb1,0xaf,0x
+                                       |
+{0xab,0xab,0xab,0xad,0xaf,0xaf,0xad,0x |{0xb1,0xb1,0xaf,0xb1,0xb1,0xaf,0xad,0x
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 3-3|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 3-3[4332]
+-4096,-4096,-4096,-4096,-4096,-4096,-4 |-4096,-4096,-4096,-4096,-4096,-4096,-4
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataRcc_with_partitioning.h: line 38-39|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataRcc_with_partitioning.h: line 39-39[2912]
+static int rectangles_array11[2913] =  |0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, |
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\image0_320_240.h: line 465-473|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\image0_320_240.h: line 473-481[2568]
+{0xab,0xab,0xab,0xad,0xaf,0xaf,0xad,0x |{0xb1,0xaf,0xaf,0xaf,0xaf,0xaf,0xaf,0x
+                                       |
+{0xaf,0xaf,0xad,0xad,0xad,0xaf,0xaf,0x |{0xb1,0xb1,0xb1,0xb1,0xb1,0xb1,0xaf,0x
+                                       |
+{0xaf,0xaf,0xad,0xad,0xad,0xaf,0xaf,0x |{0xb1,0xb1,0xb1,0xb1,0xb1,0xb1,0xaf,0x
+                                       |
+{0xaf,0xaf,0xad,0xad,0xaf,0xaf,0xaf,0x |{0xb1,0xb1,0xaf,0xb1,0xb1,0xaf,0xad,0x
+                                       |
+{0xb1,0xaf,0xaf,0xaf,0xaf,0xaf,0xaf,0x |{0xaf,0xaf,0xaf,0xaf,0xaf,0xaf,0xad,0x
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 3-3|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 3-3[2166]
+-4096,-4096,-4096,-4096,-4096,-4096,-4 |-4096,-4096,-4096,-4096,-4096,-4096,-4
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataRcc_with_partitioning.h: line 39-39|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataRcc_with_partitioning.h: line 39-39[1456]
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, |0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+
+3E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\image0_320_240.h: line 473-477|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\image0_320_240.h: line 477-481[1284]
+{0xb1,0xaf,0xaf,0xaf,0xaf,0xaf,0xaf,0x |{0xb1,0xb1,0xb1,0xb1,0xb1,0xb1,0xaf,0x
+                                       |
+{0xb1,0xb1,0xb1,0xb1,0xb1,0xb1,0xaf,0x |{0xb1,0xb1,0xaf,0xb1,0xb1,0xaf,0xad,0x
+                                       |
+{0xb1,0xb1,0xb1,0xb1,0xb1,0xb1,0xaf,0x |{0xaf,0xaf,0xaf,0xaf,0xaf,0xaf,0xad,0x
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 3-3|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 3-3[1083]
+-4096,-4096,-4096,-4096,-4096,-4096,-4 |-4096,-4096,-4096,-4096,-4096,-4096,-4
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataRcc_with_partitioning.h: line 39-39|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataRcc_with_partitioning.h: line 39-39[728]
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, |0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\image0_320_240.h: line 477-479|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\image0_320_240.h: line 479-481[642]
+{0xb1,0xb1,0xb1,0xb1,0xb1,0xb1,0xaf,0x |{0xb1,0xb1,0xaf,0xb1,0xb1,0xaf,0xad,0x
+                                       |
+{0xb1,0xb1,0xaf,0xb1,0xb1,0xaf,0xad,0x |{0xaf,0xaf,0xaf,0xaf,0xaf,0xaf,0xad,0x
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataRcc_with_partitioning.h: line 39-39|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\image0_320_240.h: line 3-3[638]
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, |{0xd4,0xd4,0xd4,0xd2,0xd4,0xd6,0xd4,0x
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 3-3|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 3-3[540]
+-4096,-4096,-4096,-4096,-4096,-4096,-4 |-4096,-4096,-4096,-4096,-4096,-4096,-4
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\image0_320_240.h: line 481-481|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\image0_320_240.h: line 481-481[318]
+{0xaf,0xaf,0xaf,0xaf,0xaf,0xaf,0xad,0x |{0xaf,0xaf,0xaf,0xaf,0xaf,0xaf,0xad,0x
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 3-3|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 3-3[270]
+-4096,-4096,-4096,-4096,-4096,-4096,-4 |-4096,-4096,-4096,-4096,-4096,-4096,-4
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\image0_320_240.h: line 481-481|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\image0_320_240.h: line 481-481[160]
+{0xaf,0xaf,0xaf,0xaf,0xaf,0xaf,0xad,0x |{0xaf,0xaf,0xaf,0xaf,0xaf,0xaf,0xad,0x
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 3-3|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 3-3[135]
+-4096,-4096,-4096,-4096,-4096,-4096,-4 |-4096,-4096,-4096,-4096,-4096,-4096,-4
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataRcc_with_partitioning.h: line 39-39|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\image0_320_240.h: line 3-3[92]
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, |{0xd4,0xd4,0xd4,0xd2,0xd4,0xd6,0xd4,0x
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 1-3|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataRcc_with_partitioning.h: line 39-42[81]
+# 1 "E:\\work\\HLS2018\\RosettaBench\\ |0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+static int weights_array0[2913] = {    |
+-4096,-4096,-4096,-4096,-4096,-4096,-4 |static int stages_thresh_array[25] = {
+                                       |-1290,-1275,-1191,-1140,-1122,-1057,-1
+
+E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\face_detect_sw.cpp: line 248-253|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\face_detect_sw.cpp: line 253-258[80]
+tr2.height = rectangles_array11[haar_c |coord[3] = SUM1_data[tr0.y+tr0.height]
+                                       |
+coord[0] = SUM1_data[tr0.y][tr0.x];    |coord[4] = SUM1_data[tr1.y][tr1.x];
+coord[1] = SUM1_data[tr0.y][tr0.x+tr0. |coord[5] = SUM1_data[tr1.y][tr1.x+tr1.
+coord[2] = SUM1_data[tr0.y+tr0.height] |coord[6] = SUM1_data[tr1.y+tr1.height]
+coord[3] = SUM1_data[tr0.y+tr0.height] |coord[7] = SUM1_data[tr1.y+tr1.height]
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\image0_320_240.h: line 481-481|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\image0_320_240.h: line 481-481[80]
+{0xaf,0xaf,0xaf,0xaf,0xaf,0xaf,0xad,0x |{0xaf,0xaf,0xaf,0xaf,0xaf,0xaf,0xad,0x
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 3-3|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataRcc_with_partitioning.h: line 42-42[72]
+-4096,-4096,-4096,-4096,-4096,-4096,-4 |-1290,-1275,-1191,-1140,-1122,-1057,-1
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 3-3|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataRcc_with_partitioning.h: line 42-42[68]
+-4096,-4096,-4096,-4096,-4096,-4096,-4 |-1290,-1275,-1191,-1140,-1122,-1057,-1
+
+E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\face_detect_sw.cpp: line 196-201|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\face_detect_sw.cpp: line 201-206[65]
+equRect.height = WINDOW_SIZE;          |   + SQSUM1_data[pt.y+WINDOW_SIZE-1][p
+                                       |
+stddev = SQSUM1_data[pt.y][pt.x]       |mean = SUM1_data[pt.y][pt.x]
+   - SQSUM1_data[pt.y][pt.x+WINDOW_SIZ |   - SUM1_data[pt.y][pt.x+WINDOW_SIZE-
+   - SQSUM1_data[pt.y+WINDOW_SIZE-1][p |   - SUM1_data[pt.y+WINDOW_SIZE-1][pt.
+   + SQSUM1_data[pt.y+WINDOW_SIZE-1][p |   + SUM1_data[pt.y+WINDOW_SIZE-1][pt.
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataRcc_with_partitioning.h: line 1-3|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataRcc_with_partitioning.h: line 4-6[56]
+# 1 "E:\\work\\HLS2018\\RosettaBench\\ |};
+static int stages_array[25] = {        |static int rectangles_array0[2913] = {
+9,16,27,32,52,53,62,72,83,91,99,115,12 |6,6,3,8,3,6,5,11,4,6,6,1,0,9,5,5,13,7,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15[51]
+-567,339,272,301,322,-479,112,113,218, |-567,339,272,301,322,-479,112,113,218,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\check_result.cpp: line 1-14|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\check_result.h: line 1-8[49]
+# 9 "E:\\work\\HLS2018\\RosettaBench\\ |# 9 "E:\\work\\HLS2018\\RosettaBench\\
+#include <cstdio>                      |void check_results(int &result_size,
+#include <cstdlib>                     |  int result_x[RESULT_SIZE],
+#include <string>                      |  int result_y[RESULT_SIZE],
+#include "image.h"                     |  int result_w[RESULT_SIZE],
+#include "typedefs.h"                  |  int result_h[RESULT_SIZE],
+                                       |  unsigned char Data[IMAGE_HEIGHT][IMA
+void check_results(int &result_size,   |  std::string outFile);
+  int result_x[RESULT_SIZE],           |
+  int result_y[RESULT_SIZE],           |
+  int result_w[RESULT_SIZE],           |
+  int result_h[RESULT_SIZE],           |
+  unsigned char Data[IMAGE_HEIGHT][IMA |
+  std::string outFile)                 |
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[49]
+534,-477,-386,-223,-199,142,-432,-378, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15[49]
+534,-477,-386,-223,-199,142,-432,-378, |-567,339,272,301,322,-479,112,113,218,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[49]
+-567,339,272,301,322,-479,112,113,218, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[48]
+534,-477,-386,-223,-199,142,-432,-378, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[48]
+534,-477,-386,-223,-199,142,-432,-378, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15[48]
+534,-477,-386,-223,-199,142,-432,-378, |-567,339,272,301,322,-479,112,113,218,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[47]
+-129,50,89,23,61,407,11,-77,24,-86,83, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[46]
+534,-477,-386,-223,-199,142,-432,-378, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15[46]
+534,-477,-386,-223,-199,142,-432,-378, |-567,339,272,301,322,-479,112,113,218,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[46]
+534,-477,-386,-223,-199,142,-432,-378, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15[46]
+-567,339,272,301,322,-479,112,113,218, |-567,339,272,301,322,-479,112,113,218,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[46]
+-129,50,89,23,61,407,11,-77,24,-86,83, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[45]
+-129,50,89,23,61,407,11,-77,24,-86,83, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\face_detect_sw.cpp: line 13-24|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\face_detect_sw.cpp: line 120-133[44]
+   );                                  |}
+                                       |
+void processImage ( float factor,      |void processImage
+   int sum_row,                        |
+   int sum_col,                        |( float factor,
+   int *AllCandidates_x,               |int sum_row,
+   int *AllCandidates_y,               |int sum_col,
+   int *AllCandidates_w,               |int *AllCandidates_x,
+   int *AllCandidates_h,               |int *AllCandidates_y,
+   int *AllCandidates_size,            |int *AllCandidates_w,
+   unsigned char IMG1_data[IMAGE_HEIGH |int *AllCandidates_h,
+   MySize winSize                      |int *AllCandidates_size,
+                                       |unsigned char IMG1_data[IMAGE_HEIGHT][
+                                       |MySize winSize
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[44]
+534,-477,-386,-223,-199,142,-432,-378, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[44]
+534,-477,-386,-223,-199,142,-432,-378, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[43]
+534,-477,-386,-223,-199,142,-432,-378, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12[43]
+534,-477,-386,-223,-199,142,-432,-378, |534,-477,-386,-223,-199,142,-432,-378,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[43]
+534,-477,-386,-223,-199,142,-432,-378, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[43]
+534,-477,-386,-223,-199,142,-432,-378, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15[43]
+534,-477,-386,-223,-199,142,-432,-378, |-567,339,272,301,322,-479,112,113,218,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[43]
+-567,339,272,301,322,-479,112,113,218, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15[42]
+534,-477,-386,-223,-199,142,-432,-378, |-567,339,272,301,322,-479,112,113,218,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15[42]
+534,-477,-386,-223,-199,142,-432,-378, |-567,339,272,301,322,-479,112,113,218,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[42]
+534,-477,-386,-223,-199,142,-432,-378, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15[42]
+-567,339,272,301,322,-479,112,113,218, |-567,339,272,301,322,-479,112,113,218,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15[42]
+-567,339,272,301,322,-479,112,113,218, |-567,339,272,301,322,-479,112,113,218,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[42]
+-567,339,272,301,322,-479,112,113,218, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[42]
+-129,50,89,23,61,407,11,-77,24,-86,83, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12[41]
+534,-477,-386,-223,-199,142,-432,-378, |534,-477,-386,-223,-199,142,-432,-378,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12[41]
+534,-477,-386,-223,-199,142,-432,-378, |534,-477,-386,-223,-199,142,-432,-378,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12[41]
+534,-477,-386,-223,-199,142,-432,-378, |534,-477,-386,-223,-199,142,-432,-378,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12[41]
+534,-477,-386,-223,-199,142,-432,-378, |534,-477,-386,-223,-199,142,-432,-378,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[41]
+534,-477,-386,-223,-199,142,-432,-378, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12[41]
+534,-477,-386,-223,-199,142,-432,-378, |534,-477,-386,-223,-199,142,-432,-378,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15[41]
+534,-477,-386,-223,-199,142,-432,-378, |-567,339,272,301,322,-479,112,113,218,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[41]
+-567,339,272,301,322,-479,112,113,218, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[41]
+-567,339,272,301,322,-479,112,113,218, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[41]
+-567,339,272,301,322,-479,112,113,218, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[41]
+-567,339,272,301,322,-479,112,113,218, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[41]
+-567,339,272,301,322,-479,112,113,218, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[41]
+-567,339,272,301,322,-479,112,113,218, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[41]
+-129,50,89,23,61,407,11,-77,24,-86,83, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[41]
+-129,50,89,23,61,407,11,-77,24,-86,83, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[41]
+-129,50,89,23,61,407,11,-77,24,-86,83, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\face_detect_sw.cpp: line 233-238|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\face_detect_sw.cpp: line 238-243[40]
+w_id = w_index;                        |tr0.height = rectangles_array3[haar_co
+                                       |
+tr0.x = pt.x + rectangles_array0[haar_ |tr1.x = pt.x + rectangles_array4[haar_
+tr0.width = rectangles_array2[haar_cou |tr1.width = rectangles_array6[haar_cou
+tr0.y = pt.y + rectangles_array1[haar_ |tr1.y = pt.y + rectangles_array5[haar_
+tr0.height = rectangles_array3[haar_co |tr1.height = rectangles_array7[haar_co
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12[40]
+534,-477,-386,-223,-199,142,-432,-378, |534,-477,-386,-223,-199,142,-432,-378,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15[40]
+534,-477,-386,-223,-199,142,-432,-378, |-567,339,272,301,322,-479,112,113,218,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[40]
+534,-477,-386,-223,-199,142,-432,-378, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12[40]
+534,-477,-386,-223,-199,142,-432,-378, |534,-477,-386,-223,-199,142,-432,-378,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[40]
+534,-477,-386,-223,-199,142,-432,-378, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12[40]
+534,-477,-386,-223,-199,142,-432,-378, |534,-477,-386,-223,-199,142,-432,-378,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[40]
+534,-477,-386,-223,-199,142,-432,-378, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15[40]
+534,-477,-386,-223,-199,142,-432,-378, |-567,339,272,301,322,-479,112,113,218,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12[40]
+534,-477,-386,-223,-199,142,-432,-378, |534,-477,-386,-223,-199,142,-432,-378,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15[40]
+534,-477,-386,-223,-199,142,-432,-378, |-567,339,272,301,322,-479,112,113,218,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15[40]
+534,-477,-386,-223,-199,142,-432,-378, |-567,339,272,301,322,-479,112,113,218,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[40]
+-567,339,272,301,322,-479,112,113,218, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15[40]
+-567,339,272,301,322,-479,112,113,218, |-567,339,272,301,322,-479,112,113,218,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15[40]
+-567,339,272,301,322,-479,112,113,218, |-567,339,272,301,322,-479,112,113,218,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[40]
+-129,50,89,23,61,407,11,-77,24,-86,83, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[40]
+-129,50,89,23,61,407,11,-77,24,-86,83, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[40]
+-129,50,89,23,61,407,11,-77,24,-86,83, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[40]
+-129,50,89,23,61,407,11,-77,24,-86,83, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\image0_320_240.h: line 481-481|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\image0_320_240.h: line 481-481[40]
+{0xaf,0xaf,0xaf,0xaf,0xaf,0xaf,0xad,0x |{0xaf,0xaf,0xaf,0xaf,0xaf,0xaf,0xad,0x
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[39]
+534,-477,-386,-223,-199,142,-432,-378, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12[39]
+534,-477,-386,-223,-199,142,-432,-378, |534,-477,-386,-223,-199,142,-432,-378,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[39]
+534,-477,-386,-223,-199,142,-432,-378, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[39]
+534,-477,-386,-223,-199,142,-432,-378, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12[39]
+534,-477,-386,-223,-199,142,-432,-378, |534,-477,-386,-223,-199,142,-432,-378,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12[39]
+534,-477,-386,-223,-199,142,-432,-378, |534,-477,-386,-223,-199,142,-432,-378,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[39]
+534,-477,-386,-223,-199,142,-432,-378, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[39]
+534,-477,-386,-223,-199,142,-432,-378, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15[39]
+534,-477,-386,-223,-199,142,-432,-378, |-567,339,272,301,322,-479,112,113,218,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15[39]
+534,-477,-386,-223,-199,142,-432,-378, |-567,339,272,301,322,-479,112,113,218,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[39]
+534,-477,-386,-223,-199,142,-432,-378, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[39]
+-567,339,272,301,322,-479,112,113,218, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[39]
+-567,339,272,301,322,-479,112,113,218, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15[39]
+-567,339,272,301,322,-479,112,113,218, |-567,339,272,301,322,-479,112,113,218,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[39]
+-567,339,272,301,322,-479,112,113,218, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[39]
+-567,339,272,301,322,-479,112,113,218, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[39]
+-567,339,272,301,322,-479,112,113,218, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[39]
+-129,50,89,23,61,407,11,-77,24,-86,83, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[39]
+-129,50,89,23,61,407,11,-77,24,-86,83, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[39]
+-129,50,89,23,61,407,11,-77,24,-86,83, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[39]
+-129,50,89,23,61,407,11,-77,24,-86,83, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12[38]
+534,-477,-386,-223,-199,142,-432,-378, |534,-477,-386,-223,-199,142,-432,-378,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12[38]
+534,-477,-386,-223,-199,142,-432,-378, |534,-477,-386,-223,-199,142,-432,-378,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15[38]
+534,-477,-386,-223,-199,142,-432,-378, |-567,339,272,301,322,-479,112,113,218,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12[38]
+534,-477,-386,-223,-199,142,-432,-378, |534,-477,-386,-223,-199,142,-432,-378,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[38]
+534,-477,-386,-223,-199,142,-432,-378, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12[38]
+534,-477,-386,-223,-199,142,-432,-378, |534,-477,-386,-223,-199,142,-432,-378,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15[38]
+534,-477,-386,-223,-199,142,-432,-378, |-567,339,272,301,322,-479,112,113,218,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12[38]
+534,-477,-386,-223,-199,142,-432,-378, |534,-477,-386,-223,-199,142,-432,-378,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[38]
+534,-477,-386,-223,-199,142,-432,-378, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12[38]
+534,-477,-386,-223,-199,142,-432,-378, |534,-477,-386,-223,-199,142,-432,-378,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12[38]
+534,-477,-386,-223,-199,142,-432,-378, |534,-477,-386,-223,-199,142,-432,-378,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15[38]
+534,-477,-386,-223,-199,142,-432,-378, |-567,339,272,301,322,-479,112,113,218,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15[38]
+534,-477,-386,-223,-199,142,-432,-378, |-567,339,272,301,322,-479,112,113,218,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15[38]
+-567,339,272,301,322,-479,112,113,218, |-567,339,272,301,322,-479,112,113,218,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15[38]
+-567,339,272,301,322,-479,112,113,218, |-567,339,272,301,322,-479,112,113,218,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15[38]
+-567,339,272,301,322,-479,112,113,218, |-567,339,272,301,322,-479,112,113,218,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[38]
+-567,339,272,301,322,-479,112,113,218, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[38]
+-567,339,272,301,322,-479,112,113,218, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[38]
+-567,339,272,301,322,-479,112,113,218, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[38]
+-567,339,272,301,322,-479,112,113,218, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[38]
+-567,339,272,301,322,-479,112,113,218, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[38]
+-129,50,89,23,61,407,11,-77,24,-86,83, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[38]
+-129,50,89,23,61,407,11,-77,24,-86,83, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12[37]
+534,-477,-386,-223,-199,142,-432,-378, |534,-477,-386,-223,-199,142,-432,-378,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12[37]
+534,-477,-386,-223,-199,142,-432,-378, |534,-477,-386,-223,-199,142,-432,-378,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15[37]
+534,-477,-386,-223,-199,142,-432,-378, |-567,339,272,301,322,-479,112,113,218,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15[37]
+534,-477,-386,-223,-199,142,-432,-378, |-567,339,272,301,322,-479,112,113,218,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[37]
+534,-477,-386,-223,-199,142,-432,-378, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12[37]
+534,-477,-386,-223,-199,142,-432,-378, |534,-477,-386,-223,-199,142,-432,-378,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15[37]
+534,-477,-386,-223,-199,142,-432,-378, |-567,339,272,301,322,-479,112,113,218,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15[37]
+534,-477,-386,-223,-199,142,-432,-378, |-567,339,272,301,322,-479,112,113,218,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[37]
+-567,339,272,301,322,-479,112,113,218, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15[37]
+-567,339,272,301,322,-479,112,113,218, |-567,339,272,301,322,-479,112,113,218,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[37]
+-567,339,272,301,322,-479,112,113,218, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[37]
+-567,339,272,301,322,-479,112,113,218, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15[37]
+-567,339,272,301,322,-479,112,113,218, |-567,339,272,301,322,-479,112,113,218,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[37]
+-567,339,272,301,322,-479,112,113,218, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15[37]
+-567,339,272,301,322,-479,112,113,218, |-567,339,272,301,322,-479,112,113,218,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[37]
+-129,50,89,23,61,407,11,-77,24,-86,83, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[37]
+-129,50,89,23,61,407,11,-77,24,-86,83, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[37]
+-129,50,89,23,61,407,11,-77,24,-86,83, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[37]
+-129,50,89,23,61,407,11,-77,24,-86,83, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[37]
+-129,50,89,23,61,407,11,-77,24,-86,83, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[37]
+-129,50,89,23,61,407,11,-77,24,-86,83, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[37]
+-129,50,89,23,61,407,11,-77,24,-86,83, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[37]
+-129,50,89,23,61,407,11,-77,24,-86,83, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\face_detect_sw.cpp: line 1-5|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\face_detect_sw.cpp: line 328-330[36]
+# 9 "E:\\work\\HLS2018\\RosettaBench\\ |}
+#include "face_detect_sw.h"            |
+                                       |void integralImages( int height, int w
+                                       |
+void integralImages( int height, int w |
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[36]
+534,-477,-386,-223,-199,142,-432,-378, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12[36]
+534,-477,-386,-223,-199,142,-432,-378, |534,-477,-386,-223,-199,142,-432,-378,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[36]
+534,-477,-386,-223,-199,142,-432,-378, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12[36]
+534,-477,-386,-223,-199,142,-432,-378, |534,-477,-386,-223,-199,142,-432,-378,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15[36]
+534,-477,-386,-223,-199,142,-432,-378, |-567,339,272,301,322,-479,112,113,218,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15[36]
+534,-477,-386,-223,-199,142,-432,-378, |-567,339,272,301,322,-479,112,113,218,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15[36]
+534,-477,-386,-223,-199,142,-432,-378, |-567,339,272,301,322,-479,112,113,218,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15[36]
+534,-477,-386,-223,-199,142,-432,-378, |-567,339,272,301,322,-479,112,113,218,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[36]
+534,-477,-386,-223,-199,142,-432,-378, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12[36]
+534,-477,-386,-223,-199,142,-432,-378, |534,-477,-386,-223,-199,142,-432,-378,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12[36]
+534,-477,-386,-223,-199,142,-432,-378, |534,-477,-386,-223,-199,142,-432,-378,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[36]
+534,-477,-386,-223,-199,142,-432,-378, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15[36]
+534,-477,-386,-223,-199,142,-432,-378, |-567,339,272,301,322,-479,112,113,218,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15[36]
+534,-477,-386,-223,-199,142,-432,-378, |-567,339,272,301,322,-479,112,113,218,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15[36]
+534,-477,-386,-223,-199,142,-432,-378, |-567,339,272,301,322,-479,112,113,218,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15[36]
+534,-477,-386,-223,-199,142,-432,-378, |-567,339,272,301,322,-479,112,113,218,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 12-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15[36]
+534,-477,-386,-223,-199,142,-432,-378, |-567,339,272,301,322,-479,112,113,218,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15[36]
+-567,339,272,301,322,-479,112,113,218, |-567,339,272,301,322,-479,112,113,218,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[36]
+-567,339,272,301,322,-479,112,113,218, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[36]
+-567,339,272,301,322,-479,112,113,218, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[36]
+-567,339,272,301,322,-479,112,113,218, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15[36]
+-567,339,272,301,322,-479,112,113,218, |-567,339,272,301,322,-479,112,113,218,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[36]
+-567,339,272,301,322,-479,112,113,218, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15[36]
+-567,339,272,301,322,-479,112,113,218, |-567,339,272,301,322,-479,112,113,218,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15[36]
+-567,339,272,301,322,-479,112,113,218, |-567,339,272,301,322,-479,112,113,218,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[36]
+-567,339,272,301,322,-479,112,113,218, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[36]
+-567,339,272,301,322,-479,112,113,218, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[36]
+-567,339,272,301,322,-479,112,113,218, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 15-15[36]
+-567,339,272,301,322,-479,112,113,218, |-567,339,272,301,322,-479,112,113,218,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataEWC_with_partitioning.h: line 18-18[36]
+-129,50,89,23,61,407,11,-77,24,-86,83, |-129,50,89,23,61,407,11,-77,24,-86,83,
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataRcc_with_partitioning.h: line 41-42|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\haar_dataRcc_with_partitioning.h: line 42-42[36]
+static int stages_thresh_array[25] = { |-1290,-1275,-1191,-1140,-1122,-1057,-1
+-1290,-1275,-1191,-1140,-1122,-1057,-1 |
+
+E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\utils.cpp: line 20-30|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\utils.cpp: line 47-57[35]
+std::string& outFile)                  |std::string& outFile)
+{                                      |{
+                                       |
+int c = 0;                             |int c = 0;
+                                       |
+while ((c = getopt(argc, argv, "f:o:") |while ((c = getopt(argc, argv, "o:")) 
+{                                      |{
+switch (c)                             |switch (c)
+{                                      |{
+case 'f':                              |case 'o':
+ kernelFile = optarg;                  | outFile = optarg;
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\face_detect_host.cpp: line 74-76|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\face_detect_host.cpp: line 76-78[34]
+CLMemObj input_mem ( (void*)Data, size |CLMemObj res_y_mem ( (void*)result_y, 
+CLMemObj res_x_mem ( (void*)result_x,  |CLMemObj res_w_mem ( (void*)result_w, 
+CLMemObj res_y_mem ( (void*)result_y,  |CLMemObj res_h_mem ( (void*)result_h, 
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\face_detect_sw.cpp: line 5-12|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\face_detect_sw.cpp: line 358-372[34]
+void integralImages( int height, int w |}
+                                       |
+void imageScaler ( int src_height,     |
+int src_width,                         |
+   unsigned char Data[IMAGE_HEIGHT][IM |
+   int dest_height,                    |
+int dest_width,                        |
+   unsigned char IMG1_data[IMAGE_HEIGH |void imageScaler
+                                       |(
+                                       |int src_height,
+                                       |int src_width,
+                                       |unsigned char Data[IMAGE_HEIGHT][IMAGE
+                                       |int dest_height,
+                                       |int dest_width,
+                                       |unsigned char IMG1_data[IMAGE_HEIGHT][
+
+E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\face_detect_sw.cpp: line 256-257|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\face_detect_sw.cpp: line 262-263[31]
+coord[5] = SUM1_data[tr1.y][tr1.x+tr1. | coord[8] = SUM1_data[pt.y + tr2.y][pt
+coord[6] = SUM1_data[tr1.y+tr1.height] | coord[9] = SUM1_data[pt.y + tr2.y][pt
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\face_detect_host.cpp: line 100-105|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\face_detect_host.cpp: line 105-108[30]
+facedetect_world.addKernel(FaceDetect) |facedetect_world.setMemKernelArg(0, 2,
+                                       |facedetect_world.setMemKernelArg(0, 3,
+                                       |facedetect_world.setMemKernelArg(0, 4,
+facedetect_world.setMemKernelArg(0, 0, |facedetect_world.setMemKernelArg(0, 5,
+facedetect_world.setMemKernelArg(0, 1, |
+facedetect_world.setMemKernelArg(0, 2, |
+
+E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\face_detect_sw.cpp: line 262-263|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\face_detect_sw.cpp: line 264-265[30]
+ coord[8] = SUM1_data[pt.y + tr2.y][pt | coord[10] = SUM1_data[pt.y + tr2.y+tr
+ coord[9] = SUM1_data[pt.y + tr2.y][pt | coord[11] = SUM1_data[pt.y + tr2.y+tr
+
+E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\face_detect_sw.cpp: line 310-313|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\face_detect_sw.cpp: line 313-315[30]
+int return_value;                      |sum1 = (coord[4] - coord[5] - coord[6]
+                                       |sum2 = (coord[8] - coord[9] - coord[10
+sum0 = (coord[0] - coord[1] - coord[2] |final_sum = sum0+sum1+sum2;
+sum1 = (coord[4] - coord[5] - coord[6] |
+
+E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\face_detect_sw.cpp: line 263-264|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\face_detect_sw.cpp: line 264-265[28]
+ coord[9] = SUM1_data[pt.y + tr2.y][pt | coord[10] = SUM1_data[pt.y + tr2.y+tr
+ coord[10] = SUM1_data[pt.y + tr2.y+tr | coord[11] = SUM1_data[pt.y + tr2.y+tr
+
+E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\face_detect_sw.cpp: line 313-314|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\face_detect_sw.cpp: line 314-315[28]
+sum1 = (coord[4] - coord[5] - coord[6] |sum2 = (coord[8] - coord[9] - coord[10
+sum2 = (coord[8] - coord[9] - coord[10 |final_sum = sum0+sum1+sum2;
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\face_detect_host.cpp: line 82-89|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\face_detect_host.cpp: line 114-118[26]
+gettimeofday(&start, 0);               |facedetect_world.readMemObj(1);
+                                       |facedetect_world.readMemObj(2);
+                                       |facedetect_world.readMemObj(3);
+                                       |facedetect_world.readMemObj(4);
+facedetect_world.addMemObj(input_mem); |facedetect_world.readMemObj(5);
+facedetect_world.addMemObj(res_x_mem); |
+facedetect_world.addMemObj(res_y_mem); |
+facedetect_world.addMemObj(res_w_mem); |
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\face_detect_sw.cpp: line 85-89|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\face_detect_sw.cpp: line 158-159[26]
+while ( IMAGE_WIDTH/factor > WINDOW_SI |if ( result > 0 ) {
+{                                      |MyRect r = {myRound(p.x*factor), myRou
+                                       |
+                                       |
+MySize winSize = { myRound(winSize0.wi |
+
+E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\image.cpp: line 84-86|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\image.cpp: line 86-88[26]
+Data[r.y+i][r.x + r.width] = 255;      |Data[r.y + r.height][r.x + r.width - i
+for (i = 0; i < r.width; i++)          |for (i = 0; i < r.height; i++)
+Data[r.y + r.height][r.x + r.width - i |Data[r.y + r.height - i][r.x] = 255;
+
+E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\utils.cpp: line 31-41|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\utils.cpp: line 55-65[26]
+ break;                                |{
+case 'o':                              |case 'o':
+ outFile = optarg;                     | outFile = optarg;
+ break;                                | break;
+default:                               |default:
+{                                      |{
+ print_usage(argv[0]);                 | print_usage(argv[0]);
+ exit(-1);                             | exit(-1);
+}                                      |}
+}                                      |}
+}                                      |}
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\check_result.h: line 2-6|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\face_detect_sw.cpp: line 57-61[25]
+void check_results(int &result_size,   |unsigned char Data[IMAGE_HEIGHT][IMAGE
+  int result_x[RESULT_SIZE],           |int result_x[RESULT_SIZE],
+  int result_y[RESULT_SIZE],           |int result_y[RESULT_SIZE],
+  int result_w[RESULT_SIZE],           |int result_w[RESULT_SIZE],
+  int result_h[RESULT_SIZE],           |int result_h[RESULT_SIZE],
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\face_detect_sw.cpp: line 223-226|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\face_detect_sw.cpp: line 389-396[25]
+int s;                                 |int y_ratio = (int)((h1<<16)/h2) +1;
+                                       |
+Stages: for ( i = 0; i < 25; i++ ) {   |
+Filters: for ( j = 0; j < stages_array |nearestNeighborL1:
+                                       |for ( i = 0 ; i < IMAGE_HEIGHT ; i++ )
+                                       |{
+                                       |nearestNeighborL1_1:
+                                       |for (j=0;j < IMAGE_WIDTH ;j++)
+
+E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\image.cpp: line 50-55|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\image.cpp: line 55-60[25]
+fputs(format, fp);                     |parameters_str[0] = 0;
+fputc('\n', fp);                       |fputc(' ', fp);
+                                       |
+itochar(IMAGE_WIDTH, parameters_str, 1 |itochar(IMAGE_HEIGHT, parameters_str, 
+fputs(parameters_str, fp);             |fputs(parameters_str, fp);
+parameters_str[0] = 0;                 |parameters_str[0] = 0;
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\typedefs.h: line 3-10|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\typedefs.h: line 14-19[25]
+#define __HAAR_H__                     |const int TOTAL_WEIGHTS = TOTAL_NODES 
+                                       |const int WINDOW_SIZE = 25;
+                                       |const int SQ_SIZE = 2;
+const int IMAGE_HEIGHT = 240;          |const int PYRAMID_HEIGHT = 12;
+const int IMAGE_WIDTH = 320;           |const int ROWS = 25;
+const int RESULT_SIZE = 100;           |const int COLS = 25;
+const int IMAGE_MAXGREY = 255;         |
+const int IMAGE_SIZE = ( IMAGE_HEIGHT  |
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\face_detect_sw.cpp: line 25-30|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\face_detect_sw.cpp: line 168-174[24]
+   );                                  |}
+                                       |
+                                       |int cascadeClassifier
+int cascadeClassifier ( int SUM1_data[ |
+   int SQSUM1_data[IMAGE_HEIGHT][IMAGE |( int SUM1_data[IMAGE_HEIGHT][IMAGE_WI
+   MyPoint pt                          |int SQSUM1_data[IMAGE_HEIGHT][IMAGE_WI
+                                       |MyPoint pt
+
+E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\face_detect_sw.cpp: line 257-258|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\face_detect_sw.cpp: line 262-263[24]
+coord[6] = SUM1_data[tr1.y+tr1.height] | coord[8] = SUM1_data[pt.y + tr2.y][pt
+coord[7] = SUM1_data[tr1.y+tr1.height] | coord[9] = SUM1_data[pt.y + tr2.y][pt
+
+E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\image.cpp: line 82-84|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\image.cpp: line 84-86[24]
+Data[r.y][r.x + i] = 255;              |Data[r.y+i][r.x + r.width] = 255;
+for (i = 0; i < r.height; i++)         |for (i = 0; i < r.width; i++)
+Data[r.y+i][r.x + r.width] = 255;      |Data[r.y + r.height][r.x + r.width - i
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\utils.cpp: line 14-20|E:\work\HLS2018\RosettaBench\rosetta_source\face-detection\utils.h: line 2-8[24]
+}                                      |void print_usage(char* filename);
+                                       |
+void parse_sdaccel_command_line_args(  |void parse_sdaccel_command_line_args(
+int argc,                              |int argc,
+char** argv,                           |char** argv,
+std::string& kernelFile,               |std::string& kernelFile,
+std::string& outFile)                  |std::string& outFile);
+

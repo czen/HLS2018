@@ -1,0 +1,175 @@
+File E:\work\HLS2018\RosettaBench\rosetta_source\harness\CLKernel.cpp: 268 tokens, 60 lines
+File E:\work\HLS2018\RosettaBench\rosetta_source\harness\CLKernel.h: 233 tokens, 85 lines
+File E:\work\HLS2018\RosettaBench\rosetta_source\harness\CLMemObj.cpp: 204 tokens, 49 lines
+File E:\work\HLS2018\RosettaBench\rosetta_source\harness\CLMemObj.h: 82 tokens, 49 lines
+File E:\work\HLS2018\RosettaBench\rosetta_source\harness\CLWorld.cpp: 1554 tokens, 390 lines
+File E:\work\HLS2018\RosettaBench\rosetta_source\harness\CLWorld.h: 235 tokens, 120 lines
+Total: 2576 tokens
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\harness\CLWorld.cpp: line 92-100|E:\work\HLS2018\RosettaBench\rosetta_source\harness\CLWorld.cpp: line 111-120[68]
+{                                      |printf("Reading mem object %d into hos
+int err = clEnqueueWriteBuffer(cmd_que |
+    mem_objs[mem_idx].elt_size * mem_o |int err = clEnqueueReadBuffer(cmd_queu
+    mem_objs[mem_idx].mem_data, 0, NUL |    mem_objs[mem_idx].elt_size * mem_o
+if (err != CL_SUCCESS)                 |mem_objs[mem_idx].mem_data, 0, NULL, N
+{                                      |if (err != CL_SUCCESS)
+ printf("Error writing buffer %d onto  |{
+ printf("Error Code %d\n", err);       |printf("Error reading kernel buffer %d
+ exit(EXIT_FAILURE);                   |printf("Error code %d\n", err);
+                                       |exit(EXIT_FAILURE);
+
+E:\work\HLS2018\RosettaBench\rosetta_source\harness\CLKernel.cpp: line 27-36|E:\work\HLS2018\RosettaBench\rosetta_source\harness\CLKernel.cpp: line 36-45[63]
+printf("Done!\n");                     |this->global_size[i] = global_work_siz
+}                                      |}
+                                       |
+void CLKernel::set_global(int global_w |void CLKernel::set_local(int local_wor
+{                                      |{
+printf("Set global work size of kernel |printf("Set local work size of kernel 
+ global_work_size[0], global_work_size | local_work_size[0], local_work_size[1
+                                       |
+for (int i = 0; i < 3; i ++ )          |for (int i = 0; i < 3; i ++ )
+this->global_size[i] = global_work_siz |this->local_size[i] = local_work_size[
+
+E:\work\HLS2018\RosettaBench\rosetta_source\harness\CLKernel.h: line 39-50|E:\work\HLS2018\RosettaBench\rosetta_source\harness\CLKernel.h: line 55-66[61]
+int set_mem_arg(int id, cl_mem mem_obj |int set_const_arg(int id, T& mem_obj)
+{                                      |{
+ int err;                              | int err;
+ err = clSetKernelArg(this->kernel, id | err = clSetKernelArg(this->kernel, id
+ if (err != CL_SUCCESS)                | if (err != CL_SUCCESS)
+ {                                     | {
+ printf("Error: Failed to set kernel a | printf("Error: Failed to set kernel a
+ printf("Error Code %d\n", err);       | printf("Error Code %d\n", err);
+ return EXIT_FAILURE;                  | return EXIT_FAILURE;
+ }                                     | }
+                                       |
+ return err;                           | return err;
+
+E:\work\HLS2018\RosettaBench\rosetta_source\harness\CLWorld.cpp: line 114-120|E:\work\HLS2018\RosettaBench\rosetta_source\harness\CLWorld.cpp: line 221-227[45]
+    mem_objs[mem_idx].elt_size * mem_o |err = clEnqueueNDRangeKernel(cmd_queue
+mem_objs[mem_idx].mem_data, 0, NULL, N |    0, NULL, NULL);
+if (err != CL_SUCCESS)                 |if (err != CL_SUCCESS)
+{                                      |{
+printf("Error reading kernel buffer %d | printf("Error enqueuing kernel %d!\n"
+printf("Error code %d\n", err);        |printf("Error Code %d\n", err);
+exit(EXIT_FAILURE);                    |exit(EXIT_FAILURE);
+
+E:\work\HLS2018\RosettaBench\rosetta_source\harness\CLWorld.cpp: line 58-63|E:\work\HLS2018\RosettaBench\rosetta_source\harness\CLWorld.cpp: line 72-77[33]
+buf = clCreateBuffer(context, new_mem_ |    new_mem_obj.mem_data, 0, NULL, NUL
+if (err != CL_SUCCESS)                 |if (err != CL_SUCCESS)
+{                                      |{
+printf("Error creating buffer for memo | printf("Error writing buffer %d onto 
+printf("Error Code %d\n", err);        | printf("Error Code %d\n", err);
+exit(EXIT_FAILURE);                    | exit(EXIT_FAILURE);
+
+E:\work\HLS2018\RosettaBench\rosetta_source\harness\CLWorld.cpp: line 316-321|E:\work\HLS2018\RosettaBench\rosetta_source\harness\CLWorld.cpp: line 323-330[33]
+this->context = clCreateContext(0, 1,  |this->cmd_queue = clCreateCommandQueue
+if (!(this->context))                  |     CL_QUEUE_OUT_OF_ORDER_EXEC_MODE_E
+{                                      | &err);
+printf("Error: Failed to create a comp |if (!(this->cmd_queue))
+printf("Error Code %d\n", err);        |{
+exit(EXIT_FAILURE);                    |printf("Error: Failed to create a comm
+                                       |printf("Error Code %d\n", err);
+                                       |exit(EXIT_FAILURE);
+
+E:\work\HLS2018\RosettaBench\rosetta_source\harness\CLWorld.cpp: line 190-200|E:\work\HLS2018\RosettaBench\rosetta_source\harness\CLWorld.h: line 62-72[31]
+int err = kernels[kernel_id].set_mem_a | int err = kernels[kernel_id].set_cons
+if (err != CL_SUCCESS)                 | if (err != CL_SUCCESS)
+{                                      | {
+printf("Error setting kernel argument! | printf("Error setting kernel argument
+printf("Error code %d\n", err);        | printf("Error code %d\n", err);
+exit(EXIT_FAILURE);                    | exit(EXIT_FAILURE);
+}                                      | }
+                                       |
+printf("Done!\n");                     | printf("Done!\n");
+                                       |
+return err;                            | return err;
+
+E:\work\HLS2018\RosettaBench\rosetta_source\harness\CLWorld.cpp: line 275-279|E:\work\HLS2018\RosettaBench\rosetta_source\harness\CLWorld.cpp: line 286-290[30]
+bool found_device = false;             |}
+                                       |
+for (int p = 0; (p < platform_cnt) & ( |for (int d = 0; (d < device_cnt) & (!f
+{                                      |{
+err = clGetDeviceIDs(platforms[p], thi | err = clGetDeviceInfo(devices[d], CL_
+
+E:\work\HLS2018\RosettaBench\rosetta_source\harness\CLKernel.cpp: line 20-27|E:\work\HLS2018\RosettaBench\rosetta_source\harness\CLWorld.cpp: line 191-198[25]
+if (!kernel || err != CL_SUCCESS)      |if (err != CL_SUCCESS)
+{                                      |{
+printf("Error: Failed to create comput |printf("Error setting kernel argument!
+printf("Error Code %d\n", err);        |printf("Error code %d\n", err);
+exit(EXIT_FAILURE);                    |exit(EXIT_FAILURE);
+}                                      |}
+                                       |
+printf("Done!\n");                     |printf("Done!\n");
+
+E:\work\HLS2018\RosettaBench\rosetta_source\harness\CLMemObj.cpp: line 7-12|E:\work\HLS2018\RosettaBench\rosetta_source\harness\CLMemObj.cpp: line 17-22[25]
+CLMemObj::CLMemObj()                   |CLMemObj::CLMemObj(void *mem_data, int
+{                                      |{
+this->mem_data = nullptr;              |this->mem_data = mem_data;
+this->elt_size = 0;                    |this->elt_size = elt_size;
+this->length = 0;                      |this->length = length;
+this->flags = 0;                       |this->flags = flags;
+
+E:\work\HLS2018\RosettaBench\rosetta_source\harness\CLWorld.cpp: line 161-173|E:\work\HLS2018\RosettaBench\rosetta_source\harness\CLWorld.cpp: line 193-205[25]
+clGetProgramBuildInfo(program, device_ |printf("Error setting kernel argument!
+printf("%s\n", buffer);                |printf("Error code %d\n", err);
+exit(EXIT_FAILURE);                    |exit(EXIT_FAILURE);
+}                                      |}
+                                       |
+printf("Done!\n");                     |printf("Done!\n");
+                                       |
+return err;                            |return err;
+}                                      |}
+                                       |
+                                       |
+                                       |
+int CLWorld::addKernel(CLKernel &new_k |int CLWorld::runKernels(bool flush)
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\harness\CLKernel.h: line 1-27|E:\work\HLS2018\RosettaBench\rosetta_source\harness\CLMemObj.h: line 1-23[24]
+# 10 "E:\\work\\HLS2018\\RosettaBench\ |# 10 "E:\\work\\HLS2018\\RosettaBench\
+#ifndef __CLKernel__Harness__          |#ifndef __CLMemObj__Harness__
+#define __CLKernel__Harness__          |#define __CLMemObj__Harness__ 
+                                       |
+                                       |
+#include <cstdio>                      |#include <cstdio>
+#include <vector>                      |
+#include <string>                      |#include <CL/cl.h>
+                                       |
+#include <CL/cl.h>                     |#include <CL/cl_ext.h>
+                                       |
+#include "CLMemObj.h"                  |namespace rosetta
+                                       |{
+namespace rosetta                      |
+{                                      |class CLMemObj
+                                       |{
+                                       |
+class CLKernel                         |friend class CLWorld;
+{                                      |
+                                       |public:
+friend class CLWorld;                  |
+                                       |
+public:                                |CLMemObj ();
+                                       |
+                                       |
+                                       |
+CLKernel(cl_context context, cl_progra |
+
+E:\work\HLS2018\RosettaBench\rosetta_source\harness\CLWorld.cpp: line 222-227|E:\work\HLS2018\RosettaBench\rosetta_source\harness\CLWorld.cpp: line 279-284[24]
+    0, NULL, NULL);                    |err = clGetDeviceIDs(platforms[p], thi
+if (err != CL_SUCCESS)                 |if (err != CL_SUCCESS)
+{                                      |{
+ printf("Error enqueuing kernel %d!\n" | printf("Error: Failed to create a dev
+printf("Error Code %d\n", err);        | printf("Error Code %d\n", err);
+exit(EXIT_FAILURE);                    | printf("Test failed\n");
+
+E:\work\HLS2018\RosettaBench\rosetta_source\harness\CLWorld.cpp: line 326-335|E:\work\HLS2018\RosettaBench\rosetta_source\harness\CLWorld.h: line 63-72[24]
+if (!(this->cmd_queue))                | if (err != CL_SUCCESS)
+{                                      | {
+printf("Error: Failed to create a comm | printf("Error setting kernel argument
+printf("Error Code %d\n", err);        | printf("Error code %d\n", err);
+exit(EXIT_FAILURE);                    | exit(EXIT_FAILURE);
+}                                      | }
+                                       |
+printf("Done!\n");                     | printf("Done!\n");
+                                       |
+return err;                            | return err;
+

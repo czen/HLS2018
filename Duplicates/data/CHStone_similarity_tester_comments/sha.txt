@@ -1,0 +1,15 @@
+File E:\work\CHStone\CHStone_v1.11_150204\sha\sha.c: 895 tokens, 217 lines
+File E:\work\CHStone\CHStone_v1.11_150204\sha\sha_driver.c: 76 tokens, 56 lines
+Total: 971 tokens
+
+E:\work\CHStone\CHStone_v1.11_150204\sha\sha.c: line 113-121|E:\work\CHStone\CHStone_v1.11_150204\sha\sha.c: line 122-129[40]
+E = sha_info_digest[4];                |}
+                                       |for (i = 40; i < 60; ++i)
+for (i = 0; i < 20; ++i)               |{
+{                                      |FUNC (3, i);
+FUNC (1, i);                           |}
+}                                      |for (i = 60; i < 80; ++i)
+for (i = 20; i < 40; ++i)              |{
+{                                      |FUNC (4, i);
+FUNC (2, i);                           |
+

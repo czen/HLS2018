@@ -1,0 +1,49 @@
+File E:\work\HLS2018\RosettaBench\rosetta_source\digit-recognition\check_result.cpp: 79 tokens, 19 lines
+File E:\work\HLS2018\RosettaBench\rosetta_source\digit-recognition\check_result.h: 17 tokens, 2 lines
+File E:\work\HLS2018\RosettaBench\rosetta_source\digit-recognition\digit_recognition.cpp: 851 tokens, 184 lines
+File E:\work\HLS2018\RosettaBench\rosetta_source\digit-recognition\digitrec_sw.cpp: 478 tokens, 109 lines
+File E:\work\HLS2018\RosettaBench\rosetta_source\digit-recognition\digitrec_sw.h: 38 tokens, 11 lines
+File E:\work\HLS2018\RosettaBench\rosetta_source\digit-recognition\testing_data.h: 34 tokens, 13 lines
+File E:\work\HLS2018\RosettaBench\rosetta_source\digit-recognition\training_data.h: 49 tokens, 19 lines
+File E:\work\HLS2018\RosettaBench\rosetta_source\digit-recognition\typedefs.h: 75 tokens, 32 lines
+File E:\work\HLS2018\RosettaBench\rosetta_source\digit-recognition\utils.cpp: 94 tokens, 37 lines
+File E:\work\HLS2018\RosettaBench\rosetta_source\digit-recognition\utils.h: 26 tokens, 7 lines
+Total: 1741 tokens
+
+E:\work\HLS2018\RosettaBench\rosetta_source\digit-recognition\digit_recognition.cpp: line 112-115|E:\work\HLS2018\RosettaBench\rosetta_source\digit-recognition\digit_recognition.cpp: line 127-130[67]
+training_in0[i].range(63 , 0 ) = train |test_in[i].range(63 , 0 ) = testing_da
+training_in0[i].range(127, 64 ) = trai |test_in[i].range(127, 64 ) = testing_d
+training_in0[i].range(191, 128) = trai |test_in[i].range(191, 128) = testing_d
+training_in0[i].range(255, 192) = trai |test_in[i].range(255, 192) = testing_d
+
+E:\work\HLS2018\RosettaBench\rosetta_source\digit-recognition\digit_recognition.cpp: line 118-120|E:\work\HLS2018\RosettaBench\rosetta_source\digit-recognition\digit_recognition.cpp: line 120-122[52]
+{                                      |training_in1[i].range(127, 64 ) = trai
+training_in1[i].range(63 , 0 ) = train |training_in1[i].range(191, 128) = trai
+training_in1[i].range(127, 64 ) = trai |training_in1[i].range(255, 192) = trai
+
+E:\work\HLS2018\RosettaBench\rosetta_source\digit-recognition\digit_recognition.cpp: line 126-128|E:\work\HLS2018\RosettaBench\rosetta_source\digit-recognition\digit_recognition.cpp: line 128-130[40]
+{                                      |test_in[i].range(127, 64 ) = testing_d
+test_in[i].range(63 , 0 ) = testing_da |test_in[i].range(191, 128) = testing_d
+test_in[i].range(127, 64 ) = testing_d |test_in[i].range(255, 192) = testing_d
+
+E:\work\HLS2018\RosettaBench\rosetta_source\digit-recognition\digit_recognition.cpp: line 107-112|E:\work\HLS2018\RosettaBench\rosetta_source\digit-recognition\digit_recognition.cpp: line 116-119[30]
+WholeDigitType* test_in = (WholeDigitT |}
+                                       |for (int i = 0; i < NUM_TRAINING / 2; 
+                                       |{
+for (int i = 0; i < NUM_TRAINING / 2;  |training_in1[i].range(63 , 0 ) = train
+{                                      |
+training_in0[i].range(63 , 0 ) = train |
+
+E:\work\HLS2018\RosettaBench\rosetta_source\digit-recognition\digit_recognition.cpp: line 120-121|E:\work\HLS2018\RosettaBench\rosetta_source\digit-recognition\digit_recognition.cpp: line 121-122[26]
+training_in1[i].range(127, 64 ) = trai |training_in1[i].range(191, 128) = trai
+training_in1[i].range(191, 128) = trai |training_in1[i].range(255, 192) = trai
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\digit-recognition\digitrec_sw.cpp: line 76-81|E:\work\HLS2018\RosettaBench\rosetta_source\digit-recognition\digitrec_sw.h: line 3-9[26]
+}                                      |#define __DIGITREC_SW_H__ 
+                                       |
+                                       |#include "../host/typedefs.h"
+void DigitRec_sw(const DigitType train |
+  const DigitType test_set[NUM_TEST *  |void DigitRec_sw(const DigitType globa
+  LabelType results[NUM_TEST])         |  const DigitType global_test_set[NUM_
+                                       |  LabelType global_results[NUM_TEST]);
+

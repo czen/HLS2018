@@ -1,10 +1,10 @@
-File E:\work\CHStone\CHStone_v1.11_150204\blowfish\bf.c: 21023 tokens, 866 lines
-File E:\work\CHStone\CHStone_v1.11_150204\blowfish\bf_cfb64.c: 366 tokens, 151 lines
-File E:\work\CHStone\CHStone_v1.11_150204\blowfish\bf_enc.c: 520 tokens, 137 lines
-File E:\work\CHStone\CHStone_v1.11_150204\blowfish\bf_skey.c: 357 tokens, 151 lines
-Total: 22266 tokens
+File E:\work\HLS2018\CHStone\CHStoneProcessed\blowfish\bf.c: 21029 tokens, 785 lines
+File E:\work\HLS2018\CHStone\CHStoneProcessed\blowfish\bf_cfb64.c: 369 tokens, 72 lines
+File E:\work\HLS2018\CHStone\CHStoneProcessed\blowfish\bf_enc.c: 523 tokens, 58 lines
+File E:\work\HLS2018\CHStone\CHStoneProcessed\blowfish\bf_skey.c: 360 tokens, 76 lines
+Total: 22281 tokens
 
-E:\work\CHStone\CHStone_v1.11_150204\blowfish\bf.c: line 92-483|E:\work\CHStone\CHStone_v1.11_150204\blowfish\bf.c: line 484-811[10409]
+E:\work\HLS2018\CHStone\CHStoneProcessed\blowfish\bf.c: line 11-402|E:\work\HLS2018\CHStone\CHStoneProcessed\blowfish\bf.c: line 403-730[10409]
 #define KEYSIZE 5200                   |};
 const unsigned char in_key[KEYSIZE] =  |
 75, 117, 114, 116, 86, 111, 110, 110,  |const unsigned char out_key[KEYSIZE] =
@@ -398,7 +398,7 @@ const unsigned char in_key[KEYSIZE] =  |
 115, 99, 105, 101, 110, 116, 105, 115, |
 97, 115, 116, 104, 101, 114, 101, 115, |
 
-E:\work\CHStone\CHStone_v1.11_150204\blowfish\bf.c: line 486-649|E:\work\CHStone\CHStone_v1.11_150204\blowfish\bf.c: line 649-811[5198]
+E:\work\HLS2018\CHStone\CHStoneProcessed\blowfish\bf.c: line 405-568|E:\work\HLS2018\CHStone\CHStoneProcessed\blowfish\bf.c: line 568-730[5198]
 const unsigned char out_key[KEYSIZE] = |83, 197, 163, 252, 4, 122, 249, 125, 7
 5, 140, 229, 49, 55, 247, 179, 22, 234 |189, 244, 140, 222, 11, 95, 136, 166, 
 253, 124, 41, 105, 239, 252, 189, 239, |118, 34, 181, 112, 11, 64, 222, 95, 71
@@ -564,7 +564,7 @@ const unsigned char out_key[KEYSIZE] = |83, 197, 163, 252, 4, 122, 249, 125, 7
 192, 22, 173, 173, 129, 9, 112, 118, 9 |129, 76, 92, 184, 58, 121, 107, 49, 39
 83, 197, 163, 252, 4, 122, 249, 125, 7 |
 
-E:\work\CHStone\CHStone_v1.11_150204\blowfish\bf.c: line 649-730|E:\work\CHStone\CHStone_v1.11_150204\blowfish\bf.c: line 730-811[2600]
+E:\work\HLS2018\CHStone\CHStoneProcessed\blowfish\bf.c: line 568-649|E:\work\HLS2018\CHStone\CHStoneProcessed\blowfish\bf.c: line 649-730[2600]
 83, 197, 163, 252, 4, 122, 249, 125, 7 |121, 178, 2, 90, 201, 58, 247, 93, 183
 189, 244, 140, 222, 11, 95, 136, 166,  |186, 126, 229, 217, 198, 190, 166, 118
 118, 34, 181, 112, 11, 64, 222, 95, 71 |22, 123, 235, 208, 48, 195, 127, 216, 
@@ -648,7 +648,7 @@ E:\work\CHStone\CHStone_v1.11_150204\blowfish\bf.c: line 649-730|E:\work\CHStone
 29, 201, 75, 48, 215, 137, 188, 236, 1 |109, 183, 120, 149, 45, 62, 90, 238, 1
 121, 178, 2, 90, 201, 58, 247, 93, 183 |129, 76, 92, 184, 58, 121, 107, 49, 39
 
-E:\work\CHStone\CHStone_v1.11_150204\blowfish\bf.c: line 730-771|E:\work\CHStone\CHStone_v1.11_150204\blowfish\bf.c: line 771-811[1300]
+E:\work\HLS2018\CHStone\CHStoneProcessed\blowfish\bf.c: line 649-690|E:\work\HLS2018\CHStone\CHStoneProcessed\blowfish\bf.c: line 690-730[1300]
 121, 178, 2, 90, 201, 58, 247, 93, 183 |115, 80, 98, 25, 182, 1, 164, 156, 11,
 186, 126, 229, 217, 198, 190, 166, 118 |241, 149, 113, 74, 90, 43, 10, 200, 23
 22, 123, 235, 208, 48, 195, 127, 216,  |159, 186, 171, 57, 116, 9, 90, 16, 50,
@@ -692,7 +692,7 @@ E:\work\CHStone\CHStone_v1.11_150204\blowfish\bf.c: line 730-771|E:\work\CHStone
 252, 106, 79, 192, 166, 25, 149, 141,  |129, 76, 92, 184, 58, 121, 107, 49, 39
 115, 80, 98, 25, 182, 1, 164, 156, 11, |
 
-E:\work\CHStone\CHStone_v1.11_150204\blowfish\bf.c: line 771-791|E:\work\CHStone\CHStone_v1.11_150204\blowfish\bf.c: line 791-811[650]
+E:\work\HLS2018\CHStone\CHStoneProcessed\blowfish\bf.c: line 690-710|E:\work\HLS2018\CHStone\CHStoneProcessed\blowfish\bf.c: line 710-730[650]
 115, 80, 98, 25, 182, 1, 164, 156, 11, |128, 148, 43, 117, 43, 166, 59, 153, 2
 241, 149, 113, 74, 90, 43, 10, 200, 23 |98, 130, 171, 149, 92, 43, 179, 43, 26
 159, 186, 171, 57, 116, 9, 90, 16, 50, |32, 143, 14, 0, 173, 1, 70, 197, 216, 
@@ -715,7 +715,7 @@ E:\work\CHStone\CHStone_v1.11_150204\blowfish\bf.c: line 771-791|E:\work\CHStone
 222, 79, 196, 141, 89, 197, 254, 184,  |109, 183, 120, 149, 45, 62, 90, 238, 1
 128, 148, 43, 117, 43, 166, 59, 153, 2 |129, 76, 92, 184, 58, 121, 107, 49, 39
 
-E:\work\CHStone\CHStone_v1.11_150204\blowfish\bf.c: line 791-801|E:\work\CHStone\CHStone_v1.11_150204\blowfish\bf.c: line 801-811[324]
+E:\work\HLS2018\CHStone\CHStoneProcessed\blowfish\bf.c: line 710-720|E:\work\HLS2018\CHStone\CHStoneProcessed\blowfish\bf.c: line 720-730[324]
 128, 148, 43, 117, 43, 166, 59, 153, 2 |148, 88, 33, 14, 208, 92, 174, 117, 16
 98, 130, 171, 149, 92, 43, 179, 43, 26 |12, 208, 60, 58, 95, 121, 105, 133, 29
 32, 143, 14, 0, 173, 1, 70, 197, 216,  |113, 139, 160, 37, 232, 100, 83, 184, 
@@ -728,7 +728,7 @@ E:\work\CHStone\CHStone_v1.11_150204\blowfish\bf.c: line 791-801|E:\work\CHStone
 94, 4, 113, 78, 220, 205, 36, 133, 237 |109, 183, 120, 149, 45, 62, 90, 238, 1
 148, 88, 33, 14, 208, 92, 174, 117, 16 |129, 76, 92, 184, 58, 121, 107, 49, 39
 
-E:\work\CHStone\CHStone_v1.11_150204\blowfish\bf_enc.c: line 94-112|E:\work\CHStone\CHStone_v1.11_150204\blowfish\bf_enc.c: line 116-133[215]
+E:\work\HLS2018\CHStone\CHStoneProcessed\blowfish\bf_enc.c: line 15-33|E:\work\HLS2018\CHStone\CHStoneProcessed\blowfish\bf_enc.c: line 37-54[215]
 l ^= p[0];                             |l ^= p[BF_ROUNDS + 1];
                                        |BF_ENC (r, l, s, p[16]);
 BF_ENC (r, l, s, p[1]);                |BF_ENC (l, r, s, p[15]);
@@ -749,7 +749,7 @@ BF_ENC (r, l, s, p[15]);               |BF_ENC (l, r, s, p[1]);
 BF_ENC (l, r, s, p[16]);               |r ^= p[0];
 r ^= p[BF_ROUNDS + 1];                 |
 
-E:\work\CHStone\CHStone_v1.11_150204\blowfish\bf.c: line 801-806|E:\work\CHStone\CHStone_v1.11_150204\blowfish\bf.c: line 806-811[162]
+E:\work\HLS2018\CHStone\CHStoneProcessed\blowfish\bf.c: line 720-725|E:\work\HLS2018\CHStone\CHStoneProcessed\blowfish\bf.c: line 725-730[162]
 148, 88, 33, 14, 208, 92, 174, 117, 16 |163, 17, 55, 206, 54, 15, 173, 115, 12
 12, 208, 60, 58, 95, 121, 105, 133, 29 |55, 165, 149, 2, 231, 134, 121, 66, 79
 113, 139, 160, 37, 232, 100, 83, 184,  |232, 94, 148, 169, 166, 32, 36, 158, 2
@@ -757,7 +757,7 @@ E:\work\CHStone\CHStone_v1.11_150204\blowfish\bf.c: line 801-806|E:\work\CHStone
 251, 245, 114, 21, 244, 247, 46, 152,  |109, 183, 120, 149, 45, 62, 90, 238, 1
 163, 17, 55, 206, 54, 15, 173, 115, 12 |129, 76, 92, 184, 58, 121, 107, 49, 39
 
-E:\work\CHStone\CHStone_v1.11_150204\blowfish\bf_enc.c: line 116-124|E:\work\CHStone\CHStone_v1.11_150204\blowfish\bf_enc.c: line 124-132[104]
+E:\work\HLS2018\CHStone\CHStoneProcessed\blowfish\bf_enc.c: line 37-45|E:\work\HLS2018\CHStone\CHStoneProcessed\blowfish\bf_enc.c: line 45-53[104]
 l ^= p[BF_ROUNDS + 1];                 |BF_ENC (l, r, s, p[9]);
 BF_ENC (r, l, s, p[16]);               |BF_ENC (r, l, s, p[8]);
 BF_ENC (l, r, s, p[15]);               |BF_ENC (l, r, s, p[7]);
@@ -768,72 +768,72 @@ BF_ENC (l, r, s, p[11]);               |BF_ENC (l, r, s, p[3]);
 BF_ENC (r, l, s, p[10]);               |BF_ENC (r, l, s, p[2]);
 BF_ENC (l, r, s, p[9]);                |BF_ENC (l, r, s, p[1]);
 
-E:\work\CHStone\CHStone_v1.11_150204\blowfish\bf_cfb64.c: line 99-118|E:\work\CHStone\CHStone_v1.11_150204\blowfish\bf_cfb64.c: line 124-142[100]
+E:\work\HLS2018\CHStone\CHStoneProcessed\blowfish\bf_cfb64.c: line 20-39|E:\work\HLS2018\CHStone\CHStoneProcessed\blowfish\bf_cfb64.c: line 45-63[100]
 if (encrypt)                           |else
 {                                      |{
 while (l--)                            |while (l--)
- {                                     | {
- if (n == 0)                           | if (n == 0)
- {                                     | {
- n2l (iv, v0);                         | n2l (iv, v0);
- ti[0] = v0;                           | ti[0] = v0;
- n2l (iv, v1);                         | n2l (iv, v1);
- ti[1] = v1;                           | ti[1] = v1;
- BF_encrypt ((unsigned long *) ti, BF_ | BF_encrypt ((unsigned long *) ti, BF_
- iv = (unsigned char *) ivec;          | iv = (unsigned char *) ivec;
- t = ti[0];                            | t = ti[0];
- l2n (t, iv);                          | l2n (t, iv);
- t = ti[1];                            | t = ti[1];
- l2n (t, iv);                          | l2n (t, iv);
-                                       | iv = (unsigned char *) ivec;
- iv = (unsigned char *) ivec;          | }
- }                                     | cc = *(in++);
- c = *(in++) ^ iv[n];                  |
+{                                      |{
+if (n == 0)                            |if (n == 0)
+{                                      |{
+n2l (iv, v0);                          |n2l (iv, v0);
+ti[0] = v0;                            |ti[0] = v0;
+n2l (iv, v1);                          |n2l (iv, v1);
+ti[1] = v1;                            |ti[1] = v1;
+BF_encrypt ((unsigned long *) ti, BF_E |BF_encrypt ((unsigned long *) ti, BF_E
+iv = (unsigned char *) ivec;           |iv = (unsigned char *) ivec;
+t = ti[0];                             |t = ti[0];
+l2n (t, iv);                           |l2n (t, iv);
+t = ti[1];                             |t = ti[1];
+l2n (t, iv);                           |l2n (t, iv);
+                                       |iv = (unsigned char *) ivec;
+iv = (unsigned char *) ivec;           |}
+}                                      |cc = *(in++);
+c = *(in++) ^ iv[n];                   |
 
-E:\work\CHStone\CHStone_v1.11_150204\blowfish\bf.c: line 806-809|E:\work\CHStone\CHStone_v1.11_150204\blowfish\bf.c: line 809-811[82]
+E:\work\HLS2018\CHStone\CHStoneProcessed\blowfish\bf.c: line 725-728|E:\work\HLS2018\CHStone\CHStoneProcessed\blowfish\bf.c: line 728-730[82]
 163, 17, 55, 206, 54, 15, 173, 115, 12 |23, 204, 104, 198, 186, 144, 151, 81, 
 55, 165, 149, 2, 231, 134, 121, 66, 79 |109, 183, 120, 149, 45, 62, 90, 238, 1
 232, 94, 148, 169, 166, 32, 36, 158, 2 |129, 76, 92, 184, 58, 121, 107, 49, 39
 23, 204, 104, 198, 186, 144, 151, 81,  |
 
-E:\work\CHStone\CHStone_v1.11_150204\blowfish\bf_enc.c: line 124-128|E:\work\CHStone\CHStone_v1.11_150204\blowfish\bf_enc.c: line 128-132[52]
+E:\work\HLS2018\CHStone\CHStoneProcessed\blowfish\bf_enc.c: line 45-49|E:\work\HLS2018\CHStone\CHStoneProcessed\blowfish\bf_enc.c: line 49-53[52]
 BF_ENC (l, r, s, p[9]);                |BF_ENC (l, r, s, p[5]);
 BF_ENC (r, l, s, p[8]);                |BF_ENC (r, l, s, p[4]);
 BF_ENC (l, r, s, p[7]);                |BF_ENC (l, r, s, p[3]);
 BF_ENC (r, l, s, p[6]);                |BF_ENC (r, l, s, p[2]);
 BF_ENC (l, r, s, p[5]);                |BF_ENC (l, r, s, p[1]);
 
-E:\work\CHStone\CHStone_v1.11_150204\blowfish\bf.c: line 809-810|E:\work\CHStone\CHStone_v1.11_150204\blowfish\bf.c: line 810-811[40]
+E:\work\HLS2018\CHStone\CHStoneProcessed\blowfish\bf.c: line 728-729|E:\work\HLS2018\CHStone\CHStoneProcessed\blowfish\bf.c: line 729-730[40]
 23, 204, 104, 198, 186, 144, 151, 81,  |109, 183, 120, 149, 45, 62, 90, 238, 1
 109, 183, 120, 149, 45, 62, 90, 238, 1 |129, 76, 92, 184, 58, 121, 107, 49, 39
 
-E:\work\CHStone\CHStone_v1.11_150204\blowfish\bf_skey.c: line 112-119|E:\work\CHStone\CHStone_v1.11_150204\blowfish\bf_skey.c: line 122-129[40]
+E:\work\HLS2018\CHStone\CHStoneProcessed\blowfish\bf_skey.c: line 37-44|E:\work\HLS2018\CHStone\CHStoneProcessed\blowfish\bf_skey.c: line 47-54[40]
 ri = *(d++);                           |ri |= *(d++);
 if (d >= end)                          |if (d >= end)
- d = data;                             | d = data;
+d = data;                              |d = data;
                                        |
 ri <<= 8;                              |ri <<= 8;
 ri |= *(d++);                          |ri |= *(d++);
 if (d >= end)                          |if (d >= end)
- d = data;                             | d = data;
+d = data;                              |d = data;
 
-E:\work\CHStone\CHStone_v1.11_150204\blowfish\bf_skey.c: line 136-140|E:\work\CHStone\CHStone_v1.11_150204\blowfish\bf_skey.c: line 144-148[33]
+E:\work\HLS2018\CHStone\CHStoneProcessed\blowfish\bf_skey.c: line 61-65|E:\work\HLS2018\CHStone\CHStoneProcessed\blowfish\bf_skey.c: line 69-73[33]
 for (i = 0; i < (BF_ROUNDS + 2); i +=  |for (i = 0; i < 4 * 256; i += 2)
 {                                      |{
 BF_encrypt (in, BF_ENCRYPT);           |BF_encrypt (in, BF_ENCRYPT);
 p[i] = in[0];                          |p[i] = in[0];
 p[i + 1] = in[1];                      |p[i + 1] = in[1];
 
-E:\work\CHStone\CHStone_v1.11_150204\blowfish\bf_enc.c: line 128-130|E:\work\CHStone\CHStone_v1.11_150204\blowfish\bf_enc.c: line 130-132[26]
+E:\work\HLS2018\CHStone\CHStoneProcessed\blowfish\bf_enc.c: line 49-51|E:\work\HLS2018\CHStone\CHStoneProcessed\blowfish\bf_enc.c: line 51-53[26]
 BF_ENC (l, r, s, p[5]);                |BF_ENC (l, r, s, p[3]);
 BF_ENC (r, l, s, p[4]);                |BF_ENC (r, l, s, p[2]);
 BF_ENC (l, r, s, p[3]);                |BF_ENC (l, r, s, p[1]);
 
-E:\work\CHStone\CHStone_v1.11_150204\blowfish\bf_skey.c: line 119-124|E:\work\CHStone\CHStone_v1.11_150204\blowfish\bf_skey.c: line 124-129[24]
- d = data;                             | d = data;
+E:\work\HLS2018\CHStone\CHStoneProcessed\blowfish\bf_skey.c: line 44-49|E:\work\HLS2018\CHStone\CHStoneProcessed\blowfish\bf_skey.c: line 49-54[24]
+d = data;                              |d = data;
                                        |
 ri <<= 8;                              |ri <<= 8;
 ri |= *(d++);                          |ri |= *(d++);
 if (d >= end)                          |if (d >= end)
- d = data;                             | d = data;
+d = data;                              |d = data;
 

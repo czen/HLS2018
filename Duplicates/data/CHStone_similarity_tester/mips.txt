@@ -1,7 +1,7 @@
-File E:\work\CHStone\CHStone_v1.11_150204\mips\mips.c: 1122 tokens, 306 lines
-Total: 1122 tokens
+File E:\work\HLS2018\CHStone\CHStoneProcessed\mips\mips.c: 1125 tokens, 271 lines
+Total: 1125 tokens
 
-E:\work\CHStone\CHStone_v1.11_150204\mips\mips.c: line 38-57|E:\work\CHStone\CHStone_v1.11_150204\mips\mips.c: line 59-78[44]
+E:\work\HLS2018\CHStone\CHStoneProcessed\mips\mips.c: line 3-22|E:\work\HLS2018\CHStone\CHStoneProcessed\mips\mips.c: line 24-43[44]
 int main_result;                       |#define SLT 42
                                        |#define SLTU 43
 #define R 0                            |
@@ -23,40 +23,40 @@ int main_result;                       |#define SLT 42
 #define SLLV 4                         |#define BNE 5
 #define SRLV 6                         |#define BGEZ 1
 
-E:\work\CHStone\CHStone_v1.11_150204\mips\mips.c: line 151-159|E:\work\CHStone\CHStone_v1.11_150204\mips\mips.c: line 235-241[39]
- rd = (ins >> 11) & 0x1f;              | address = ins & 0xffff;
- rt = (ins >> 16) & 0x1f;              | rt = (ins >> 16) & 0x1f;
- rs = (ins >> 21) & 0x1f;              | rs = (ins >> 21) & 0x1f;
-                                       | switch (op)
- switch (funct)                        |  {
-  {                                    |  case ADDIU:
-                                       |  reg[rt] = reg[rs] + address;
-  case ADDU:                           |
-  reg[rd] = reg[rs] + reg[rt];         |
+E:\work\HLS2018\CHStone\CHStoneProcessed\mips\mips.c: line 116-124|E:\work\HLS2018\CHStone\CHStoneProcessed\mips\mips.c: line 200-206[39]
+rd = (ins >> 11) & 0x1f;               |address = ins & 0xffff;
+rt = (ins >> 16) & 0x1f;               |rt = (ins >> 16) & 0x1f;
+rs = (ins >> 21) & 0x1f;               |rs = (ins >> 21) & 0x1f;
+                                       |switch (op)
+switch (funct)                         |{
+{                                      |case ADDIU:
+                                       |reg[rt] = reg[rs] + address;
+case ADDU:                             |
+reg[rd] = reg[rs] + reg[rt];           |
 
-E:\work\CHStone\CHStone_v1.11_150204\mips\mips.c: line 266-270|E:\work\CHStone\CHStone_v1.11_150204\mips\mips.c: line 270-274[28]
-  if (reg[rs] == reg[rt])              |  if (reg[rs] != reg[rt])
-  pc = pc - 4 + (address << 2);        |  pc = pc - 4 + (address << 2);
-  break;                               |  break;
-  case BNE:                            |  case BGEZ:
-  if (reg[rs] != reg[rt])              |  if (reg[rs] >= 0)
+E:\work\HLS2018\CHStone\CHStoneProcessed\mips\mips.c: line 231-235|E:\work\HLS2018\CHStone\CHStoneProcessed\mips\mips.c: line 235-239[28]
+if (reg[rs] == reg[rt])                |if (reg[rs] != reg[rt])
+pc = pc - 4 + (address << 2);          |pc = pc - 4 + (address << 2);
+break;                                 |break;
+case BNE:                              |case BGEZ:
+if (reg[rs] != reg[rt])                |if (reg[rs] >= 0)
 
-E:\work\CHStone\CHStone_v1.11_150204\mips\mips.c: line 166-170|E:\work\CHStone\CHStone_v1.11_150204\mips\mips.c: line 173-178[26]
-  hilo = (long long) reg[rs] * (long l |  (unsigned long long) ((unsigned int)
-  Lo = hilo & 0x00000000ffffffffULL;   |  Lo = hilo & 0x00000000ffffffffULL;
-  Hi = ((int) (hilo >> 32)) & 0xffffff |  Hi = ((int) (hilo >> 32)) & 0xffffff
-  break;                               |  break;
-  case MULTU:                          |
-                                       |  case MFHI:
+E:\work\HLS2018\CHStone\CHStoneProcessed\mips\mips.c: line 131-135|E:\work\HLS2018\CHStone\CHStoneProcessed\mips\mips.c: line 138-143[26]
+hilo = (long long) reg[rs] * (long lon |(unsigned long long) ((unsigned int) (
+Lo = hilo & 0x00000000ffffffffULL;     |Lo = hilo & 0x00000000ffffffffULL;
+Hi = ((int) (hilo >> 32)) & 0xffffffff |Hi = ((int) (hilo >> 32)) & 0xffffffff
+break;                                 |break;
+case MULTU:                            |
+                                       |case MFHI:
 
-E:\work\CHStone\CHStone_v1.11_150204\mips\mips.c: line 148-151|E:\work\CHStone\CHStone_v1.11_150204\mips\mips.c: line 233-237[25]
- case R:                               | default:
- funct = ins & 0x3f;                   |
- shamt = (ins >> 6) & 0x1f;            | address = ins & 0xffff;
- rd = (ins >> 11) & 0x1f;              | rt = (ins >> 16) & 0x1f;
-                                       | rs = (ins >> 21) & 0x1f;
+E:\work\HLS2018\CHStone\CHStoneProcessed\mips\mips.c: line 113-116|E:\work\HLS2018\CHStone\CHStoneProcessed\mips\mips.c: line 198-202[25]
+case R:                                |default:
+funct = ins & 0x3f;                    |
+shamt = (ins >> 6) & 0x1f;             |address = ins & 0xffff;
+rd = (ins >> 11) & 0x1f;               |rt = (ins >> 16) & 0x1f;
+                                       |rs = (ins >> 21) & 0x1f;
 
-E:\work\CHStone\CHStone_v1.11_150204\mips\mips.c: line 59-69|E:\work\CHStone\CHStone_v1.11_150204\mips\mips.c: line 70-80[24]
+E:\work\HLS2018\CHStone\CHStoneProcessed\mips\mips.c: line 24-34|E:\work\HLS2018\CHStone\CHStoneProcessed\mips\mips.c: line 35-45[24]
 #define SLT 42                         |#define XORI 14
 #define SLTU 43                        |
                                        |#define LW 35

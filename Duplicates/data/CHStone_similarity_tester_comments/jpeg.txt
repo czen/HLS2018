@@ -1,0 +1,447 @@
+File E:\work\CHStone\CHStone_v1.11_150204\jpeg\chenidct.c: 912 tokens, 231 lines
+File E:\work\CHStone\CHStone_v1.11_150204\jpeg\decode.c: 1399 tokens, 464 lines
+File E:\work\CHStone\CHStone_v1.11_150204\jpeg\huffman.c: 1124 tokens, 349 lines
+File E:\work\CHStone\CHStone_v1.11_150204\jpeg\jfif_read.c: 274 tokens, 109 lines
+File E:\work\CHStone\CHStone_v1.11_150204\jpeg\jpeg2bmp.c: 135 tokens, 87 lines
+File E:\work\CHStone\CHStone_v1.11_150204\jpeg\main.c: 20 tokens, 60 lines
+File E:\work\CHStone\CHStone_v1.11_150204\jpeg\marker.c: 1728 tokens, 612 lines
+Total: 5592 tokens
+
+E:\work\CHStone\CHStone_v1.11_150204\jpeg\chenidct.c: line 106-142|E:\work\CHStone\CHStone_v1.11_150204\jpeg\chenidct.c: line 172-211[196]
+a3 = LS (*aptr, 2);                    |a3 = *(aptr);
+                                       |
+/* Split into even mode  b0 = x0  b1 = |/*
+ And the odd terms a0 = x1 a1 = x3 a2  | Split into even mode  b0 = x0  b1 = x
+*/                                     | And the odd terms a0 = x1 a1 = x3 a2 
+                                       |*/
+c0 = MSCALE ((c7d16 * a0) - (c1d16 * a |
+c1 = MSCALE ((c3d16 * a2) - (c5d16 * a |c0 = MSCALE ((c7d16 * a0) - (c1d16 * a
+c2 = MSCALE ((c3d16 * a1) + (c5d16 * a |c1 = MSCALE ((c3d16 * a2) - (c5d16 * a
+c3 = MSCALE ((c1d16 * a0) + (c7d16 * a |c2 = MSCALE ((c3d16 * a1) + (c5d16 * a
+                                       |c3 = MSCALE ((c1d16 * a0) + (c7d16 * a
+/* First Butterfly on even terms. */   |
+                                       |/* First Butterfly on even terms. */
+a0 = MSCALE (c1d4 * (b0 + b1));        |
+a1 = MSCALE (c1d4 * (b0 - b1));        |a0 = MSCALE (c1d4 * (b0 + b1));
+                                       |a1 = MSCALE (c1d4 * (b0 - b1));
+a2 = MSCALE ((c3d8 * b2) - (c1d8 * b3) |
+a3 = MSCALE ((c1d8 * b2) + (c3d8 * b3) |a2 = MSCALE ((c3d8 * b2) - (c1d8 * b3)
+                                       |a3 = MSCALE ((c1d8 * b2) + (c3d8 * b3)
+b0 = a0 + a3;                          |
+b1 = a1 + a2;                          |/* Calculate last set of b's */
+b2 = a1 - a2;                          |
+b3 = a0 - a3;                          |b0 = a0 + a3;
+                                       |b1 = a1 + a2;
+/* Second Butterfly */                 |b2 = a1 - a2;
+                                       |b3 = a0 - a3;
+a0 = c0 + c1;                          |
+a1 = c0 - c1;                          |/* Second Butterfly */
+a2 = c3 - c2;                          |
+a3 = c3 + c2;                          |a0 = c0 + c1;
+                                       |a1 = c0 - c1;
+c0 = a0;                               |a2 = c3 - c2;
+c1 = MSCALE (c1d4 * (a2 - a1));        |a3 = c3 + c2;
+c2 = MSCALE (c1d4 * (a2 + a1));        |
+c3 = a3;                               |c0 = a0;
+                                       |c1 = MSCALE (c1d4 * (a2 - a1));
+aptr = y + i;                          |c2 = MSCALE (c1d4 * (a2 + a1));
+                                       |c3 = a3;
+                                       |
+                                       |aptr = y + LS (i, 3);
+
+E:\work\CHStone\CHStone_v1.11_150204\jpeg\decode.c: line 53-63|E:\work\CHStone\CHStone_v1.11_150204\jpeg\marker.c: line 142-155[136]
+int rgb_buf[4][RGB_NUM][DCTSIZE2];     |const int out_num_get_dht[GET_DQT_REP]
+                                       |
+const int zigzag_index[64] = /* Is zig |
+{ 0, 1, 5, 6, 14, 15, 27, 28,          |/*
+2, 4, 7, 13, 16, 26, 29, 42,           |* Initialize Quantization Table
+3, 8, 12, 17, 25, 30, 41, 43,          |*/
+9, 11, 18, 24, 31, 40, 44, 53,         |const int izigzag_index[64] = { 0, 1, 
+10, 19, 23, 32, 39, 45, 52, 54,        |17, 24, 32, 25, 18, 11, 4, 5,
+20, 22, 33, 38, 46, 51, 55, 60,        |12, 19, 26, 33, 40, 48, 41, 34,
+21, 34, 37, 47, 50, 56, 59, 61,        |27, 20, 13, 6, 7, 14, 21, 28,
+35, 36, 48, 49, 57, 58, 62, 63         |35, 42, 49, 56, 57, 50, 43, 36,
+                                       |29, 22, 15, 23, 30, 37, 44, 51,
+                                       |58, 59, 52, 45, 38, 31, 39, 46,
+                                       |53, 60, 61, 54, 47, 55, 62, 63
+
+E:\work\CHStone\CHStone_v1.11_150204\jpeg\jfif_read.c: line 55-71|E:\work\CHStone\CHStone_v1.11_150204\jpeg\jfif_read.c: line 71-83[102]
+p_jinfo_NumMCU = p_jinfo_MCUHeight * p |p_jinfo_dc_dhuff_tbl_ml[1] = tmp;
+                                       |tmp = huff_make_dhuff_tb (&p_jinfo_ac_
+/*                                     |   p_jinfo_ac_dhuff_tbl_ml[0],
+* Create Huffman Table for decoding    |   &p_jinfo_ac_dhuff_tbl_maxcode[0][0]
+*/                                     |   &p_jinfo_ac_dhuff_tbl_mincode[0][0]
+tmp = huff_make_dhuff_tb (&p_jinfo_dc_ |   &p_jinfo_ac_dhuff_tbl_valptr[0][0])
+   p_jinfo_dc_dhuff_tbl_ml[0],         |p_jinfo_ac_dhuff_tbl_ml[0] = tmp;
+   &p_jinfo_dc_dhuff_tbl_maxcode[0][0] |tmp = huff_make_dhuff_tb (&p_jinfo_ac_
+   &p_jinfo_dc_dhuff_tbl_mincode[0][0] |   p_jinfo_ac_dhuff_tbl_ml[1],
+   &p_jinfo_dc_dhuff_tbl_valptr[0][0]) |   &p_jinfo_ac_dhuff_tbl_maxcode[1][0]
+p_jinfo_dc_dhuff_tbl_ml[0] = tmp;      |   &p_jinfo_ac_dhuff_tbl_mincode[1][0]
+tmp = huff_make_dhuff_tb (&p_jinfo_dc_ |   &p_jinfo_ac_dhuff_tbl_valptr[1][0])
+   p_jinfo_dc_dhuff_tbl_ml[1],         |p_jinfo_ac_dhuff_tbl_ml[1] = tmp;
+   &p_jinfo_dc_dhuff_tbl_maxcode[1][0] |
+   &p_jinfo_dc_dhuff_tbl_mincode[1][0] |
+   &p_jinfo_dc_dhuff_tbl_valptr[1][0]) |
+p_jinfo_dc_dhuff_tbl_ml[1] = tmp;      |
+
+E:\work\CHStone\CHStone_v1.11_150204\jpeg\huffman.c: line 58-71|E:\work\CHStone\CHStone_v1.11_150204\jpeg\huffman.c: line 71-82[72]
+0xFFF80000, 0xFFF00000                 |0x10000000, 0x20000000, 0x40000000, 0x
+};                                     |};
+                                       |
+                                       |const int lmask[32] = {  /* This is 2^
+/* Masks */                            |0x00000001, 0x00000003, 0x00000007, 0x
+const int bit_set_mask[32] = { /* This |0x0000001f, 0x0000003f, 0x0000007f, 0x
+0x00000001, 0x00000002, 0x00000004, 0x |0x000001ff, 0x000003ff, 0x000007ff, 0x
+0x00000010, 0x00000020, 0x00000040, 0x |0x00001fff, 0x00003fff, 0x00007fff, 0x
+0x00000100, 0x00000200, 0x00000400, 0x |0x0001ffff, 0x0003ffff, 0x0007ffff, 0x
+0x00001000, 0x00002000, 0x00004000, 0x |0x001fffff, 0x003fffff, 0x007fffff, 0x
+0x00010000, 0x00020000, 0x00040000, 0x |0x01ffffff, 0x03ffffff, 0x07ffffff, 0x
+0x00100000, 0x00200000, 0x00400000, 0x |0x1fffffff, 0x3fffffff, 0x7fffffff, 0x
+0x01000000, 0x02000000, 0x04000000, 0x |
+0x10000000, 0x20000000, 0x40000000, 0x |
+
+E:\work\CHStone\CHStone_v1.11_150204\jpeg\huffman.c: line 71-82|E:\work\CHStone\CHStone_v1.11_150204\jpeg\marker.c: line 142-151[72]
+0x10000000, 0x20000000, 0x40000000, 0x |const int out_num_get_dht[GET_DQT_REP]
+};                                     |
+                                       |
+const int lmask[32] = {  /* This is 2^ |/*
+0x00000001, 0x00000003, 0x00000007, 0x |* Initialize Quantization Table
+0x0000001f, 0x0000003f, 0x0000007f, 0x |*/
+0x000001ff, 0x000003ff, 0x000007ff, 0x |const int izigzag_index[64] = { 0, 1, 
+0x00001fff, 0x00003fff, 0x00007fff, 0x |17, 24, 32, 25, 18, 11, 4, 5,
+0x0001ffff, 0x0003ffff, 0x0007ffff, 0x |12, 19, 26, 33, 40, 48, 41, 34,
+0x001fffff, 0x003fffff, 0x007fffff, 0x |27, 20, 13, 6, 7, 14, 21, 28,
+0x01ffffff, 0x03ffffff, 0x07ffffff, 0x |
+0x1fffffff, 0x3fffffff, 0x7fffffff, 0x |
+
+E:\work\CHStone\CHStone_v1.11_150204\jpeg\marker.c: line 148-151|E:\work\CHStone\CHStone_v1.11_150204\jpeg\marker.c: line 151-155[62]
+const int izigzag_index[64] = { 0, 1,  |27, 20, 13, 6, 7, 14, 21, 28,
+17, 24, 32, 25, 18, 11, 4, 5,          |35, 42, 49, 56, 57, 50, 43, 36,
+12, 19, 26, 33, 40, 48, 41, 34,        |29, 22, 15, 23, 30, 37, 44, 51,
+27, 20, 13, 6, 7, 14, 21, 28,          |58, 59, 52, 45, 38, 31, 39, 46,
+                                       |53, 60, 61, 54, 47, 55, 62, 63
+
+E:\work\CHStone\CHStone_v1.11_150204\jpeg\decode.c: line 387-403|E:\work\CHStone\CHStone_v1.11_150204\jpeg\decode.c: line 417-436[55]
+if (p_jinfo_smp_fact == SF1_1_1)       |else
+{                                      |{
+printf ("Decode 1:1:1 NumMCU = %d\n",  |printf ("Decode 4:1:1 NumMCU = %d\n", 
+                                       |/*
+/*                                     |* 4_1_1
+* 1_1_1                                |*/
+*/                                     |while (CurrentMCU < p_jinfo_NumMCU)
+while (CurrentMCU < p_jinfo_NumMCU)    | {
+ {                                     | /*
+                                       | * Decode Y element
+ for (i = 0; i < NUM_COMPONENT; i++)   | * Decoding Y, U and V elements should
+ {                                     | */
+ decode_block (i, IDCTBuff[i], HuffBuf |
+ }                                     | for (i = 0; i < 4; i++)
+                                       | {
+                                       | decode_block (0, IDCTBuff[i], HuffBuf
+ YuvToRgb (0, IDCTBuff[0], IDCTBuff[1] | }
+                                       |
+                                       | /* Decode U */
+                                       | decode_block (1, IDCTBuff[4], HuffBuf
+
+E:\work\CHStone\CHStone_v1.11_150204\jpeg\marker.c: line 88-94|E:\work\CHStone\CHStone_v1.11_150204\jpeg\marker.c: line 108-114[55]
+int out_data_precision_get_sof = 8;    |#define GET_SOS_REP 3
+int out_p_jinfo_image_height_get_sof = |int i_get_sos = 0;
+int out_p_jinfo_image_width_get_sof =  |int out_length_get_sos = 12;
+int out_p_jinfo_num_components_get_sof |int out_num_comp_get_sos = 3;
+const int out_index_get_sof[GET_SOF_RE |const int out_comp_id_get_sos[GET_SOS_
+const int out_id_get_sof[GET_SOF_REP]  |const int out_dc_tbl_no_get_sos[GET_SO
+const int out_h_samp_factor_get_sof[GE |const int out_ac_tbl_no_get_sos[GET_SO
+
+E:\work\CHStone\CHStone_v1.11_150204\jpeg\jfif_read.c: line 71-77|E:\work\CHStone\CHStone_v1.11_150204\jpeg\jfif_read.c: line 77-83[51]
+p_jinfo_dc_dhuff_tbl_ml[1] = tmp;      |p_jinfo_ac_dhuff_tbl_ml[0] = tmp;
+tmp = huff_make_dhuff_tb (&p_jinfo_ac_ |tmp = huff_make_dhuff_tb (&p_jinfo_ac_
+   p_jinfo_ac_dhuff_tbl_ml[0],         |   p_jinfo_ac_dhuff_tbl_ml[1],
+   &p_jinfo_ac_dhuff_tbl_maxcode[0][0] |   &p_jinfo_ac_dhuff_tbl_maxcode[1][0]
+   &p_jinfo_ac_dhuff_tbl_mincode[0][0] |   &p_jinfo_ac_dhuff_tbl_mincode[1][0]
+   &p_jinfo_ac_dhuff_tbl_valptr[0][0]) |   &p_jinfo_ac_dhuff_tbl_valptr[1][0])
+p_jinfo_ac_dhuff_tbl_ml[0] = tmp;      |p_jinfo_ac_dhuff_tbl_ml[1] = tmp;
+
+E:\work\CHStone\CHStone_v1.11_150204\jpeg\chenidct.c: line 91-98|E:\work\CHStone\CHStone_v1.11_150204\jpeg\chenidct.c: line 99-106[49]
+aptr = x + i;                          |aptr += 8;
+b0 = LS (*aptr, 2);                    |b1 = LS (*aptr, 2);
+aptr += 8;                             |aptr += 8;
+a0 = LS (*aptr, 2);                    |a2 = LS (*aptr, 2);
+aptr += 8;                             |aptr += 8;
+b2 = LS (*aptr, 2);                    |b3 = LS (*aptr, 2);
+aptr += 8;                             |aptr += 8;
+a1 = LS (*aptr, 2);                    |a3 = LS (*aptr, 2);
+
+E:\work\CHStone\CHStone_v1.11_150204\jpeg\decode.c: line 185-201|E:\work\CHStone\CHStone_v1.11_150204\jpeg\decode.c: line 223-235[48]
+WriteBlock (int *store, int *p_out_vpo |Write4Blocks (int *store1, int *store2
+ unsigned char *p_out_buf)             | int *p_out_vpos, int *p_out_hpos, uns
+{                                      |{
+int voffs, hoffs;                      |int voffs, hoffs;
+                                       |
+/*                                     |/*
+* Get vertical offsets                 |* OX
+*/                                     |* XX
+voffs = *p_out_vpos * DCTSIZE;         |*/
+hoffs = *p_out_hpos * DCTSIZE;         |voffs = *p_out_vpos * DCTSIZE;
+                                       |hoffs = *p_out_hpos * DCTSIZE;
+/*                                     |WriteOneBlock (store1, p_out_buf,
+* Write block                          |  p_jinfo_image_width, p_jinfo_image_h
+*/                                     |
+WriteOneBlock (store,                  |
+  p_out_buf,                           |
+  p_jinfo_image_width, p_jinfo_image_h |
+
+E:\work\CHStone\CHStone_v1.11_150204\jpeg\huffman.c: line 54-58|E:\work\CHStone\CHStone_v1.11_150204\jpeg\huffman.c: line 63-68[45]
+const static int extend_mask[20] = {   |const int bit_set_mask[32] = { /* This
+0xFFFFFFFE, 0xFFFFFFFC, 0xFFFFFFF8, 0x |0x00000001, 0x00000002, 0x00000004, 0x
+0xFFFFFF80, 0xFFFFFF00, 0xFFFFFE00, 0x |0x00000010, 0x00000020, 0x00000040, 0x
+0xFFFFE000, 0xFFFFC000, 0xFFFF8000, 0x |0x00000100, 0x00000200, 0x00000400, 0x
+0xFFF80000, 0xFFF00000                 |0x00001000, 0x00002000, 0x00004000, 0x
+                                       |0x00010000, 0x00020000, 0x00040000, 0x
+
+E:\work\CHStone\CHStone_v1.11_150204\jpeg\huffman.c: line 288-293|E:\work\CHStone\CHStone_v1.11_150204\jpeg\huffman.c: line 319-324[45]
+tbl_no = p_jinfo_comps_info_dc_tbl_no[ |{    /* JPEG Mistake */
+s = DecodeHuffman (&p_jinfo_dc_xhuff_t |r = DecodeHuffman (&p_jinfo_ac_xhuff_t
+  p_jinfo_dc_dhuff_tbl_ml[tbl_no],     |   p_jinfo_ac_dhuff_tbl_ml[tbl_no],
+  &p_jinfo_dc_dhuff_tbl_maxcode[tbl_no |   &p_jinfo_ac_dhuff_tbl_maxcode[tbl_n
+  &p_jinfo_dc_dhuff_tbl_mincode[tbl_no |   &p_jinfo_ac_dhuff_tbl_mincode[tbl_n
+  &p_jinfo_dc_dhuff_tbl_valptr[tbl_no] |   &p_jinfo_ac_dhuff_tbl_valptr[tbl_no
+
+E:\work\CHStone\CHStone_v1.11_150204\jpeg\huffman.c: line 319-324|E:\work\CHStone\CHStone_v1.11_150204\jpeg\jfif_read.c: line 55-64[45]
+{    /* JPEG Mistake */                |p_jinfo_NumMCU = p_jinfo_MCUHeight * p
+r = DecodeHuffman (&p_jinfo_ac_xhuff_t |
+   p_jinfo_ac_dhuff_tbl_ml[tbl_no],    |/*
+   &p_jinfo_ac_dhuff_tbl_maxcode[tbl_n |* Create Huffman Table for decoding
+   &p_jinfo_ac_dhuff_tbl_mincode[tbl_n |*/
+   &p_jinfo_ac_dhuff_tbl_valptr[tbl_no |tmp = huff_make_dhuff_tb (&p_jinfo_dc_
+                                       |   p_jinfo_dc_dhuff_tbl_ml[0],
+                                       |   &p_jinfo_dc_dhuff_tbl_maxcode[0][0]
+                                       |   &p_jinfo_dc_dhuff_tbl_mincode[0][0]
+                                       |   &p_jinfo_dc_dhuff_tbl_valptr[0][0])
+
+E:\work\CHStone\CHStone_v1.11_150204\jpeg\marker.c: line 431-446|E:\work\CHStone\CHStone_v1.11_150204\jpeg\marker.c: line 503-517[45]
+int *p_xhtbl_bits;                     |unsigned int *p_quant_tbl;
+int *p_xhtbl_huffval;                  |
+                                       |length = read_word ();
+length = read_word ();                 |length -= 2;
+length -= 2;                           |
+                                       |printf (" length = %d\n", length);
+printf (" length = %d\n", length);     |
+                                       |if (length != out_length_get_dqt[i_get
+if (length != out_length_get_dht[i_get |{
+{                                      | main_result++;
+ main_result++;                        |}
+}                                      |
+                                       |while (length > 0)
+while (length > 16)                    |{
+{                                      |num = read_byte ();
+index = read_byte ();                  |
+
+E:\work\CHStone\CHStone_v1.11_150204\jpeg\marker.c: line 250-260|E:\work\CHStone\CHStone_v1.11_150204\jpeg\marker.c: line 351-362[37]
+printf ("image_height   = %d\n", p_jin |num_comp = read_byte ();
+printf ("image_width    = %d\n", p_jin |
+printf ("num_components = %d\n", p_jin |printf (" length = %d\n", length);
+                                       |printf (" num_comp = %d\n", num_comp);
+if (length != out_length_get_sof)      |
+{                                      |if (length != out_length_get_sos)
+ main_result++;                        |{
+}                                      | main_result++;
+if (p_jinfo_data_precision != out_data |}
+{                                      |if (num_comp != out_num_comp_get_sos)
+ main_result++;                        |{
+                                       | main_result++;
+
+E:\work\CHStone\CHStone_v1.11_150204\jpeg\marker.c: line 94-109|E:\work\CHStone\CHStone_v1.11_150204\jpeg\marker.c: line 112-125[34]
+const int out_h_samp_factor_get_sof[GE |const int out_comp_id_get_sos[GET_SOS_
+const int out_v_samp_factor_get_sof[GE |const int out_dc_tbl_no_get_sos[GET_SO
+const int out_quant_tbl_no_get_sof[GET |const int out_ac_tbl_no_get_sos[GET_SO
+                                       |
+/*                                     |/*
++------------------------------------- |+-------------------------------------
+| * Test Vectors (added for CHStone) f || * Test Vectors (added for CHStone) f
+|     out_length_get_sos : expected ou ||     out_length_get_dht : expected ou
+|     out_num_comp_get_sos : expected  ||     out_index_get_dht : expected out
+|     out_comp_id_get_sos : expected o ||     out_count_get_dht : expected out
+|     out_dc_tbl_no_get_sos : expected |+-------------------------------------
+|     out_ac_tbl_no_get_sos : expected |*/
++------------------------------------- |#define GET_DHT_REP 4
+*/                                     |int i_get_dht = 0;
+#define GET_SOS_REP 3                  |
+int i_get_sos = 0;                     |
+
+E:\work\CHStone\CHStone_v1.11_150204\jpeg\marker.c: line 275-284|E:\work\CHStone\CHStone_v1.11_150204\jpeg\marker.c: line 369-375[34]
+length -= 8;                           |c = read_byte ();
+                                       |
+/* Omit error check */                 |for (ci = 0; ci < p_jinfo_num_componen
+                                       | {
+/* Check components */                 | p_comp_info_id = &p_jinfo_comps_info_
+for (ci = 0; ci < p_jinfo_num_componen | p_comp_info_dc_tbl_no = &p_jinfo_comp
+{                                      | p_comp_info_ac_tbl_no = &p_jinfo_comp
+p_comp_info_index = &p_jinfo_comps_inf |
+p_comp_info_id = &p_jinfo_comps_info_i |
+p_comp_info_h_samp_factor = &p_jinfo_c |
+
+E:\work\CHStone\CHStone_v1.11_150204\jpeg\decode.c: line 233-243|E:\work\CHStone\CHStone_v1.11_150204\jpeg\decode.c: line 250-262[33]
+hoffs = *p_out_hpos * DCTSIZE;         |hoffs -= DCTSIZE;
+WriteOneBlock (store1, p_out_buf,      |WriteOneBlock (store3, p_out_buf,
+  p_jinfo_image_width, p_jinfo_image_h |  p_jinfo_image_width, p_jinfo_image_h
+                                       |
+/*                                     |
+* XO                                   |/*
+* XX                                   |* XX
+*/                                     |* XO
+hoffs += DCTSIZE;                      |*/
+WriteOneBlock (store2, p_out_buf,      |hoffs += DCTSIZE;
+  p_jinfo_image_width, p_jinfo_image_h |WriteOneBlock (store4,
+                                       |  p_out_buf, p_jinfo_image_width, p_ji
+                                       |  voffs, hoffs);
+
+E:\work\CHStone\CHStone_v1.11_150204\jpeg\decode.c: line 403-410|E:\work\CHStone\CHStone_v1.11_150204\jpeg\decode.c: line 447-453[32]
+ YuvToRgb (0, IDCTBuff[0], IDCTBuff[1] | }
+ /*                                    |
+ * Write                               |
+ */                                    | for (i = 0; i < RGB_NUM; i++)
+ for (i = 0; i < RGB_NUM; i++)         | {
+ {                                     | Write4Blocks (&rgb_buf[0][i][0],
+ WriteBlock (&rgb_buf[0][i][0],        |   &rgb_buf[1][i][0],
+   &out_data_comp_vpos[i],             |
+
+E:\work\CHStone\CHStone_v1.11_150204\jpeg\marker.c: line 151-153|E:\work\CHStone\CHStone_v1.11_150204\jpeg\marker.c: line 153-155[32]
+27, 20, 13, 6, 7, 14, 21, 28,          |29, 22, 15, 23, 30, 37, 44, 51,
+35, 42, 49, 56, 57, 50, 43, 36,        |58, 59, 52, 45, 38, 31, 39, 46,
+29, 22, 15, 23, 30, 37, 44, 51,        |53, 60, 61, 54, 47, 55, 62, 63
+
+E:\work\CHStone\CHStone_v1.11_150204\jpeg\marker.c: line 299-307|E:\work\CHStone\CHStone_v1.11_150204\jpeg\marker.c: line 308-315[32]
+printf (" quant_tbl_no  = %d\n\n", *p_ | }
+                                       |if (*p_comp_info_h_samp_factor != out_
+if (*p_comp_info_index != out_index_ge | {
+ {                                     |  main_result++;
+  main_result++;                       | }
+ }                                     |if (*p_comp_info_v_samp_factor != out_
+if (*p_comp_info_id != out_id_get_sof[ | {
+ {                                     |  main_result++;
+  main_result++;                       |
+
+E:\work\CHStone\CHStone_v1.11_150204\jpeg\marker.c: line 308-315|E:\work\CHStone\CHStone_v1.11_150204\jpeg\marker.c: line 395-402[32]
+ }                                     | }
+if (*p_comp_info_h_samp_factor != out_ |if (*p_comp_info_dc_tbl_no != out_dc_t
+ {                                     | {
+  main_result++;                       |  main_result++;
+ }                                     | }
+if (*p_comp_info_v_samp_factor != out_ |if (*p_comp_info_ac_tbl_no != out_ac_t
+ {                                     | {
+  main_result++;                       |  main_result++;
+
+E:\work\CHStone\CHStone_v1.11_150204\jpeg\decode.c: line 98-111|E:\work\CHStone\CHStone_v1.11_150204\jpeg\decode.c: line 113-127[30]
+qmatrix++;                             |*mptr += shift;
+}                                      |}
+}                                      |}
+                                       |
+                                       |
+/*                                     |/*
+* PostshiftIDctMatrix() adds 128 (2048 |* BoundIDctMatrix bounds the inverse d
+* This results in strictly positive va |* value greater than 255 (4095) or les
+*/                                     |*/
+void                                   |void
+PostshiftIDctMatrix (int *matrix, int  |BoundIDctMatrix (int *matrix, int Boun
+{                                      |{
+int *mptr;                             |int *mptr;
+for (mptr = matrix; mptr < matrix + DC |
+                                       |for (mptr = matrix; mptr < matrix + DC
+
+E:\work\CHStone\CHStone_v1.11_150204\jpeg\chenidct.c: line 164-168|E:\work\CHStone\CHStone_v1.11_150204\jpeg\chenidct.c: line 168-172[29]
+aptr = y + LS (i, 3);                  |a1 = *(aptr++);
+b0 = *(aptr++);                        |b1 = *(aptr++);
+a0 = *(aptr++);                        |a2 = *(aptr++);
+b2 = *(aptr++);                        |b3 = *(aptr++);
+a1 = *(aptr++);                        |a3 = *(aptr);
+
+E:\work\CHStone\CHStone_v1.11_150204\jpeg\huffman.c: line 170-183|E:\work\CHStone\CHStone_v1.11_150204\jpeg\huffman.c: line 243-254[29]
+return ((current_read_byte >> p) & lma |return p_dhtbl_ml;
+}                                      |}
+                                       |
+                                       |
+                                       |/*
+/*                                     |*  
+* Create Table for decoding            |*/
+*/                                     |int
+int                                    |DecodeHuffman (int *Xhuff_huffval, int
+huff_make_dhuff_tb (int *p_xhtbl_bits, | int *Dhuff_maxcode, int *Dhuff_mincod
+  int *p_dhtbl_maxcode, int *p_dhtbl_m |{
+  int *p_dhtbl_valptr)                 |int code, l, p;
+{                                      |
+int i, j, p, code, size, l;            |
+
+E:\work\CHStone\CHStone_v1.11_150204\jpeg\chenidct.c: line 98-102|E:\work\CHStone\CHStone_v1.11_150204\jpeg\chenidct.c: line 102-106[26]
+a1 = LS (*aptr, 2);                    |a2 = LS (*aptr, 2);
+aptr += 8;                             |aptr += 8;
+b1 = LS (*aptr, 2);                    |b3 = LS (*aptr, 2);
+aptr += 8;                             |aptr += 8;
+a2 = LS (*aptr, 2);                    |a3 = LS (*aptr, 2);
+
+E:\work\CHStone\CHStone_v1.11_150204\jpeg\chenidct.c: line 172-180|E:\work\CHStone\CHStone_v1.11_150204\jpeg\chenidct.c: line 187-190[26]
+a3 = *(aptr);                          |a1 = MSCALE (c1d4 * (b0 - b1));
+                                       |
+/*                                     |a2 = MSCALE ((c3d8 * b2) - (c1d8 * b3)
+ Split into even mode  b0 = x0  b1 = x |a3 = MSCALE ((c1d8 * b2) + (c3d8 * b3)
+ And the odd terms a0 = x1 a1 = x3 a2  |
+*/                                     |
+                                       |
+c0 = MSCALE ((c7d16 * a0) - (c1d16 * a |
+c1 = MSCALE ((c3d16 * a2) - (c5d16 * a |
+
+E:\work\CHStone\CHStone_v1.11_150204\jpeg\decode.c: line 424-432|E:\work\CHStone\CHStone_v1.11_150204\jpeg\decode.c: line 439-446[26]
+ {                                     | decode_block (2, IDCTBuff[5], HuffBuf
+ /*                                    |
+ * Decode Y element                    |
+ * Decoding Y, U and V elements should | /* Transform from Yuv into RGB */
+ */                                    |
+                                       | for (i = 0; i < 4; i++)
+ for (i = 0; i < 4; i++)               | {
+ {                                     | YuvToRgb (i, IDCTBuff[i], IDCTBuff[4]
+ decode_block (0, IDCTBuff[i], HuffBuf |
+
+E:\work\CHStone\CHStone_v1.11_150204\jpeg\marker.c: line 67-69|E:\work\CHStone\CHStone_v1.11_150204\jpeg\marker.c: line 142-149[26]
+int i_marker = 0;                      |const int out_num_get_dht[GET_DQT_REP]
+const int out_unread_marker[READ_MARKE |
+{ 0xd8, 0xe0, 0xdb, 0xdb, 0xc0, 0xc4,  |
+                                       |/*
+                                       |* Initialize Quantization Table
+                                       |*/
+                                       |const int izigzag_index[64] = { 0, 1, 
+                                       |17, 24, 32, 25, 18, 11, 4, 5,
+
+E:\work\CHStone\CHStone_v1.11_150204\jpeg\chenidct.c: line 180-182|E:\work\CHStone\CHStone_v1.11_150204\jpeg\chenidct.c: line 189-194[25]
+c1 = MSCALE ((c3d16 * a2) - (c5d16 * a |a2 = MSCALE ((c3d8 * b2) - (c1d8 * b3)
+c2 = MSCALE ((c3d16 * a1) + (c5d16 * a |a3 = MSCALE ((c1d8 * b2) + (c3d8 * b3)
+c3 = MSCALE ((c1d16 * a0) + (c7d16 * a |
+                                       |/* Calculate last set of b's */
+                                       |
+                                       |b0 = a0 + a3;
+
+E:\work\CHStone\CHStone_v1.11_150204\jpeg\jpeg2bmp.c: line 76-84|E:\work\CHStone\CHStone_v1.11_150204\jpeg\marker.c: line 256-264[25]
+ }                                     | main_result++;
+}                                      |}
+if (OutData_image_width != out_width)  |if (p_jinfo_data_precision != out_data
+{                                      |{
+main_result++;                         | main_result++;
+}                                      |}
+if (OutData_image_height != out_length |if (p_jinfo_image_height != out_p_jinf
+{                                      |{
+main_result++;                         | main_result++;
+
+E:\work\CHStone\CHStone_v1.11_150204\jpeg\decode.c: line 452-453|E:\work\CHStone\CHStone_v1.11_150204\jpeg\decode.c: line 453-455[24]
+ Write4Blocks (&rgb_buf[0][i][0],      |   &rgb_buf[1][i][0],
+   &rgb_buf[1][i][0],                  |   &rgb_buf[2][i][0],
+                                       |   &rgb_buf[3][i][0],
+
+E:\work\CHStone\CHStone_v1.11_150204\jpeg\marker.c: line 261-268|E:\work\CHStone\CHStone_v1.11_150204\jpeg\marker.c: line 354-362[24]
+}                                      |printf (" num_comp = %d\n", num_comp);
+if (p_jinfo_image_height != out_p_jinf |
+{                                      |if (length != out_length_get_sos)
+ main_result++;                        |{
+}                                      | main_result++;
+if (p_jinfo_image_width != out_p_jinfo |}
+{                                      |if (num_comp != out_num_comp_get_sos)
+ main_result++;                        |{
+                                       | main_result++;
+

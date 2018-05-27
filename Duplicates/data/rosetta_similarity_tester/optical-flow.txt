@@ -1,0 +1,898 @@
+File E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\check_result.cpp: 404 tokens, 73 lines
+File E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\check_result.h: 46 tokens, 6 lines
+File E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\Convert.cpp: 697 tokens, 123 lines
+File E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\Convert.h: 585 tokens, 82 lines
+File E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\Convolve.cpp: 1523 tokens, 236 lines
+File E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\Convolve.h: 79 tokens, 16 lines
+File E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\Copyright.h: 0 tokens, 0 lines
+File E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\Error.h: 122 tokens, 17 lines
+File E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\flowIO.cpp: 652 tokens, 111 lines
+File E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\flowIO.h: 46 tokens, 15 lines
+File E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\Image.cpp: 822 tokens, 158 lines
+File E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\Image.h: 1000 tokens, 222 lines
+File E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: 3423 tokens, 586 lines
+File E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.h: 53 tokens, 6 lines
+File E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\imageLib.h: 3 tokens, 6 lines
+File E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_host.cpp: 1029 tokens, 213 lines
+File E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_sw.cpp: 1829 tokens, 258 lines
+File E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_sw.h: 141 tokens, 19 lines
+File E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\RefCntMem.cpp: 312 tokens, 96 lines
+File E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\RefCntMem.h: 100 tokens, 29 lines
+File E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\typedefs.h: 93 tokens, 42 lines
+File E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\utils.cpp: 217 tokens, 75 lines
+File E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\utils.h: 64 tokens, 15 lines
+Total: 13240 tokens
+
+E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 463-484|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 529-547[83]
+if (fclose(stream))                    |else
+ throw CError("WriteFilePGM(%s): error | throw CError("ReadImage(%s): file typ
+}                                      |}
+                                       |
+                                       |
+                                       |
+                                       |void WriteImage(CImage& img, const cha
+                                       |{
+                                       |if (filename == NULL)
+void ReadImage (CImage& img, const cha |throw CError("WriteImage: empty filena
+{                                      |
+if (filename == NULL)                  |
+throw CError("ReadImage: empty filenam |const char *dot = strrchr(filename, '.
+                                       |if (dot == NULL)
+                                       |throw CError("WriteImage: extension re
+const char *dot = strrchr(filename, '. |
+if (dot == NULL)                       |if (strcmp(dot, ".TGA") == 0 || strcmp
+throw CError("ReadImage: extension req |{
+                                       | if (img.PixType() == typeid(uchar))
+if (strcmp(dot, ".TGA") == 0 || strcmp |
+{                                      |
+ if ((&img.PixType()) == 0)            |
+
+E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_sw.cpp: line 148-162|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_sw.cpp: line 180-193[82]
+for(int c = 0; c < MAX_WIDTH; c ++)    |for (int c = 0; c < MAX_WIDTH + 1; c +
+{                                      |{
+tensor_t acc;                          |tensor_t acc;
+for (int k = 0; k < 6; k ++)           |for(int k = 0; k < 6; k++)
+{                                      |{
+ acc.val[k] = 0;                       | acc.val[k] = 0;
+}                                      |}
+                                       |if (c >= 2 && c < MAX_WIDTH)
+if (r >= 2 && r < MAX_HEIGHT)          |{
+{                                      | for (int i = 0; i < 3; i ++)
+ for (int i = 0; i < 3; i ++)          | {
+ {                                     | for (int component = 0; component < 6
+ for(int component = 0; component < 6; | {
+ {                                     | acc.val[component] += tensor_y[r][c-i
+ acc.val[component] += outer[r-i][c].v |
+
+E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 500-510|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 554-564[77]
+ }                                     |{
+ if (img.PixType() == typeid(uchar) || | if (img.PixType() == typeid(uchar) ||
+ img.PixType() == typeid(float))       | img.PixType() == typeid(float))
+ ReadFilePGM(*(CByteImage *) &img, fil | WriteFilePGM(*(CByteImage *) &img, fi
+ else                                  | else
+ throw CError("ReadImage(%s): wrong im | throw CError("WriteImage(%s): wrong i
+}                                      |}
+#ifdef HAVE_PNG_LIB                    |#ifdef HAVE_PNG_LIB
+else if (strcmp(dot, ".PNG") == 0 || s |else if (strcmp(dot, ".PNG") == 0 || s
+{                                      |{
+ if ((&img.PixType()) == 0)            | if (img.PixType() == typeid(uchar))
+
+E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_sw.cpp: line 83-97|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_sw.cpp: line 165-180[74]
+else if (r >= 3)                       |}
+{                                      |if (r >= 1)
+ filt_grad[r-3][c] = acc;              |{
+}                                      | tensor_y[r-1][c] = acc;
+}                                      |}
+}                                      |}
+}                                      |}
+                                       |}
+                                       |
+void gradient_weight_x(gradient_t y_fi |
+  gradient_t filt_grad[MAX_HEIGHT][MAX |void tensor_weight_x(tensor_t tensor_y
+{                                      |  tensor_t tensor[MAX_HEIGHT][MAX_WIDT
+for (int r = 0; r < MAX_HEIGHT; r ++)  |{
+{                                      |for (int r = 0; r < MAX_HEIGHT; r ++)
+for (int c = 0; c < MAX_WIDTH + 3; c + |{
+                                       |for (int c = 0; c < MAX_WIDTH + 1; c +
+
+E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_sw.cpp: line 113-127|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_sw.cpp: line 196-211[72]
+else if (c >= 3)                       |}
+{                                      |if (c >= 1)
+ filt_grad[r][c-3] = acc;              |{
+}                                      | tensor[r][c-1] = acc;
+}                                      |}
+}                                      |}
+}                                      |}
+                                       |}
+                                       |
+void outer_product(gradient_t gradient |
+  outer_t outer_product[MAX_HEIGHT][MA |void flow_calc(tensor_t tensors[MAX_HE
+{                                      | velocity_t output[MAX_HEIGHT][MAX_WID
+for (int r = 0; r < MAX_HEIGHT; r ++)  |{
+{                                      |for(int r = 0; r < MAX_HEIGHT; r ++)
+for (int c = 0; c < MAX_WIDTH; c ++)   |{
+                                       |for(int c = 0; c < MAX_WIDTH; c ++)
+
+E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 510-516|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 521-527[68]
+ if ((&img.PixType()) == 0)            | if ((&img.PixType()) == 0)
+ img.ReAllocate(CShape(), typeid(uchar | img.ReAllocate(CShape(), typeid(uchar
+ if (img.PixType() == typeid(uchar))   | if (img.PixType() == typeid(uchar))
+ ReadFilePNG(*(CByteImage *) &img, fil | ReadFileJPG(*(CByteImage *) &img, fil
+ else                                  | else
+ throw CError("ReadImage(%s): can only | throw CError("ReadImage(%s): can only
+}                                      |}
+
+E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\flowIO.cpp: line 57-64|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\flowIO.cpp: line 100-107[67]
+img.ReAllocate(sh);                    |throw CError("WriteFlowFile(%s): probl
+                                       |
+                                       |
+int n = nBands * width;                |int n = nBands * width;
+for (int y = 0; y < height; y++) {     |for (int y = 0; y < height; y++) {
+float* ptr = &img.Pixel(0, y, 0);      |float* ptr = &img.Pixel(0, y, 0);
+if ((int)fread(ptr, sizeof(float), n,  |if ((int)fwrite(ptr, sizeof(float), n,
+throw CError("ReadFlowFile(%s): file i |throw CError("WriteFlowFile(%s): probl
+
+E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 484-489|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 510-515[67]
+ if ((&img.PixType()) == 0)            | if ((&img.PixType()) == 0)
+ img.ReAllocate(CShape(), typeid(uchar | img.ReAllocate(CShape(), typeid(uchar
+ if (img.PixType() == typeid(uchar))   | if (img.PixType() == typeid(uchar))
+ ReadFileTGA(*(CByteImage *) &img, fil | ReadFilePNG(*(CByteImage *) &img, fil
+ else                                  | else
+ throw CError("ReadImage(%s): can only | throw CError("ReadImage(%s): can only
+
+E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_host.cpp: line 97-99|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_host.cpp: line 100-102[66]
+ frames[i*MAX_WIDTH+j](7 , 0) = imgs[0 | frames[i*MAX_WIDTH+j](31, 24) = imgs[
+ frames[i*MAX_WIDTH+j](15, 8) = imgs[1 | frames[i*MAX_WIDTH+j](39, 32) = imgs[
+ frames[i*MAX_WIDTH+j](23, 16) = imgs[ | frames[i*MAX_WIDTH+j](63, 40) = 0;
+
+E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_sw.cpp: line 216-218|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_sw.cpp: line 218-220[64]
+   tensors[r][c].val[3] * tensors[r][c |   tensors[r][c].val[4] * tensors[r][c
+ output[r][c].x = (tensors[r][c].val[5 | output[r][c].y = (tensors[r][c].val[4
+   tensors[r][c].val[4] * tensors[r][c |   tensors[r][c].val[5] * tensors[r][c
+
+E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\Convert.cpp: line 47-52|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\Convert.cpp: line 81-88[63]
+int aC = dst.alphaChannel;             | throw CError("BandSelect: destination
+for (int y = 0; y < sShape.height; y++ |
+{                                      |
+ T* srcP = &src.Pixel(0, y, 0);        |for (int y = 0; y < sShape.height; y++
+ T* dstP = &dst.Pixel(0, y, 0);        |{
+ for (int x = 0; x < sShape.width; x++ | T* srcP = &src.Pixel(0, y, 0);
+                                       | T* dstP = &dst.Pixel(0, y, 0);
+                                       | for (int x = 0; x < sShape.width; x++
+
+E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 543-550|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 562-567[59]
+throw CError("WriteImage: extension re |else if (strcmp(dot, ".PNG") == 0 || s
+                                       |{
+if (strcmp(dot, ".TGA") == 0 || strcmp | if (img.PixType() == typeid(uchar))
+{                                      | WriteFilePNG(*(CByteImage *) &img, fi
+ if (img.PixType() == typeid(uchar))   | else
+ WriteFileTGA(*(CByteImage *) &img, fi | throw CError("WriteImage(%s): can onl
+ else                                  |
+ throw CError("WriteImage(%s): can onl |
+
+E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_host.cpp: line 162-164|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_host.cpp: line 165-167[58]
+ frames[i][j](7 , 0) = imgs[0].Pixel(j | frames[i][j](31, 24) = imgs[3].Pixel(
+ frames[i][j](15, 8) = imgs[1].Pixel(j | frames[i][j](39, 32) = imgs[4].Pixel(
+ frames[i][j](23, 16) = imgs[2].Pixel( | frames[i][j](63, 40) = 0;
+
+E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_sw.cpp: line 228-237|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_sw.h: line 10-18[57]
+}                                      |const pixel_t TENSOR_FILTER[] = {0.324
+}                                      |
+                                       |
+                                       |void optical_flow_sw(pixel_t frame0[MA
+void optical_flow_sw(pixel_t frame0[MA |  pixel_t frame1[MAX_HEIGHT][MAX_WIDTH
+  pixel_t frame1[MAX_HEIGHT][MAX_WIDTH |  pixel_t frame2[MAX_HEIGHT][MAX_WIDTH
+  pixel_t frame2[MAX_HEIGHT][MAX_WIDTH |  pixel_t frame3[MAX_HEIGHT][MAX_WIDTH
+  pixel_t frame3[MAX_HEIGHT][MAX_WIDTH |  pixel_t frame4[MAX_HEIGHT][MAX_WIDTH
+  pixel_t frame4[MAX_HEIGHT][MAX_WIDTH |  velocity_t outputs[MAX_HEIGHT][MAX_W
+  velocity_t outputs[MAX_HEIGHT][MAX_W |
+
+E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 522-535|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 563-575[54]
+ img.ReAllocate(CShape(), typeid(uchar |{
+ if (img.PixType() == typeid(uchar))   | if (img.PixType() == typeid(uchar))
+ ReadFileJPG(*(CByteImage *) &img, fil | WriteFilePNG(*(CByteImage *) &img, fi
+ else                                  | else
+ throw CError("ReadImage(%s): can only | throw CError("WriteImage(%s): can onl
+}                                      |}
+#endif                                 |#endif
+else                                   |else
+ throw CError("ReadImage(%s): file typ | throw CError("WriteImage(%s): file ty
+}                                      |}
+                                       |
+                                       |
+                                       |void ReadImageVerb(CImage& img, const 
+void WriteImage(CImage& img, const cha |
+
+E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\flowIO.cpp: line 74-83|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 472-482[53]
+void WriteFlowFile(CFloatImage img, co |void ReadImage (CImage& img, const cha
+{                                      |{
+if (filename == NULL)                  |if (filename == NULL)
+throw CError("WriteFlowFile: empty fil |throw CError("ReadImage: empty filenam
+                                       |
+const char *dot = strrchr(filename, '. |
+if (dot == NULL)                       |const char *dot = strrchr(filename, '.
+throw CError("WriteFlowFile: extension |if (dot == NULL)
+                                       |throw CError("ReadImage: extension req
+if (strcmp(dot, ".flo") != 0)          |
+                                       |if (strcmp(dot, ".TGA") == 0 || strcmp
+
+E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\Convert.cpp: line 85-88|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\Convert.h: line 66-69[52]
+{                                      |{
+ T* srcP = &src.Pixel(0, y, 0);        | T* srcP = &src.Pixel(0, y, 0);
+ T* dstP = &dst.Pixel(0, y, 0);        | T* dstP = &dst.Pixel(0, y, 0);
+ for (int x = 0; x < sShape.width; x++ | for (int x = 0; x < sShape.width; x++
+
+E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_sw.cpp: line 68-77|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_sw.cpp: line 98-107[51]
+{                                      |{
+gradient_t acc;                        |gradient_t acc;
+acc.x = 0;                             |acc.x = 0;
+acc.y = 0;                             |acc.y = 0;
+acc.z = 0;                             |acc.z = 0;
+if (r >= 6 && r < MAX_HEIGHT)          |if (c >= 6 && c < MAX_WIDTH)
+{                                      |{
+ for (int i = 0; i < 7; i ++)          | for (int i = 0; i < 7; i ++)
+ {                                     | {
+ acc.x += gradient_x[r-i][c] * GRAD_FI | acc.x += y_filt[r][c-i].x * GRAD_FILT
+
+E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_sw.cpp: line 168-180|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_sw.cpp: line 199-211[51]
+ tensor_y[r-1][c] = acc;               | tensor[r][c-1] = acc;
+}                                      |}
+}                                      |}
+}                                      |}
+}                                      |}
+                                       |
+                                       |
+void tensor_weight_x(tensor_t tensor_y |void flow_calc(tensor_t tensors[MAX_HE
+  tensor_t tensor[MAX_HEIGHT][MAX_WIDT | velocity_t output[MAX_HEIGHT][MAX_WID
+{                                      |{
+for (int r = 0; r < MAX_HEIGHT; r ++)  |for(int r = 0; r < MAX_HEIGHT; r ++)
+{                                      |{
+for (int c = 0; c < MAX_WIDTH + 1; c + |for(int c = 0; c < MAX_WIDTH; c ++)
+
+E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_sw.cpp: line 215-216|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_sw.cpp: line 217-218[51]
+ pixel_t denom = tensors[r][c].val[0]  | output[r][c].x = (tensors[r][c].val[5
+   tensors[r][c].val[3] * tensors[r][c |   tensors[r][c].val[4] * tensors[r][c
+
+E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_sw.cpp: line 48-51|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_sw.cpp: line 51-54[49]
+gradient_z[r][c] = 0.0f;               |gradient_z[r][c] += frame2[r][c] * GRA
+gradient_z[r][c] += frame0[r][c] * GRA |gradient_z[r][c] += frame3[r][c] * GRA
+gradient_z[r][c] += frame1[r][c] * GRA |gradient_z[r][c] += frame4[r][c] * GRA
+gradient_z[r][c] += frame2[r][c] * GRA |gradient_z[r][c] /= 12.0f;
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\check_result.cpp: line 1-12|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\check_result.h: line 1-5[46]
+# 9 "E:\\work\\HLS2018\\RosettaBench\\ |# 10 "E:\\work\\HLS2018\\RosettaBench\
+#include <cstdio>                      |#ifdef OCL
+#include <string>                      |void check_results(velocity_t output[M
+#include <cmath>                       |#else
+                                       |void check_results(velocity_t output[M
+#include "typedefs.h"                  |
+#include "../../imageLib/imageLib.h"   |
+                                       |
+#ifdef OCL                             |
+void check_results(velocity_t output[M |
+#else                                  |
+void check_results(velocity_t output[M |
+#
+E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\Convolve.cpp: line 219-221|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\Convolve.cpp: line 222-226[44]
+#if 0                                  |#endif
+static float k_8ptFP[8] = {-0.044734f, |
+    0.449199f, 0.156544f, -0.059009f,  |
+                                       |static float k_8ptI [8] = {-0.04687500
+                                       |    0.44921875f, 0.15625000f, -0.05859
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 365-368|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 429-432[43]
+uchar* ptr = (uchar *) img.PixelAddres |char* ptr = (char *) img.PixelAddress(
+ if ((int)fread(ptr, sizeof(uchar), n, |if ((int)fwrite(ptr, sizeof(uchar), n,
+ throw CError("ReadFilePGM(%s): file i |throw CError("WriteFilePGM(%s): file i
+}                                      |}
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 209-222|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 387-402[42]
+  throw CError("ReadFileTGA(%s): unhan |ptr += 4;
+ }                                     |}
+ }                                     |}
+}                                      |}
+                                       |
+if (fclose(stream))                    |if (fclose(stream))
+ throw CError("ReadFileTGA(%s): error  | throw CError("ReadFilePGM(%s): error 
+}                                      |}
+                                       |
+void WriteFileTGA(CImage img, const ch |
+{                                      |
+                                       |void WriteFilePGM(CByteImage img, cons
+CShape sh = img.Shape();               |{
+int nBands = sh.nBands;                |
+                                       |CShape sh = img.Shape();
+                                       |int nBands = sh.nBands;
+
+E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_sw.cpp: line 130-133|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_sw.cpp: line 133-136[42]
+outer_t out;                           |out.val[2] = grad.z * grad.z;
+out.val[0] = grad.x * grad.x;          |out.val[3] = grad.x * grad.y;
+out.val[1] = grad.y * grad.y;          |out.val[4] = grad.x * grad.z;
+out.val[2] = grad.z * grad.z;          |out.val[5] = grad.y * grad.z;
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\utils.cpp: line 22-35|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\utils.cpp: line 53-66[42]
+std::string& outFile )                 |std::string& outFile )
+{                                      |{
+                                       |
+int c = 0;                             |int c = 0;
+                                       |
+while ((c = getopt(argc, argv, "f:p:o: |while ((c = getopt(argc, argv, "p:o:")
+{                                      |{
+switch (c)                             |switch (c)
+{                                      |{
+case 'f':                              |case 'p':
+ kernelFile = optarg;                  | dataPath = optarg;
+ break;                                | break;
+case 'p':                              |case 'o':
+ dataPath = optarg;                    | outFile = optarg;
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 178-182|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 257-260[40]
+ {                                     | char* ptr = (char *) img.PixelAddress
+                                       | int n = sh.width*sh.nBands;
+ int n = sh.width*sh.nBands;           |if ((int)fwrite(ptr, sizeof(uchar), n,
+ if ((int)fread(ptr, sizeof(uchar), n, | throw CError("WriteFileTGA(%s): file 
+ throw CError("ReadFileTGA(%s): file i |
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_sw.cpp: line 54-63|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_sw.cpp: line 226-235[40]
+gradient_z[r][c] /= 12.0f;             |}
+}                                      |}
+}                                      |}
+}                                      |}
+                                       |
+                                       |
+void gradient_weight_y(pixel_t gradien |void optical_flow_sw(pixel_t frame0[MA
+  pixel_t gradient_y[MAX_HEIGHT][MAX_W |  pixel_t frame1[MAX_HEIGHT][MAX_WIDTH
+  pixel_t gradient_z[MAX_HEIGHT][MAX_W |  pixel_t frame2[MAX_HEIGHT][MAX_WIDTH
+  gradient_t filt_grad[MAX_HEIGHT][MAX |  pixel_t frame3[MAX_HEIGHT][MAX_WIDTH
+
+E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\flowIO.cpp: line 20-30|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 464-479[39]
+return unknown_flow(f[0], f[1]);       | throw CError("WriteFilePGM(%s): error
+}                                      |}
+                                       |
+                                       |
+void ReadFlowFile(CFloatImage& img, co |
+{                                      |
+if (filename == NULL)                  |
+throw CError("ReadFlowFile: empty file |
+                                       |void ReadImage (CImage& img, const cha
+const char *dot = strrchr(filename, '. |{
+if (strcmp(dot, ".flo") != 0)          |if (filename == NULL)
+                                       |throw CError("ReadImage: empty filenam
+                                       |
+                                       |
+                                       |const char *dot = strrchr(filename, '.
+                                       |if (dot == NULL)
+
+E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 334-339|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 340-343[39]
+int isGray = 0, isFloat = 0;           |else if (strcmp(dot, ".ppm") == 0) {
+                                       |read_header(stream, "PGM", 'P', '6', &
+if (strcmp(dot, ".pgm") == 0) {        |isGray = 0;
+read_header(stream, "PGM", 'P', '5', & |}
+isGray = 1;                            |
+}                                      |
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\Convolve.cpp: line 135-141|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\Convolve.h: line 5-12[38]
+}                                      | float scale, float offset);
+                                       |
+template <class T>                     |
+void ConvolveSeparable(CImageOf<T> src |template <class T>
+  CFloatImage x_kernel, CFloatImage y_ |void ConvolveSeparable(CImageOf<T> src
+  float scale, float offset,           |  CFloatImage x_kernel, CFloatImage y_
+  int decimate, int interpolate)       |  float scale, float offset,
+                                       |  int decimate, int interpolate);
+
+E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 370-376|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 438-444[38]
+else {                                 |fprintf(stream, "P6\n%d %d\n%d\n", sh.
+                                       |
+                                       |
+ int n = sh.width*3;                   | int n = sh.width*3;
+std::vector<uchar> rowBuf;             |std::vector<uchar> rowBuf;
+rowBuf.resize(n);                      |rowBuf.resize(n);
+for (int y = 0; y<sh.height; y++) {    |for (int y = 0; y<sh.height; y++) {
+
+E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 490-494|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 551-555[38]
+}                                      |}
+else if (strcmp(dot, ".pgm") == 0 || s |else if (strcmp(dot, ".pgm") == 0 || s
+ strcmp(dot, ".pmf") == 0)             | strcmp(dot, ".pmf") == 0)
+{                                      |{
+ if ((&img.PixType()) == 0)            | if (img.PixType() == typeid(uchar) ||
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_sw.cpp: line 38-42|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_sw.cpp: line 233-237[38]
+  pixel_t frame1[MAX_HEIGHT][MAX_WIDTH |  pixel_t frame1[MAX_HEIGHT][MAX_WIDTH
+  pixel_t frame2[MAX_HEIGHT][MAX_WIDTH |  pixel_t frame2[MAX_HEIGHT][MAX_WIDTH
+  pixel_t frame3[MAX_HEIGHT][MAX_WIDTH |  pixel_t frame3[MAX_HEIGHT][MAX_WIDTH
+  pixel_t frame4[MAX_HEIGHT][MAX_WIDTH |  pixel_t frame4[MAX_HEIGHT][MAX_WIDTH
+  pixel_t gradient_z[MAX_HEIGHT][MAX_W |  velocity_t outputs[MAX_HEIGHT][MAX_W
+
+E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 340-342|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 344-346[36]
+else if (strcmp(dot, ".ppm") == 0) {   |else if (strcmp(dot, ".pmf") == 0) {
+read_header(stream, "PGM", 'P', '6', & |read_header(stream, "PMF", 'P', '9', &
+isGray = 0;                            |isGray = 0;
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_sw.cpp: line 238-243|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_sw.cpp: line 243-247[36]
+{                                      |static gradient_t y_filtered[MAX_HEIGH
+                                       |static gradient_t filtered_gradient[MA
+static pixel_t gradient_x[MAX_HEIGHT][ |static outer_t out_product[MAX_HEIGHT]
+static pixel_t gradient_y[MAX_HEIGHT][ |static tensor_t tensor_y[MAX_HEIGHT][M
+static pixel_t gradient_z[MAX_HEIGHT][ |static tensor_t tensor[MAX_HEIGHT][MAX
+static gradient_t y_filtered[MAX_HEIGH |
+
+E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\flowIO.cpp: line 30-35|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\flowIO.cpp: line 89-94[35]
+if (strcmp(dot, ".flo") != 0)          |if (nBands != 2)
+throw CError("ReadFlowFile (%s): exten |throw CError("WriteFlowFile(%s): image
+                                       |
+FILE *stream = fopen(filename, "rb");  |FILE *stream = fopen(filename, "wb");
+if (stream == 0)                       |if (stream == 0)
+ throw CError("ReadFlowFile: could not | throw CError("WriteFlowFile: could no
+
+E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 552-555|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 562-564[35]
+else if (strcmp(dot, ".pgm") == 0 || s |else if (strcmp(dot, ".PNG") == 0 || s
+ strcmp(dot, ".pmf") == 0)             |{
+{                                      | if (img.PixType() == typeid(uchar))
+ if (img.PixType() == typeid(uchar) || |
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_host.cpp: line 155-162|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_sw.cpp: line 43-48[35]
+velocity_t outputs[MAX_HEIGHT][MAX_WID |{
+                                       |for (int r = 0; r < MAX_HEIGHT; r ++)
+                                       |{
+for (int i = 0; i < MAX_HEIGHT; i++)   |for (int c = 0; c < MAX_WIDTH; c ++)
+{                                      |{
+for (int j = 0; j < MAX_WIDTH; j++)    |gradient_z[r][c] = 0.0f;
+{                                      |
+ frames[i][j](7 , 0) = imgs[0].Pixel(j |
+
+E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 79-84|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 97-101[34]
+ throw CError("ReadFileTGA: only suppo | }
+                                       | if (! m_isRun)
+if (! m_RLC)                           | {
+{                                      | if ((int)fread(m_buffer, sizeof(uchar
+if ((int)fread(m_buffer, sizeof(uchar) | throw CError("ReadFileTGA: file is to
+ throw CError("ReadFileTGA: file is to |
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\Convert.cpp: line 39-44|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\Convert.h: line 55-60[33]
+if (sShape.nBands != 1)                |if (sShape.nBands != 4 || src.alphaCha
+ throw CError("ConvertToRGBA: can only | throw CError("ConvertToGray: can only
+                                       |
+                                       |
+CShape dShape(sShape.width, sShape.hei |CShape dShape(sShape.width, sShape.hei
+CImageOf<T> dst(dShape);               |CImageOf<T> dst(dShape);
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\flowIO.cpp: line 89-94|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 413-418[33]
+if (nBands != 2)                       |if (strcmp(dot, ".pmf") == 0 && ! isFl
+throw CError("WriteFlowFile(%s): image |throw CError("WriteFilePMF(%s): can on
+                                       |
+FILE *stream = fopen(filename, "wb");  |FILE *stream = fopen(filename, "wb");
+if (stream == 0)                       |if (stream == 0)
+ throw CError("WriteFlowFile: could no | throw CError("WriteFilePGM: could not
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 376-378|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 452-455[33]
+for (int y = 0; y<sh.height; y++) {    |}
+ if ((int)fread(&rowBuf[0], sizeof(uch |
+ throw CError("ReadFilePGM(%s): file i |if ((int)fwrite(&rowBuf[0], sizeof(uch
+                                       |throw CError("WriteFilePGM(%s): file i
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 571-578|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 578-585[33]
+ throw CError("WriteImage(%s): file ty |ReadImage(img, filename);
+}                                      |}
+                                       |
+                                       |
+void ReadImageVerb(CImage& img, const  |void WriteImageVerb(CImage& img, const
+if (verbose)                           |if (verbose)
+fprintf(stderr, "Reading image %s\n",  |fprintf(stderr, "Writing image %s\n", 
+ReadImage(img, filename);              |WriteImage(img, filename);
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 143-145|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 365-367[32]
+ throw CError("ReadFileTGA(%s): colorm |uchar* ptr = (uchar *) img.PixelAddres
+if ((int)fread(colormap, sizeof(uchar) | if ((int)fread(ptr, sizeof(uchar), n,
+ throw CError("ReadFileTGA(%s): could  | throw CError("ReadFilePGM(%s): file i
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_host.cpp: line 90-97|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_host.cpp: line 155-162[32]
+velocity_t* outputs = new velocity_t[M |velocity_t outputs[MAX_HEIGHT][MAX_WID
+                                       |
+                                       |
+for (int i = 0; i < MAX_HEIGHT; i++)   |for (int i = 0; i < MAX_HEIGHT; i++)
+{                                      |{
+for (int j = 0; j < MAX_WIDTH; j++)    |for (int j = 0; j < MAX_WIDTH; j++)
+{                                      |{
+ frames[i*MAX_WIDTH+j](7 , 0) = imgs[0 | frames[i][j](7 , 0) = imgs[0].Pixel(j
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_sw.cpp: line 30-38|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_sw.cpp: line 115-123[32]
+ gradient_y[r-2][c-2] = 0;             | filt_grad[r][c-3] = acc;
+}                                      |}
+}                                      |}
+}                                      |}
+}                                      |}
+                                       |
+                                       |
+void gradient_z_calc(pixel_t frame0[MA |void outer_product(gradient_t gradient
+  pixel_t frame1[MAX_HEIGHT][MAX_WIDTH |  outer_t outer_product[MAX_HEIGHT][MA
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_sw.cpp: line 63-67|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_sw.cpp: line 144-148[32]
+  gradient_t filt_grad[MAX_HEIGHT][MAX |  tensor_t tensor_y[MAX_HEIGHT][MAX_WI
+{                                      |{
+for (int r = 0; r < MAX_HEIGHT + 3; r  |for (int r = 0; r < MAX_HEIGHT + 1; r 
+{                                      |{
+for (int c = 0; c < MAX_WIDTH; c ++)   |for(int c = 0; c < MAX_WIDTH; c ++)
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_sw.cpp: line 137-146|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_sw.cpp: line 169-178[32]
+outer_product[r][c] = out;             |}
+}                                      |}
+}                                      |}
+}                                      |}
+                                       |
+                                       |
+void tensor_weight_y(outer_t outer[MAX |void tensor_weight_x(tensor_t tensor_y
+  tensor_t tensor_y[MAX_HEIGHT][MAX_WI |  tensor_t tensor[MAX_HEIGHT][MAX_WIDT
+{                                      |{
+for (int r = 0; r < MAX_HEIGHT + 1; r  |for (int r = 0; r < MAX_HEIGHT; r ++)
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\flowIO.cpp: line 41-43|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\flowIO.cpp: line 98-100[31]
+(int)fread(&width, sizeof(int), 1, str |if ((int)fwrite(&width, sizeof(int), 1
+(int)fread(&height, sizeof(int), 1, st |(int)fwrite(&height, sizeof(int), 1, s
+throw CError("ReadFlowFile: problem re |throw CError("WriteFlowFile(%s): probl
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\Image.cpp: line 60-64|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\Image.cpp: line 68-72[31]
+SetDefaults();                         | return;
+ReAllocate(s, ti, cS, 0, true, 0);     |ReAllocate(s, ti, bandSize, 0, true, 0
+}                                      |}
+                                       |
+void CImage::ReAllocate(CShape s, cons |void CImage::ReAllocate(CShape s, cons
+
+E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 170-175|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 251-256[31]
+CTargaRLC rlc(! isRaw);                |throw CError("WriteFileTGA(%s): file i
+                                       |
+                                       |
+for (int y = 0; y < sh.height; y++)    |for (int y = 0; y < sh.height; y++)
+{                                      |{
+ int yr = reverseRows ? sh.height-1-y  | int yr = reverseRows ? sh.height-1-y 
+
+E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 378-383|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 444-448[31]
+ throw CError("ReadFilePGM(%s): file i |for (int y = 0; y<sh.height; y++) {
+                                       |uchar* ptr = (uchar *) img.PixelAddres
+uchar* ptr = (uchar *) img.PixelAddres |int x = 0;
+int x = 0;                             |while (x < n) {
+while (x < n) {                        |rowBuf[x++] = ptr[2];
+ptr[2] = rowBuf[x++];                  |
+
+E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\utils.cpp: line 15-22|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\utils.h: line 2-9[31]
+}                                      |void print_usage(char* filename);
+                                       |
+void parse_sdaccel_command_line_args(  |void parse_sdaccel_command_line_args(
+int argc,                              |int argc,
+char** argv,                           |char** argv,
+std::string& kernelFile,               |std::string& kernelFile,
+std::string& dataPath,                 |std::string& dataPath,
+std::string& outFile )                 |std::string& outFile);
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\Convert.cpp: line 115-122|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\Convolve.cpp: line 189-196[30]
+return (int)r1.Pixel(0, 0, 0);         |ConvolveSeparable(img, img, kernel, ke
+}                                      |}
+                                       |
+void InstantiateAllConverts(void)      |void InstantiateConvolutions()
+{                                      |{
+InstantiateConvert(CByteImage());      |InstantiateConvolutionOf(CByteImage())
+InstantiateConvert(CIntImage());       |InstantiateConvolutionOf(CIntImage());
+InstantiateConvert(CFloatImage());     |InstantiateConvolutionOf(CFloatImage()
+
+E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\Convolve.cpp: line 70-73|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\flowIO.cpp: line 60-62[30]
+ float sum = 0.0f;                     |int n = nBands * width;
+ for (int k = 0; k < kY; k++)          |for (int y = 0; y < height; y++) {
+ {                                     |float* ptr = &img.Pixel(0, y, 0);
+  float* kPtr = &kernel.Pixel(0, k, 0) |
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\flowIO.cpp: line 40-41|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\flowIO.cpp: line 98-99[30]
+if ((int)fread(&tag, sizeof(float), 1, |if ((int)fwrite(&width, sizeof(int), 1
+(int)fread(&width, sizeof(int), 1, str |(int)fwrite(&height, sizeof(int), 1, s
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 105-112|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 320-328[30]
+return m_buffer;                       |}
+}                                      |}
+                                       |
+void ReadFileTGA(CByteImage& img, cons |
+{                                      |void ReadFilePGM(CByteImage& img, cons
+                                       |{
+FILE *stream = fopen(filename, "rb");  |
+if (stream == 0)                       |FILE *stream = fopen(filename, "rb");
+                                       |if (stream == 0) {
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 258-260|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 365-367[30]
+ int n = sh.width*sh.nBands;           |uchar* ptr = (uchar *) img.PixelAddres
+if ((int)fwrite(ptr, sizeof(uchar), n, | if ((int)fread(ptr, sizeof(uchar), n,
+ throw CError("WriteFileTGA(%s): file  | throw CError("ReadFilePGM(%s): file i
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_sw.cpp: line 187-191|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_sw.cpp: line 207-211[30]
+if (c >= 2 && c < MAX_WIDTH)           | velocity_t output[MAX_HEIGHT][MAX_WID
+{                                      |{
+ for (int i = 0; i < 3; i ++)          |for(int r = 0; r < MAX_HEIGHT; r ++)
+ {                                     |{
+ for (int component = 0; component < 6 |for(int c = 0; c < MAX_WIDTH; c ++)
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\check_result.cpp: line 45-48|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\Convolve.cpp: line 64-68[29]
+int num_pix = 0;                       |int nB = bShape.nBands;
+for (int i = 0; i < MAX_HEIGHT; i++)   |
+{                                      |for (int i = 0; i < n; i++)
+for (int j = 0; j < MAX_WIDTH; j++)    |{
+                                       | for (int b = 0; b < nB; b++)
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 407-410|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 410-413[29]
+if (strcmp(dot, ".pgm") == 0 && nBands |if (strcmp(dot, ".ppm") == 0 && nBands
+throw CError("WriteFilePGM(%s): can on |throw CError("WriteFilePGM(%s): can on
+                                       |
+if (strcmp(dot, ".ppm") == 0 && nBands |if (strcmp(dot, ".pmf") == 0 && ! isFl
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 517-521|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 560-564[29]
+#endif                                 |}
+#ifdef HAVE_JPEG_READER                |#ifdef HAVE_PNG_LIB
+else if (strcmp(dot, ".JPG") == 0 || s |else if (strcmp(dot, ".PNG") == 0 || s
+{                                      |{
+ if ((&img.PixType()) == 0)            | if (img.PixType() == typeid(uchar))
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\check_result.cpp: line 16-19|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\check_result.cpp: line 45-48[28]
+CFloatImage outFlow(MAX_WIDTH, MAX_HEI |int num_pix = 0;
+for (int i = 0; i < MAX_HEIGHT; i++)   |for (int i = 0; i < MAX_HEIGHT; i++)
+{                                      |{
+for (int j = 0; j < MAX_WIDTH; j++)    |for (int j = 0; j < MAX_WIDTH; j++)
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\Convert.cpp: line 31-35|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\Convert.h: line 47-51[28]
+extern CImageOf<T> ConvertToRGBA(CImag |static CImageOf<T> ConvertToGray(CImag
+{                                      |{
+                                       |
+CShape sShape = src.Shape();           |CShape sShape = src.Shape();
+if (sShape.nBands == 4 && src.alphaCha |if (sShape.nBands == 1)
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\Convert.h: line 24-27|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\Convolve.cpp: line 48-51[28]
+else if (typeid(T1) == typeid(T2))     | if (l0 < 0)
+ memcpy(dst, src, n*sizeof(T2));       | memset(buf, 0, nB * sizeof(T));
+else                                   | else
+ for (int i = 0; i < n; i++)           | for (int b = 0; b < nB; b++)
+
+E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\Convert.h: line 64-67|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\Convolve.cpp: line 164-169[28]
+#T maxVal = dst.MaxVal();               |Convolve(tmpImg1, tmpImg2, v_kernel, s
+for (int y = 0; y < sShape.height; y++ |
+{                                      |
+ T* srcP = &src.Pixel(0, y, 0);        |for (int y = 0; y < dShape.height; y++
+                                       |{
+                                       | T* sPtr = &tmpImg2.Pixel(0, y * decim
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\Convolve.cpp: line 34-36|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\Convolve.cpp: line 46-48[28]
+int nB = sShape.nBands;                |{
+int k0 = TrimIndex(k + kernel.origin[1 | int l0 = TrimIndex(l + kernel.origin[
+if (k0 < 0)                            | if (l0 < 0)
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\Convolve.cpp: line 64-68|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_host.cpp: line 90-95[28]
+int nB = bShape.nBands;                |velocity_t* outputs = new velocity_t[M
+                                       |
+for (int i = 0; i < n; i++)            |
+{                                      |for (int i = 0; i < MAX_HEIGHT; i++)
+ for (int b = 0; b < nB; b++)          |{
+                                       |for (int j = 0; j < MAX_WIDTH; j++)
+
+E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\Convolve.cpp: line 229-231|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\Convolve.cpp: line 231-233[28]
+ConvolveKernel_121.origin[0] = -1;     |ConvolveKernel_14641.origin[0] = -2;
+ConvolveKernel_14641.ReAllocate(CShape |ConvolveKernel_8TapLowPass.ReAllocate(
+ConvolveKernel_14641.origin[0] = -2;   |ConvolveKernel_8TapLowPass.origin[0] =
+
+E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\Image.h: line 44-48|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\Image.h: line 51-55[28]
+inline bool CShape::InBounds(int x, in |inline bool CShape::InBounds(int x, in
+{                                      |{
+                                       |
+return (0 <= x && x < width &&         |return (0 <= x && x < width &&
+ 0 <= y && y < height);                | 0 <= y && y < height &&
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\Image.h: line 157-160|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\Image.h: line 165-168[28]
+CImage(CShape(), typeid(T), sizeof(T)) |CImage(CShape(width, height, nBands), 
+                                       |
+template <class T>                     |template <class T>
+inline CImageOf<T>::CImageOf(CShape s) |inline void CImageOf<T>::ReAllocate(CS
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 94-96|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 143-145[28]
+ if (m_isRun)                          | throw CError("ReadFileTGA(%s): colorm
+ if ((int)fread(m_buffer, sizeof(uchar |if ((int)fread(colormap, sizeof(uchar)
+  throw CError("ReadFileTGA: file is t | throw CError("ReadFileTGA(%s): could 
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_sw.cpp: line 1-8|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_sw.cpp: line 34-39[28]
+# 9 "E:\\work\\HLS2018\\RosettaBench\\ |}
+#include "optical_flow_sw.h"           |
+#include <cstdio>                      |
+                                       |void gradient_z_calc(pixel_t frame0[MA
+                                       |  pixel_t frame1[MAX_HEIGHT][MAX_WIDTH
+void gradient_xy_calc(pixel_t frame[MA |  pixel_t frame2[MAX_HEIGHT][MAX_WIDTH
+pixel_t gradient_x[MAX_HEIGHT][MAX_WID |
+pixel_t gradient_y[MAX_HEIGHT][MAX_WID |
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_sw.cpp: line 43-46|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_sw.cpp: line 124-127[28]
+{                                      |{
+for (int r = 0; r < MAX_HEIGHT; r ++)  |for (int r = 0; r < MAX_HEIGHT; r ++)
+{                                      |{
+for (int c = 0; c < MAX_WIDTH; c ++)   |for (int c = 0; c < MAX_WIDTH; c ++)
+
+E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\utils.cpp: line 35-46|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\utils.cpp: line 63-74[28]
+ dataPath = optarg;                    | dataPath = optarg;
+ break;                                | break;
+case 'o':                              |case 'o':
+ outFile = optarg;                     | outFile = optarg;
+ break;                                | break;
+default:                               |default:
+{                                      |{
+ print_usage(argv[0]);                 | print_usage(argv[0]);
+ exit(-1);                             | exit(-1);
+}                                      |}
+}                                      |}
+}                                      |}
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\Convolve.cpp: line 226-229|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\Convolve.cpp: line 229-231[27]
+    0.44921875f, 0.15625000f, -0.05859 |ConvolveKernel_121.origin[0] = -1;
+                                       |ConvolveKernel_14641.ReAllocate(CShape
+ConvolveKernel_121.ReAllocate(CShape(3 |ConvolveKernel_14641.origin[0] = -2;
+ConvolveKernel_121.origin[0] = -1;     |
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\Image.cpp: line 128-131|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 363-365[27]
+int nC = m_shape.width * m_shape.nBand | int n = isFloat ? width * nBands * si
+for (int y = 0; y < m_shape.height; y+ |for (int y = 0; y<sh.height; y++) {
+{                                      |uchar* ptr = (uchar *) img.PixelAddres
+ uchar *rp = (uchar *) PixelAddress(0, |
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\Image.h: line 161-164|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\Image.h: line 165-168[27]
+CImage(s, typeid(T), sizeof(T)) {}     |CImage(CShape(width, height, nBands), 
+                                       |
+template <class T>                     |template <class T>
+inline CImageOf<T>::CImageOf(int width |inline void CImageOf<T>::ReAllocate(CS
+
+E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_host.cpp: line 99-100|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_host.cpp: line 100-101[27]
+ frames[i*MAX_WIDTH+j](23, 16) = imgs[ | frames[i*MAX_WIDTH+j](31, 24) = imgs[
+ frames[i*MAX_WIDTH+j](31, 24) = imgs[ | frames[i*MAX_WIDTH+j](39, 32) = imgs[
+
+E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_host.cpp: line 100-101|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_host.cpp: line 101-102[27]
+ frames[i*MAX_WIDTH+j](31, 24) = imgs[ | frames[i*MAX_WIDTH+j](39, 32) = imgs[
+ frames[i*MAX_WIDTH+j](39, 32) = imgs[ | frames[i*MAX_WIDTH+j](63, 40) = 0;
+
+E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_sw.cpp: line 102-105|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_sw.cpp: line 154-158[27]
+acc.z = 0;                             |}
+if (c >= 6 && c < MAX_WIDTH)           |
+{                                      |if (r >= 2 && r < MAX_HEIGHT)
+ for (int i = 0; i < 7; i ++)          |{
+                                       | for (int i = 0; i < 3; i ++)
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\check_result.cpp: line 29-32|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\check_result.cpp: line 34-37[26]
+if (out_x*out_x + out_y*out_y > 25.0)  |else
+{                                      |{
+ outFlow.Pixel(j, i, 0) = 1e10;        | outFlow.Pixel(j, i, 0) = out_x;
+ outFlow.Pixel(j, i, 1) = 1e10;        | outFlow.Pixel(j, i, 1) = out_y;
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\check_result.cpp: line 49-51|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\check_result.cpp: line 55-57[26]
+{                                      |double out_deg = atan2(-out_y, -out_x)
+double out_x = outFlow.Pixel(j, i, 0); |double ref_x = refFlow.Pixel(j, i, 0);
+double out_y = outFlow.Pixel(j, i, 1); |double ref_y = refFlow.Pixel(j, i, 1);
+
+E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\Convert.cpp: line 24-25|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\Convolve.cpp: line 118-121[26]
+ int n = sShape.width * sShape.nBands; |  sShape.width);
+ ScaleAndOffsetLine(&src.Pixel(0, y, 0 |
+                                       |
+                                       | ScaleAndOffsetLine(&output.Pixel(0, 0
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\Convert.cpp: line 80-84|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 250-254[26]
+if (dBand < 0 || dBand >= dB)          |if (fwrite(&h, sizeof(CTargaHead), 1, 
+ throw CError("BandSelect: destination |throw CError("WriteFileTGA(%s): file i
+                                       |
+                                       |
+for (int y = 0; y < sShape.height; y++ |for (int y = 0; y < sh.height; y++)
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\Convolve.cpp: line 78-85|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\Convolve.cpp: line 132-139[26]
+ *dst++ = sum;                         | FillRowBuffer(&buffer.Pixel(0, k, 0),
+ }                                     | }
+}                                      |}
+}                                      |}
+                                       |
+template <class T>                     |template <class T>
+void Convolve(CImageOf<T> src, CImageO |void ConvolveSeparable(CImageOf<T> src
+ CFloatImage kernel,                   |  CFloatImage x_kernel, CFloatImage y_
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\Convolve.cpp: line 160-164|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\Convolve.cpp: line 187-189[26]
+v_kernel.origin[1] = y_kernel.origin[0 |CFloatImage kernel;
+                                       |Convolve(img, img, kernel, 1.0, 0.0);
+                                       |ConvolveSeparable(img, img, kernel, ke
+Convolve(src, tmpImg1, x_kernel, 1.0f, |
+Convolve(tmpImg1, tmpImg2, v_kernel, s |
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 99-101|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 143-145[26]
+ {                                     | throw CError("ReadFileTGA(%s): colorm
+ if ((int)fread(m_buffer, sizeof(uchar |if ((int)fread(colormap, sizeof(uchar)
+ throw CError("ReadFileTGA: file is to | throw CError("ReadFileTGA(%s): could 
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 244-250|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 414-420[26]
+bool reverseRows = false;              |throw CError("WriteFilePMF(%s): can on
+                                       |
+                                       |FILE *stream = fopen(filename, "wb");
+FILE *stream = fopen(filename, "wb");  |if (stream == 0)
+if (stream == 0)                       | throw CError("WriteFilePGM: could not
+ throw CError("WriteFileTGA: could not |
+if (fwrite(&h, sizeof(CTargaHead), 1,  |if (nBands == 1 || isFloat) {
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 363-364|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 427-428[26]
+ int n = isFloat ? width * nBands * si | int n = isFloat ? sh.width * sh.nBand
+for (int y = 0; y<sh.height; y++) {    |for (int y = 0; y<sh.height; y++) {
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_host.cpp: line 164-165|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_host.cpp: line 165-166[26]
+ frames[i][j](23, 16) = imgs[2].Pixel( | frames[i][j](31, 24) = imgs[3].Pixel(
+ frames[i][j](31, 24) = imgs[3].Pixel( | frames[i][j](39, 32) = imgs[4].Pixel(
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_host.cpp: line 165-166|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_host.cpp: line 166-167[26]
+ frames[i][j](31, 24) = imgs[3].Pixel( | frames[i][j](39, 32) = imgs[4].Pixel(
+ frames[i][j](39, 32) = imgs[4].Pixel( | frames[i][j](63, 40) = 0;
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_sw.h: line 13-15|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_sw.h: line 15-18[26]
+void optical_flow_sw(pixel_t frame0[MA |  pixel_t frame2[MAX_HEIGHT][MAX_WIDTH
+  pixel_t frame1[MAX_HEIGHT][MAX_WIDTH |  pixel_t frame3[MAX_HEIGHT][MAX_WIDTH
+  pixel_t frame2[MAX_HEIGHT][MAX_WIDTH |  pixel_t frame4[MAX_HEIGHT][MAX_WIDTH
+                                       |  velocity_t outputs[MAX_HEIGHT][MAX_W
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\Convert.cpp: line 7-12|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\Convolve.cpp: line 85-90[25]
+extern void ScaleAndOffset(CImageOf<T1 | CFloatImage kernel,
+{                                      | float scale, float offset)
+                                       |{
+                                       |
+CShape sShape = src.Shape();           |CShape kShape = kernel.Shape();
+CShape dShape = dst.Shape();           |CShape sShape = src.Shape();
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 115-116|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 250-251[25]
+if ((int)fread(&h, sizeof(CTargaHead), |if (fwrite(&h, sizeof(CTargaHead), 1, 
+throw CError("ReadFileTGA(%s): file is |throw CError("WriteFileTGA(%s): file i
+
+E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_sw.cpp: line 17-19|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_sw.cpp: line 73-75[25]
+if (r >= 4 && r < MAX_HEIGHT && c >= 4 |if (r >= 6 && r < MAX_HEIGHT)
+{                                      |{
+ for (int i = 0; i < 5; i++)           | for (int i = 0; i < 7; i ++)
+
+E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_sw.cpp: line 162-168|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_sw.cpp: line 193-199[25]
+ acc.val[component] += outer[r-i][c].v | acc.val[component] += tensor_y[r][c-i
+ }                                     | }
+ }                                     | }
+}                                      |}
+if (r >= 1)                            |if (c >= 1)
+{                                      |{
+ tensor_y[r-1][c] = acc;               | tensor[r][c-1] = acc;
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_sw.cpp: line 199-207|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_sw.cpp: line 225-233[25]
+ tensor[r][c-1] = acc;                 | output[r][c].y = 0;
+}                                      |}
+}                                      |}
+}                                      |}
+}                                      |}
+                                       |
+                                       |
+void flow_calc(tensor_t tensors[MAX_HE |void optical_flow_sw(pixel_t frame0[MA
+ velocity_t output[MAX_HEIGHT][MAX_WID |  pixel_t frame1[MAX_HEIGHT][MAX_WIDTH
+
+E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_sw.cpp: line 219-219|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_sw.cpp: line 219-220[25]
+ output[r][c].y = (tensors[r][c].val[4 | output[r][c].y = (tensors[r][c].val[4
+                                       |   tensors[r][c].val[5] * tensors[r][c
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\ImageIO.cpp: line 149-150|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_host.cpp: line 93-95[24]
+ for (i = 0; i < cMapSize; i++) {      |for (int i = 0; i < MAX_HEIGHT; i++)
+ for (int j = 0; j < TargaCMapBands; j |{
+                                       |for (int j = 0; j < MAX_WIDTH; j++)
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_sw.cpp: line 10-13|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\optical_flow_sw.cpp: line 64-67[24]
+pixel_t x_grad, y_grad;                |{
+for (int r = 0; r < MAX_HEIGHT + 2; r  |for (int r = 0; r < MAX_HEIGHT + 3; r 
+{                                      |{
+for (int c = 0; c < MAX_WIDTH + 2; c + |for (int c = 0; c < MAX_WIDTH; c ++)
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\utils.cpp: line 47-53|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\utils.h: line 9-15[24]
+}                                      |std::string& outFile);
+                                       |
+void parse_sdsoc_command_line_args(    |void parse_sdsoc_command_line_args(
+int argc,                              |int argc,
+char** argv,                           |char** argv,
+std::string& dataPath,                 |std::string& dataPath,
+std::string& outFile )                 |std::string& outFile );
+
+#E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\utils.h: line 2-8|E:\work\HLS2018\RosettaBench\rosetta_source\optical-flow\utils.h: line 9-15[24]
+void print_usage(char* filename);      |std::string& outFile);
+                                       |
+void parse_sdaccel_command_line_args(  |void parse_sdsoc_command_line_args(
+int argc,                              |int argc,
+char** argv,                           |char** argv,
+std::string& kernelFile,               |std::string& dataPath,
+std::string& dataPath,                 |std::string& outFile );
+

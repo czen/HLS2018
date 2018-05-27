@@ -1,3 +1,380 @@
-File E:\work\CHStone\CHStone_v1.11_150204\adpcm\adpcm.c: 3710 tokens, 882 lines
-Total: 3710 tokens
+File E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: 3716 tokens, 810 lines
+Total: 3716 tokens
+
+E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 704-726|E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 740-761[208]
+#define IN_END 100                     |};
+                                       |const int test_result[SIZE] = {
+const int test_data[SIZE] = {          |0, 0xffffffff, 0xffffffff, 0, 0,
+0x44, 0x44, 0x44, 0x44, 0x44,          |0xffffffff, 0, 0, 0xffffffff, 0xffffff
+0x44, 0x44, 0x44, 0x44, 0x44,          |0, 0, 0x1, 0x1, 0,
+0x44, 0x44, 0x44, 0x44, 0x44,          |0xfffffffe, 0xffffffff, 0xfffffffe, 0,
+0x44, 0x44, 0x43, 0x43, 0x43,          |0x1, 0x1, 0x1, 0xfffffffb, 0x2,
+0x43, 0x43, 0x43, 0x43, 0x42,          |0x2, 0x3, 0xb, 0x14, 0x14,
+0x42, 0x42, 0x42, 0x42, 0x42,          |0x16, 0x18, 0x20, 0x21, 0x26,
+0x41, 0x41, 0x41, 0x41, 0x41,          |0x27, 0x2e, 0x2f, 0x33, 0x32,
+0x40, 0x40, 0x40, 0x40, 0x40,          |0x35, 0x33, 0x36, 0x34, 0x37,
+0x40, 0x40, 0x40, 0x3f, 0x3f,          |0x34, 0x37, 0x35, 0x38, 0x36,
+0x3f, 0x3f, 0x3f, 0x3e, 0x3e,          |0x39, 0x38, 0x3b, 0x3a, 0x3f,
+0x3e, 0x3e, 0x3e, 0x3e, 0x3d,          |0x3f, 0x40, 0x3a, 0x3d, 0x3e,
+0x3d, 0x3d, 0x3d, 0x3d, 0x3d,          |0x41, 0x3c, 0x3e, 0x3f, 0x42,
+0x3c, 0x3c, 0x3c, 0x3c, 0x3c,          |0x3e, 0x3b, 0x37, 0x3b, 0x3e,
+0x3c, 0x3c, 0x3c, 0x3c, 0x3b,          |0x41, 0x3b, 0x3b, 0x3a, 0x3b,
+0x3b, 0x3b, 0x3b, 0x3b, 0x3b,          |0x36, 0x39, 0x3b, 0x3f, 0x3c,
+0x3b, 0x3b, 0x3b, 0x3b, 0x3b,          |0x3b, 0x37, 0x3b, 0x3d, 0x41,
+0x3b, 0x3b, 0x3b, 0x3b, 0x3b,          |0x3d, 0x3e, 0x3c, 0x3e, 0x3b,
+0x3b, 0x3b, 0x3b, 0x3b, 0x3b,          |0x3a, 0x37, 0x3b, 0x3e, 0x41,
+0x3b, 0x3b, 0x3c, 0x3c, 0x3c,          |0x3c, 0x3b, 0x39, 0x3a, 0x36
+0x3c, 0x3c, 0x3c, 0x3c, 0x3c           |
+
+E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 728-739|E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 740-751[106]
+int compressed[SIZE], result[SIZE];    |};
+const int test_compressed[SIZE] = {    |const int test_result[SIZE] = {
+0xfd, 0xde, 0x77, 0xba, 0xf2,          |0, 0xffffffff, 0xffffffff, 0, 0,
+0x90, 0x20, 0xa0, 0xec, 0xed,          |0xffffffff, 0, 0, 0xffffffff, 0xffffff
+0xef, 0xf1, 0xf3, 0xf4, 0xf5,          |0, 0, 0x1, 0x1, 0,
+0xf5, 0xf5, 0xf5, 0xf6, 0xf6,          |0xfffffffe, 0xffffffff, 0xfffffffe, 0,
+0xf6, 0xf7, 0xf8, 0xf7, 0xf8,          |0x1, 0x1, 0x1, 0xfffffffb, 0x2,
+0xf7, 0xf9, 0xf8, 0xf7, 0xf9,          |0x2, 0x3, 0xb, 0x14, 0x14,
+0xf8, 0xf8, 0xf6, 0xf8, 0xf8,          |0x16, 0x18, 0x20, 0x21, 0x26,
+0xf7, 0xf9, 0xf9, 0xf9, 0xf8,          |0x27, 0x2e, 0x2f, 0x33, 0x32,
+0xf7, 0xfa, 0xf8, 0xf8, 0xf7,          |0x35, 0x33, 0x36, 0x34, 0x37,
+0xfb, 0xfa, 0xf9, 0xf8, 0xf8           |0x34, 0x37, 0x35, 0x38, 0x36,
+
+E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 741-751|E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 751-761[98]
+const int test_result[SIZE] = {        |0x34, 0x37, 0x35, 0x38, 0x36,
+0, 0xffffffff, 0xffffffff, 0, 0,       |0x39, 0x38, 0x3b, 0x3a, 0x3f,
+0xffffffff, 0, 0, 0xffffffff, 0xffffff |0x3f, 0x40, 0x3a, 0x3d, 0x3e,
+0, 0, 0x1, 0x1, 0,                     |0x41, 0x3c, 0x3e, 0x3f, 0x42,
+0xfffffffe, 0xffffffff, 0xfffffffe, 0, |0x3e, 0x3b, 0x37, 0x3b, 0x3e,
+0x1, 0x1, 0x1, 0xfffffffb, 0x2,        |0x41, 0x3b, 0x3b, 0x3a, 0x3b,
+0x2, 0x3, 0xb, 0x14, 0x14,             |0x36, 0x39, 0x3b, 0x3f, 0x3c,
+0x16, 0x18, 0x20, 0x21, 0x26,          |0x3b, 0x37, 0x3b, 0x3d, 0x41,
+0x27, 0x2e, 0x2f, 0x33, 0x32,          |0x3d, 0x3e, 0x3c, 0x3e, 0x3b,
+0x35, 0x33, 0x36, 0x34, 0x37,          |0x3a, 0x37, 0x3b, 0x3e, 0x41,
+0x34, 0x37, 0x35, 0x38, 0x36,          |0x3c, 0x3b, 0x39, 0x3a, 0x36
+
+E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 296-329|E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 404-434[87]
+ih--;                                  |dec_sh = dec_sph + dec_szh;
+                                       |
+                                       |
+dh = ((long) deth * qq2_code2_table[ih |dec_dh = ((long) dec_deth * qq2_code2_
+                                       |
+                                       |
+nbh = logsch (ih, nbh);                |dec_nbh = logsch (ih, dec_nbh);
+                                       |
+                                       |
+deth = scalel (nbh, 10);               |dec_deth = scalel (dec_nbh, 10);
+                                       |
+                                       |
+ph = dh + szh;                         |dec_ph = dec_dh + dec_szh;
+                                       |
+                                       |
+                                       |upzero (dec_dh, dec_del_dhx, dec_del_b
+                                       |
+upzero (dh, delay_dhx, delay_bph);     |
+                                       |dec_ah2 = uppol2 (dec_ah1, dec_ah2, de
+                                       |
+                                       |
+ah2 = uppol2 (ah1, ah2, ph, ph1, ph2); |dec_ah1 = uppol1 (dec_ah1, dec_ah2, de
+                                       |
+                                       |
+ah1 = uppol1 (ah1, ah2, ph, ph1);      |rh = dec_sh + dec_dh;
+                                       |
+                                       |
+yh = sh + dh;                          |dec_rh2 = dec_rh1;
+                                       |dec_rh1 = rh;
+                                       |dec_ph2 = dec_ph1;
+rh2 = rh1;                             |dec_ph1 = dec_ph;
+rh1 = yh;                              |
+ph2 = ph1;                             |
+ph1 = ph;                              |
+
+E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 238-275|E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 407-439[80]
+dlt = ((long) detl * qq4_code4_table[i |dec_dh = ((long) dec_deth * qq2_code2_
+                                       |
+                                       |
+nbl = logscl (il, nbl);                |dec_nbh = logsch (ih, dec_nbh);
+                                       |
+                                       |
+                                       |dec_deth = scalel (dec_nbh, 10);
+detl = scalel (nbl, 8);                |
+                                       |
+                                       |dec_ph = dec_dh + dec_szh;
+plt = dlt + szl;                       |
+                                       |
+                                       |upzero (dec_dh, dec_del_dhx, dec_del_b
+                                       |
+                                       |
+                                       |dec_ah2 = uppol2 (dec_ah1, dec_ah2, de
+upzero (dlt, delay_dltx, delay_bpl);   |
+                                       |
+                                       |dec_ah1 = uppol1 (dec_ah1, dec_ah2, de
+                                       |
+al2 = uppol2 (al1, al2, plt, plt1, plt |
+                                       |rh = dec_sh + dec_dh;
+                                       |
+                                       |
+al1 = uppol1 (al1, al2, plt, plt1);    |dec_rh2 = dec_rh1;
+                                       |dec_rh1 = rh;
+                                       |dec_ph2 = dec_ph1;
+rlt = sl + dlt;                        |dec_ph1 = dec_ph;
+                                       |
+                                       |
+rlt2 = rlt1;                           |
+rlt1 = rlt;                            |
+plt2 = plt1;                           |xd = rl - rh;
+plt1 = plt;                            |
+                                       |
+                                       |
+                                       |
+szh = filtez (delay_bph, delay_dhx);   |
+
+E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 365-398|E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 407-439[75]
+rl = dl + dec_sl;                      |dec_dh = ((long) dec_deth * qq2_code2_
+                                       |
+                                       |
+dec_nbl = logscl (ilr, dec_nbl);       |dec_nbh = logsch (ih, dec_nbh);
+                                       |
+                                       |
+dec_detl = scalel (dec_nbl, 8);        |dec_deth = scalel (dec_nbh, 10);
+                                       |
+                                       |
+                                       |dec_ph = dec_dh + dec_szh;
+dec_plt = dec_dlt + dec_szl;           |
+                                       |
+                                       |upzero (dec_dh, dec_del_dhx, dec_del_b
+upzero (dec_dlt, dec_del_dltx, dec_del |
+                                       |
+                                       |dec_ah2 = uppol2 (dec_ah1, dec_ah2, de
+dec_al2 = uppol2 (dec_al1, dec_al2, de |
+                                       |
+                                       |dec_ah1 = uppol1 (dec_ah1, dec_ah2, de
+dec_al1 = uppol1 (dec_al1, dec_al2, de |
+                                       |
+                                       |rh = dec_sh + dec_dh;
+dec_rlt = dec_sl + dec_dlt;            |
+                                       |
+                                       |dec_rh2 = dec_rh1;
+dec_rlt2 = dec_rlt1;                   |dec_rh1 = rh;
+dec_rlt1 = dec_rlt;                    |dec_ph2 = dec_ph1;
+dec_plt2 = dec_plt1;                   |dec_ph1 = dec_ph;
+dec_plt1 = dec_plt;                    |
+                                       |
+                                       |
+                                       |
+                                       |xd = rl - rh;
+dec_szh = filtez (dec_del_bph, dec_del |
+
+E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 67-74|E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 739-748[72]
+3042, 1198, 538, 334, 172, 58, -30, -6 |0xfb, 0xfa, 0xf9, 0xf8, 0xf8
+};                                     |};
+                                       |const int test_result[SIZE] = {
+const int ilb_table[32] = {            |0, 0xffffffff, 0xffffffff, 0, 0,
+2048, 2093, 2139, 2186, 2233, 2282, 23 |0xffffffff, 0, 0, 0xffffffff, 0xffffff
+2435, 2489, 2543, 2599, 2656, 2714, 27 |0, 0, 0x1, 0x1, 0,
+2896, 2960, 3025, 3091, 3158, 3228, 32 |0xfffffffe, 0xffffffff, 0xfffffffe, 0,
+3444, 3520, 3597, 3676, 3756, 3838, 39 |0x1, 0x1, 0x1, 0xfffffffb, 0x2,
+                                       |0x2, 0x3, 0xb, 0x14, 0x14,
+                                       |0x16, 0x18, 0x20, 0x21, 0x26,
+
+E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 99-108|E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 739-747[70]
+37, 36, 35, 34, 33, 32, 32             |0xfb, 0xfa, 0xf9, 0xf8, 0xf8
+};                                     |};
+                                       |const int test_result[SIZE] = {
+                                       |0, 0xffffffff, 0xffffffff, 0, 0,
+                                       |0xffffffff, 0, 0, 0xffffffff, 0xffffff
+const int quant26bt_neg[31] = {        |0, 0, 0x1, 0x1, 0,
+63, 62, 31, 30, 29, 28, 27, 26,        |0xfffffffe, 0xffffffff, 0xfffffffe, 0,
+25, 24, 23, 22, 21, 20, 19, 18,        |0x1, 0x1, 0x1, 0xfffffffb, 0x2,
+17, 16, 15, 14, 13, 12, 11, 10,        |0x2, 0x3, 0xb, 0x14, 0x14,
+9, 8, 7, 6, 5, 4, 4                    |
+
+E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 91-99|E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 704-712[69]
+int detl;                              |#define IN_END 100
+                                       |
+                                       |const int test_data[SIZE] = {
+                                       |0x44, 0x44, 0x44, 0x44, 0x44,
+const int quant26bt_pos[31] = {        |0x44, 0x44, 0x44, 0x44, 0x44,
+61, 60, 59, 58, 57, 56, 55, 54,        |0x44, 0x44, 0x44, 0x44, 0x44,
+53, 52, 51, 50, 49, 48, 47, 46,        |0x44, 0x44, 0x43, 0x43, 0x43,
+45, 44, 43, 42, 41, 40, 39, 38,        |0x43, 0x43, 0x43, 0x43, 0x42,
+37, 36, 35, 34, 33, 32, 32             |0x42, 0x42, 0x42, 0x42, 0x42,
+
+E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 81-88|E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 91-99[67]
+int rlt, rlt1, rlt2;                   |int detl;
+                                       |
+                                       |
+const int decis_levl[30] = {           |
+280, 576, 880, 1200, 1520, 1864, 2208, |const int quant26bt_pos[31] = {
+2960, 3376, 3784, 4240, 4696, 5200, 57 |61, 60, 59, 58, 57, 56, 55, 54,
+6864, 7520, 8184, 8968, 9752, 10712, 1 |53, 52, 51, 50, 49, 48, 47, 46,
+14120, 15840, 17560, 20456, 23352, 327 |45, 44, 43, 42, 41, 40, 39, 38,
+                                       |37, 36, 35, 34, 33, 32, 32
+
+E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 54-58|E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 70-74[62]
+-3168, -2776, -2400, -2032, -1688, -13 |const int ilb_table[32] = {
+24808, 21904, 19008, 16704, 14984, 135 |2048, 2093, 2139, 2186, 2233, 2282, 23
+10232, 9360, 8576, 7856, 7192, 6576, 6 |2435, 2489, 2543, 2599, 2656, 2714, 27
+4944, 4464, 4008, 3576, 3168, 2776, 24 |2896, 2960, 3025, 3091, 3158, 3228, 32
+1688, 1360, 1040, 728, 432, 136, -432, |3444, 3520, 3597, 3676, 3756, 3838, 39
+
+E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 751-756|E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 756-761[50]
+0x34, 0x37, 0x35, 0x38, 0x36,          |0x41, 0x3b, 0x3b, 0x3a, 0x3b,
+0x39, 0x38, 0x3b, 0x3a, 0x3f,          |0x36, 0x39, 0x3b, 0x3f, 0x3c,
+0x3f, 0x40, 0x3a, 0x3d, 0x3e,          |0x3b, 0x37, 0x3b, 0x3d, 0x41,
+0x41, 0x3c, 0x3e, 0x3f, 0x42,          |0x3d, 0x3e, 0x3c, 0x3e, 0x3b,
+0x3e, 0x3b, 0x37, 0x3b, 0x3e,          |0x3a, 0x37, 0x3b, 0x3e, 0x41,
+0x41, 0x3b, 0x3b, 0x3a, 0x3b,          |0x3c, 0x3b, 0x39, 0x3a, 0x36
+
+E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 50-52|E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 52-54[48]
+const int qq6_code6_table[64] = {      |-14984, -13512, -12280, -11192, -10232
+-136, -136, -136, -136, -24808, -21904 |-7192, -6576, -6000, -5456, -4944, -44
+-14984, -13512, -12280, -11192, -10232 |-3168, -2776, -2400, -2032, -1688, -13
+
+E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 199-205|E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 449-455[48]
+for (i = 0; i < 10; i++)               |for (i = 0; i < 10; i++)
+{                                      |{
+xa += (long) (*tqmf_ptr++) * (*h_ptr++ |xa1 += (long) (*ac_ptr++) * (*h_ptr++)
+xb += (long) (*tqmf_ptr++) * (*h_ptr++ |xa2 += (long) (*ad_ptr++) * (*h_ptr++)
+}                                      |}
+                                       |
+xa += (long) (*tqmf_ptr++) * (*h_ptr++ |xa1 += (long) (*ac_ptr) * (*h_ptr++);
+
+E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 44-46|E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 54-55[37]
+const int qq4_code4_table[16] = {      |-3168, -2776, -2400, -2032, -1688, -13
+0, -20456, -12896, -8968, -6288, -4240 |24808, 21904, 19008, 16704, 14984, 135
+20456, 12896, 8968, 6288, 4240, 2584,  |
+
+E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 347-360|E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 393-407[36]
+ih = input >> 6;                       |dec_plt1 = dec_plt;
+                                       |
+                                       |
+                                       |
+                                       |
+dec_szl = filtez (dec_del_bpl, dec_del |dec_szh = filtez (dec_del_bph, dec_del
+                                       |
+                                       |
+dec_spl = filtep (dec_rlt1, dec_al1, d |dec_sph = filtep (dec_rh1, dec_ah1, de
+                                       |
+dec_sl = dec_spl + dec_szl;            |
+                                       |dec_sh = dec_sph + dec_szh;
+                                       |
+dec_dlt = ((long) dec_detl * qq4_code4 |
+                                       |dec_dh = ((long) dec_deth * qq2_code2_
+
+E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 651-665|E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 679-691[31]
+apl2 = wd4 + (127L * (long) al2 >> 7L) |wd3 = 15360 - apl2;
+                                       |if (apl1 > wd3)
+                                       |apl1 = wd3;
+if (apl2 > 12288)                      |if (apl1 < -wd3)
+apl2 = 12288;                          |apl1 = -wd3;
+if (apl2 < -12288)                     |return (apl1);
+apl2 = -12288;                         |}
+return (apl2);                         |
+}                                      |
+                                       |
+                                       |
+                                       |int
+                                       |logsch (int ih, int nbh)
+int                                    |
+uppol1 (int al1, int apl2, int plt, in |
+
+E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 196-199|E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 521-523[30]
+xa = (long) (*tqmf_ptr++) * (*h_ptr++) |long int zl;
+xb = (long) (*tqmf_ptr++) * (*h_ptr++) |zl = (long) (*bpl++) * (*dlt++);
+                                       |for (i = 1; i < 6; i++)
+for (i = 0; i < 10; i++)               |
+
+E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 217-231|E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 347-360[30]
+xh = (xa - xb) >> 15;                  |ih = input >> 6;
+                                       |
+                                       |
+                                       |
+                                       |
+                                       |dec_szl = filtez (dec_del_bpl, dec_del
+                                       |
+szl = filtez (delay_bpl, delay_dltx);  |
+                                       |dec_spl = filtep (dec_rlt1, dec_al1, d
+                                       |
+spl = filtep (rlt1, al1, rlt2, al2);   |dec_sl = dec_spl + dec_szl;
+                                       |
+                                       |
+sl = szl + spl;                        |dec_dlt = ((long) dec_detl * qq4_code4
+el = xl - sl;                          |
+
+E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 481-484|E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 484-486[30]
+detl = dec_detl = 32;                  |nbh = ah1 = ah2 = ph1 = ph2 = rh1 = rh
+deth = dec_deth = 8;                   |dec_nbl = dec_al1 = dec_al2 = dec_plt1
+nbl = al1 = al2 = plt1 = plt2 = rlt1 = |dec_nbh = dec_ah1 = dec_ah2 = dec_ph1 
+nbh = ah1 = ah2 = ph1 = ph2 = rh1 = rh |
+
+E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 205-209|E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 455-459[27]
+xa += (long) (*tqmf_ptr++) * (*h_ptr++ |xa1 += (long) (*ac_ptr) * (*h_ptr++);
+xb += (long) (*tqmf_ptr) * (*h_ptr++); |xa2 += (long) (*ad_ptr) * (*h_ptr++);
+                                       |
+                                       |
+tqmf_ptr1 = tqmf_ptr - 2;              |xout1 = xa1 >> 14;
+
+E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 7-9|E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 12-14[26]
+void upzero (int dlt, int *dlti, int * |int uppol2 (int al1, int al2, int plt,
+int filtep (int rlt1, int al1, int rlt |int uppol1 (int al1, int apl2, int plt
+int quantl (int el, int detl);         |int logsch (int ih, int nbh);
+
+E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 486-491|E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 505-510[26]
+dec_nbh = dec_ah1 = dec_ah2 = dec_ph1  |tqmf[i] = 0;
+                                       |
+for (i = 0; i < 6; i++)                |for (i = 0; i < 11; i++)
+{                                      |{
+delay_dltx[i] = 0;                     |accumc[i] = 0;
+delay_dhx[i] = 0;                      |accumd[i] = 0;
+
+E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 491-496|E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 499-504[26]
+delay_dhx[i] = 0;                      |delay_bph[i] = 0;
+dec_del_dltx[i] = 0;                   |dec_del_bpl[i] = 0;
+dec_del_dhx[i] = 0;                    |dec_del_bph[i] = 0;
+}                                      |}
+                                       |
+for (i = 0; i < 6; i++)                |for (i = 0; i < 24; i++)
+
+E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 794-799|E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 801-806[26]
+for (i = 0; i < IN_END / 2; i++)       |for (i = 0; i < IN_END; i++)
+{                                      |{
+if (compressed[i] != test_compressed[i |if (result[i] != test_result[i])
+{                                      |{
+main_result += 1;                      |main_result += 1;
+}                                      |}
+
+E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 24-26|E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 26-27[25]
+const int h[24] = {                    |-840, -3220, 3804, 15504, 15504, 3804,
+12, -44, -44, 212, 48, -624, 128, 1448 |1448, 128, -624, 48, 212, -44, -44, 12
+-840, -3220, 3804, 15504, 15504, 3804, |
+
+E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 275-282|E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 352-360[25]
+szh = filtez (delay_bph, delay_dhx);   |dec_szl = filtez (dec_del_bpl, dec_del
+                                       |
+sph = filtep (rh1, ah1, rh2, ah2);     |
+                                       |dec_spl = filtep (dec_rlt1, dec_al1, d
+                                       |
+sh = sph + szh;                        |dec_sl = dec_spl + dec_szl;
+                                       |
+eh = xh - sh;                          |
+                                       |dec_dlt = ((long) dec_detl * qq4_code4
+
+E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 575-580|E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 695-700[25]
+nbl = (int) wd + wl_code_table[il >> 2 |nbh = wd + wh_code_table[ih];
+if (nbl < 0)                           |if (nbh < 0)
+nbl = 0;                               |nbh = 0;
+if (nbl > 18432)                       |if (nbh > 22528)
+nbl = 18432;                           |nbh = 22528;
+return (nbl);                          |return (nbh);
+
+E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 52-53|E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 53-54[24]
+-14984, -13512, -12280, -11192, -10232 |-7192, -6576, -6000, -5456, -4944, -44
+-7192, -6576, -6000, -5456, -4944, -44 |-3168, -2776, -2400, -2032, -1688, -13
+
+E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 756-759|E:\work\HLS2018\CHStone\CHStoneProcessed\adpcm\adpcm.c: line 759-761[24]
+0x41, 0x3b, 0x3b, 0x3a, 0x3b,          |0x3d, 0x3e, 0x3c, 0x3e, 0x3b,
+0x36, 0x39, 0x3b, 0x3f, 0x3c,          |0x3a, 0x37, 0x3b, 0x3e, 0x41,
+0x3b, 0x37, 0x3b, 0x3d, 0x41,          |0x3c, 0x3b, 0x39, 0x3a, 0x36
+0x3d, 0x3e, 0x3c, 0x3e, 0x3b,          |
 
