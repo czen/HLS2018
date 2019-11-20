@@ -34,7 +34,7 @@
  * agents, transferees, successors, and assigns.
  *
  */
-#include <stdio.h>
+//#include <stdio.h>
 #include "softfloat.c"
 
 double
@@ -220,11 +220,11 @@ main ()
 	  result = float64_add (x1, x2);
 	  main_result += (result != z_output[i]);
 
-	  printf
-	    ("a_input=%016llx b_input=%016llx expected=%016llx output=%016llx (%lf)\n",
-	     a_input[i], b_input[i], z_output[i], result,
-	     ullong_to_double (result));
+	  //printf
+	   // ("a_input=%016llx b_input=%016llx expected=%016llx output=%016llx (%lf)\n",
+	   //  a_input[i], b_input[i], z_output[i], result,
+	    // ullong_to_double (result));
 	}
-      printf ("%d\n", main_result);
+      //printf ("%d\n", main_result);
       return main_result;
     }

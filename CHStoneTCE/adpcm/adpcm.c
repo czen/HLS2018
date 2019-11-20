@@ -62,7 +62,7 @@
 /*                                                                       */
 /*                                                                       */
 /*************************************************************************/
-#include <stdio.h>
+//#include <stdio.h>
 
 int encode (int, int);
 void decode (int);
@@ -876,6 +876,6 @@ int main (int arhc, char** argv)
 	      main_result += 1;
 	    }
 	}
-      printf ("%d\n", main_result);
+      //printf ("%d\n", main_result);
       return main_result;
     }

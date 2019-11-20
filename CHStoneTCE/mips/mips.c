@@ -34,7 +34,7 @@
  * agents, transferees, successors, and assigns.
  *
  */
-#include <stdio.h>
+//#include <stdio.h>
 int main_result;
 
 #define R 0
@@ -300,7 +300,7 @@ main ()
 	  main_result += (dmem[j] != outData[j]);
 	}
 
-      printf ("%d\n", main_result);
+      //printf ("%d\n", main_result);
       return main_result;
     }
 }

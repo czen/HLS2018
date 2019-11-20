@@ -16,7 +16,7 @@
 |    4. Please follow the copyright of each benchmark program.             |
 +--------------------------------------------------------------------------+
 */
-#include <stdio.h>
+//#include <stdio.h>
 #include "lpc.c"
 
 /*
@@ -105,6 +105,6 @@ main ()
       for (i = 0; i < M; i++)
 	main_result += (LARc[i] != outLARc[i]);
 
-      printf ("%d\n", main_result);
+      //printf ("%d\n", main_result);
       return main_result;
     }

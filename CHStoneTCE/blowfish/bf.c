@@ -73,7 +73,7 @@
  * copied and put under another distribution licence
  * [including the GNU Public Licence.]
  */
-#include <stdio.h>
+//#include <stdio.h>
 
 #include "blowfish.h"
 #include "bf_locl.h"
@@ -860,7 +860,7 @@ main ()
       main_result = 0;
       main_result = blowfish_main ();
 
-      printf ("%d\n", main_result);
+      //printf ("%d\n", main_result);
 
       return main_result;
     }

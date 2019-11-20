@@ -59,7 +59,7 @@
  *   WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  *
  */
-#include <stdio.h>
+//#include <stdio.h>
 
 
 int main_result;
@@ -124,6 +124,6 @@ main ()
 {
       main_result = 0;
       aes_main ();
-      printf ("\n%d\n", main_result);
+     // printf ("\n%d\n", main_result);
       return main_result;
     }

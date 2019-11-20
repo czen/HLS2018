@@ -386,7 +386,7 @@ decode_start (int *out_data_image_width, int *out_data_image_height,
 
   if (p_jinfo_smp_fact == SF1_1_1)
     {
-      printf ("Decode 1:1:1 NumMCU = %d\n", p_jinfo_NumMCU);
+      //printf ("Decode 1:1:1 NumMCU = %d\n", p_jinfo_NumMCU);
 
       /*
        * 1_1_1
@@ -416,7 +416,7 @@ decode_start (int *out_data_image_width, int *out_data_image_height,
     }
   else
     {
-      printf ("Decode 4:1:1 NumMCU = %d\n", p_jinfo_NumMCU);
+      //printf ("Decode 4:1:1 NumMCU = %d\n", p_jinfo_NumMCU);
       /*
        * 4_1_1
        */

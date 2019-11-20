@@ -24,7 +24,7 @@
 /* NIST's proposed modification to SHA of 7/11/94 may be */
 /* activated by defining USE_MODIFIED_SHA */
 
-#include <stdio.h>
+//#include <stdio.h>
 #include "sha.h"
 #include "sha.c"
 
@@ -50,7 +50,7 @@ main ()
 
 	  main_result += (sha_info_digest[i] != outData[i]);
 	}
-      printf ("%d\n", main_result);
+      //printf ("%d\n", main_result);
 
       return main_result;
     }

@@ -34,7 +34,7 @@
  * agents, transferees, successors, and assigns.
  *
  */
-#include <stdio.h>
+//#include <stdio.h>
 #include <stdlib.h>
 
 #include "global.h"
@@ -54,7 +54,7 @@ main ()
   main_result = 0;
   jpeg2bmp_main ();
 
-  printf ("%d\n", main_result);
+  //printf ("%d\n", main_result);
 
   return main_result;
 }

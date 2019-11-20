@@ -34,7 +34,7 @@
  * agents, transferees, successors, and assigns.
  *
  */
-#include <stdio.h>
+//#include <stdio.h>
 
 #define Num 2048
 
@@ -389,7 +389,7 @@ main ()
 	  }
 
   
-    printf ("%d\n", main_result);
+    //printf ("%d\n", main_result);
   return main_result;
 
 }
