@@ -855,6 +855,8 @@ adpcm_main ()
     }
 }
 
+int total_result;
+
 int main (int arhc, char** argv)
 {
   int i;
@@ -877,5 +879,6 @@ int main (int arhc, char** argv)
 	    }
 	}
       //printf ("%d\n", main_result);
+      total_result = main_result;
       return main_result;
     }

@@ -852,10 +852,12 @@ blowfish_main ()
   return check;
 }
 
+int main_result;
+
 int
 main ()
 {
-  int main_result;
+  
 
       main_result = 0;
       main_result = blowfish_main ();

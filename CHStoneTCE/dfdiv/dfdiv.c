@@ -134,10 +134,12 @@ const float64 z_output[N] = {
   0x3FE5555555555555ULL		/* 0.666667 */
 };
 
+int main_result;
+
 int
 main ()
 {
-  int main_result;
+
   int i;
   float64 x1, x2;
       main_result = 0;
