@@ -59,6 +59,9 @@
  *   WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  *
  */
+
+#include "tceops.h"
+
 const int Sbox[16][16] = {
   {0x63, 0x7c, 0x77, 0x7b, 0xf2, 0x6b, 0x6f, 0xc5, 0x30, 0x01, 0x67, 0x2b,
    0xfe, 0xd7, 0xab, 0x76},
@@ -371,51 +374,24 @@ MixColumn_AddRoundKey (int statemt[32], int nb, int n)
 
   for (j = 0; j < nb; ++j)
     {
-      ret[j * 4] = (statemt[j * 4] << 1);
-      if ((ret[j * 4] >> 8) == 1)
-	ret[j * 4] ^= 283;
-      x = statemt[1 + j * 4];
-      x ^= (x << 1);
-      if ((x >> 8) == 1)
-	ret[j * 4] ^= (x ^ 283);
-      else
-	ret[j * 4] ^= x;
+      int r = 0;
+      _TCE_ROUND32(statemt[j * 4], statemt[1 + j * 4], r);
+      ret[j * 4] = r;
       ret[j * 4] ^=
 	statemt[2 + j * 4] ^ statemt[3 + j * 4] ^ word[0][j + nb * n];
 
-      ret[1 + j * 4] = (statemt[1 + j * 4] << 1);
-      if ((ret[1 + j * 4] >> 8) == 1)
-	ret[1 + j * 4] ^= 283;
-      x = statemt[2 + j * 4];
-      x ^= (x << 1);
-      if ((x >> 8) == 1)
-	ret[1 + j * 4] ^= (x ^ 283);
-      else
-	ret[1 + j * 4] ^= x;
+      _TCE_ROUND32(statemt[1 + j * 4], statemt[2 + j * 4], r);
+      ret[1+ j * 4] = r;
       ret[1 + j * 4] ^=
 	statemt[3 + j * 4] ^ statemt[j * 4] ^ word[1][j + nb * n];
 
-      ret[2 + j * 4] = (statemt[2 + j * 4] << 1);
-      if ((ret[2 + j * 4] >> 8) == 1)
-	ret[2 + j * 4] ^= 283;
-      x = statemt[3 + j * 4];
-      x ^= (x << 1);
-      if ((x >> 8) == 1)
-	ret[2 + j * 4] ^= (x ^ 283);
-      else
-	ret[2 + j * 4] ^= x;
+      _TCE_ROUND32(statemt[2 + j * 4], statemt[3 + j * 4], r);
+      ret[2+ j * 4] = r;
       ret[2 + j * 4] ^=
-	statemt[j * 4] ^ statemt[1 + j * 4] ^ word[2][j + nb * n];
+  	statemt[j * 4] ^ statemt[1 + j * 4] ^ word[2][j + nb * n];
 
-      ret[3 + j * 4] = (statemt[3 + j * 4] << 1);
-      if ((ret[3 + j * 4] >> 8) == 1)
-	ret[3 + j * 4] ^= 283;
-      x = statemt[j * 4];
-      x ^= (x << 1);
-      if ((x >> 8) == 1)
-	ret[3 + j * 4] ^= (x ^ 283);
-      else
-	ret[3 + j * 4] ^= x;
+    _TCE_ROUND32(statemt[3 + j * 4], statemt[3 + j * 4], r);
+      ret[3+ j * 4] = r;
       ret[3 + j * 4] ^=
 	statemt[1 + j * 4] ^ statemt[2 + j * 4] ^ word[3][j + nb * n];
     }
@@ -446,56 +422,17 @@ AddRoundKey_InversMixColumn (int statemt[32], int nb, int n)
   for (j = 0; j < nb; ++j)
     for (i = 0; i < 4; ++i)
       {
-	x = (statemt[i + j * 4] << 1);
-	if ((x >> 8) == 1)
-	  x ^= 283;
-	x ^= statemt[i + j * 4];
-	x = (x << 1);
-	if ((x >> 8) == 1)
-	  x ^= 283;
-	x ^= statemt[i + j * 4];
-	x = (x << 1);
-	if ((x >> 8) == 1)
-	  x ^= 283;
-	ret[i + j * 4] = x;
+      _TCE_MIX32(statemt[1 + j * 4], 3, x);
+    	ret[i + j * 4] = x;
 
-	x = (statemt[(i + 1) % 4 + j * 4] << 1);
-	if ((x >> 8) == 1)
-	  x ^= 283;
-	x = (x << 1);
-	if ((x >> 8) == 1)
-	  x ^= 283;
-	x ^= statemt[(i + 1) % 4 + j * 4];
-	x = (x << 1);
-	if ((x >> 8) == 1)
-	  x ^= 283;
-	x ^= statemt[(i + 1) % 4 + j * 4];
-	ret[i + j * 4] ^= x;
+      _TCE_MIX32(statemt[1 + j * 4], 6, x);
+    	ret[i + j * 4] ^= x;
+  
+      _TCE_MIX32(statemt[1 + j * 4], 5, x);
+     	ret[i + j * 4] ^= x;
 
-	x = (statemt[(i + 2) % 4 + j * 4] << 1);
-	if ((x >> 8) == 1)
-	  x ^= 283;
-	x ^= statemt[(i + 2) % 4 + j * 4];
-	x = (x << 1);
-	if ((x >> 8) == 1)
-	  x ^= 283;
-	x = (x << 1);
-	if ((x >> 8) == 1)
-	  x ^= 283;
-	x ^= statemt[(i + 2) % 4 + j * 4];
-	ret[i + j * 4] ^= x;
-
-	x = (statemt[(i + 3) % 4 + j * 4] << 1);
-	if ((x >> 8) == 1)
-	  x ^= 283;
-	x = (x << 1);
-	if ((x >> 8) == 1)
-	  x ^= 283;
-	x = (x << 1);
-	if ((x >> 8) == 1)
-	  x ^= 283;
-	x ^= statemt[(i + 3) % 4 + j * 4];
-	ret[i + j * 4] ^= x;
+      _TCE_MIX32(statemt[1 + j * 4], 4, x);
+     	ret[i + j * 4] ^= x;
       }
   for (i = 0; i < nb; ++i)
     {
