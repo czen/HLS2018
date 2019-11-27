@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<osal version="0.1">
+
+  <operation>
+    <name>FILTEP</name>
+    <description/>
+    <inputs>4</inputs>
+    <outputs>1</outputs>
+    <in element-count="1" element-width="32" id="1" type="SIntWord"/>
+    <in element-count="1" element-width="32" id="2" type="SIntWord"/>
+    <in element-count="1" element-width="32" id="3" type="SIntWord"/>
+    <in element-count="1" element-width="32" id="4" type="SIntWord"/>
+    <out element-count="1" element-width="32" id="5" type="SIntWord"/>
+  </operation>
+
+</osal>

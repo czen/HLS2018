@@ -63,6 +63,7 @@
 /*                                                                       */
 /*************************************************************************/
 //#include <stdio.h>
+#include "tceops.h"
 
 int encode (int, int);
 void decode (int);
@@ -287,7 +288,8 @@ encode (int xin1, int xin2)
   szl = filtez (delay_bpl, delay_dltx);
 
 /* filtep - compute predictor output signal (pole section) */
-  spl = filtep (rlt1, al1, rlt2, al2);
+//  spl = filtep (rlt1, al1, rlt2, al2);
+   _TCE_FILTEP(rlt1, al1, rlt2, al2, spl);
 
 /* compute the predictor output value in the lower sub_band encoder */
   sl = szl + spl;
@@ -337,7 +339,8 @@ encode (int xin1, int xin2)
 
   szh = filtez (delay_bph, delay_dhx);
 
-  sph = filtep (rh1, ah1, rh2, ah2);
+  //sph = filtep (rh1, ah1, rh2, ah2);
+   _TCE_FILTEP(rh1, ah1, rh2, ah2, sph);
 
 /* predic: sh = sph + szh */
   sh = sph + szh;
@@ -415,7 +418,8 @@ decode (int input)
   dec_szl = filtez (dec_del_bpl, dec_del_dltx);
 
 /* filtep: compute predictor output signal for pole section */
-  dec_spl = filtep (dec_rlt1, dec_al1, dec_rlt2, dec_al2);
+  //dec_spl = filtep (dec_rlt1, dec_al1, dec_rlt2, dec_al2);
+   _TCE_FILTEP(dec_rlt1, dec_al1, dec_rlt2, dec_al2, dec_spl);
 
   dec_sl = dec_spl + dec_szl;
 
@@ -461,7 +465,8 @@ decode (int input)
   dec_szh = filtez (dec_del_bph, dec_del_dhx);
 
 /* filtep: compute predictor output signal for pole section */
-  dec_sph = filtep (dec_rh1, dec_ah1, dec_rh2, dec_ah2);
+//  dec_sph = filtep (dec_rh1, dec_ah1, dec_rh2, dec_ah2);
+   _TCE_FILTEP(dec_rh1, dec_ah1, dec_rh2, dec_ah2, dec_sph);
 
 /* predic:compute the predictor output value in the higher sub_band decoder */
   dec_sh = dec_sph + dec_szh;
